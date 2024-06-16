@@ -1,0 +1,10 @@
+.topBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100rem;
+  margin: 0 auto;
+  align-items: center;
+  border-bottom: 1px solid var(--color-grey);
+}

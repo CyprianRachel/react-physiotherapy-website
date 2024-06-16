@@ -1,0 +1,8 @@
+.MainBookingButton {
+  background-color: var(--color-orange);
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+  font-weight: 500;
+  color: var(--color-text-white);
+}
