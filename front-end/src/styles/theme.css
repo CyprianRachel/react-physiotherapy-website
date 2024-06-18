@@ -1,6 +1,15 @@
+/* Przykładowy kod z theme.css */
+
+/* Preconnect */
+@import url("https://fonts.googleapis.com");
+@import url("https://fonts.gstatic.com") crossorigin;
+
+/* Importowanie czcionki Inter z parametrami wagi 100-900 */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
 body {
   --font-size-default: 16px;
-  --font-family-default: Helvetica, Arial, sans-serif;
+  --font-family-default: Inter, Arial, sans-serif;
   --color-text-default: #222020;
   --color-text-white: #ffffff;
   --color-orange: #ff4e00;

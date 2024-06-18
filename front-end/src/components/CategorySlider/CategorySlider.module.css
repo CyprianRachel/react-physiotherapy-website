@@ -15,7 +15,8 @@
   background-color: var(--color-background-orange);
   border-radius: 1rem;
   gap: 1rem;
-  padding: 1rem;
+  padding: 1.5rem;
+  overflow: hidden;
 }
 
 .leftDiv {
@@ -32,16 +33,43 @@
   gap: 2rem;
 }
 
-.imageWrapper img {
-  width: 100%;
-}
-
 .imageWrapper {
-  margin: -1rem;
+  position: relative;
+  margin: -1.5rem;
 }
 
 .btn {
   margin-left: auto;
   justify-content: right;
   padding: 1rem;
+  width: 1rem;
+}
+
+.orangeCircle {
+  width: 10rem;
+  height: 10rem;
+  background-color: var(--color-light-orange);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -2rem;
+  right: 1rem;
+  z-index: 0;
+}
+
+.whiteCircle {
+  width: 4rem;
+  height: 4rem;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 1rem;
+  right: 6rem;
+}
+
+.black {
+  color: var(--color-text-default);
+}
+
+.orange {
+  color: var(--color-orange);
 }
