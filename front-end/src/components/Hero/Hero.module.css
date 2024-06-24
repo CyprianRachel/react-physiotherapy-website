@@ -1,29 +1,9 @@
-h1 {
-  text-transform: capitalize;
-}
-
-.hero img {
-  width: 100%;
-}
-
-.highlight {
-  color: var(--color-orange);
-}
-
 .leftDiv {
   width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 2rem;
-}
-
-.centerDiv {
-  width: 40%;
-  background-size: cover;
-  background-position: center;
-  display: flex-end;
-  position: relative;
 }
 
 .rightDiv {
@@ -66,46 +46,27 @@ h1 {
   justify-content: space-between;
 }
 
-.members {
-  padding: 0.5rem;
-  margin-right: -1.5rem;
+.membersWrapper {
   display: flex;
-  justify-content: space-between;
-  border-top-left-radius: 100px;
-  border-bottom-left-radius: 100px;
   background-color: white;
+  margin-right: -1.5rem;
+  border-top-left-radius: 10rem;
+  border-bottom-left-radius: 10rem;
 }
 
-.members div {
-  width: 50px;
-  height: 50px;
+.employeeImage {
+  width: 5rem;
+  height: 5rem;
+  background-position: center;
+  background-size: cover;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 0.25rem solid white;
 }
 
-.members div:nth-child(n + 2) {
-  margin-left: -0.5rem;
+.employeeImage:nth-child(n + 2) {
+  margin-left: -0.75rem;
 }
 
 .hero {
   padding-top: 2rem;
-}
-
-.opinionCounter {
-  background-color: black;
-  color: white;
-  position: absolute;
-  right: 0.5rem;
-  top: 0.5rem;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1rem;
-  gap: 0.25rem;
-  border-radius: 1rem;
-}
-
-.opinionCounter p {
-  font-size: 0.75rem;
 }

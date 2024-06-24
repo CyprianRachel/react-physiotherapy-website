@@ -1,5 +1,6 @@
 export const SERVICES = [
   {
+    id: 1,
     servicesName: "Fizjoterapia ortopedyczna",
     path: "fizjoterapiaortopedyczna",
     servicesList: [
@@ -28,7 +29,8 @@ export const SERVICES = [
     ],
   },
   {
-    servicesName: "Fizjoterapia ortopedyczna",
+    id: 2,
+    servicesName: "Fizjoterapia dzieci i młodzieży",
     path: "fizjoterapiaortopedyczna",
     servicesList: [
       {
@@ -51,18 +53,8 @@ export const SERVICES = [
     ],
   },
   {
+    id: 3,
     servicesName: "Integracja sensoryczna",
-    path: "fizjoterapiaortopedyczna",
-    servicesList: [
-      {
-        serviceName: "Drenaż limfatyczny aparatem Normatec",
-        description:
-          "Masaż obejmuje wybraną część ciała, np. plecy czy kończyny dolne.",
-      },
-    ],
-  },
-  {
-    servicesName: "Fizjoterapia",
     path: "fizjoterapiaortopedyczna",
     servicesList: [
       {

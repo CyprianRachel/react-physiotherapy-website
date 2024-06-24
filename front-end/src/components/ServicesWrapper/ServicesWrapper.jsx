@@ -3,12 +3,12 @@ import { CenteredContent } from "../CenteredContent/CenteredContent";
 import { ServicesList } from "../ServicesList/ServicesList";
 import styles from "./ServicesWrapper.module.css";
 
-export function ServicesWrapper() {
+export function ServicesWrapper({ team, selectedServiceId }) {
   return (
     <div className={styles.wrapper}>
       <CenteredContent>
-        <ServicesList />
-        <AllAboutUs />
+        <ServicesList selectedServiceId={selectedServiceId} />
+        <AllAboutUs team={team} />
       </CenteredContent>
     </div>
   );

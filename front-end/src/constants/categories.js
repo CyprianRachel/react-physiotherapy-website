@@ -4,12 +4,16 @@ export const CATEGORIES = [
     path: "/",
   },
   {
+    categoryName: "Fizjoterapia Ortopedyczna",
+    path: "/fizjoterpia-ortopedyczna",
+  },
+  {
     categoryName: "Fizjoteria dzieci i młodzieży",
-    path: "mezcyzna",
+    path: "/fizjoterapia-dzieci-i-mlodziezy",
   },
   {
     categoryName: "Integracja sensoryczna",
-    path: "masaz",
+    path: "/integracja-sensoryczna",
   },
   {
     categoryName: "Blog",

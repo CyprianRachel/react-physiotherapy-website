@@ -1,19 +1,21 @@
-import FIZJOTERAPIAORTOPEDYCZNA from "../assets/fizjoterapia-ortopedyczna.svg";
+import MALGORZANA_ZERDZINSKA from "../assets/IN-MOTION-38.jpg";
+import PAWEL_ZERDZINSKI from "../assets/pawel-zerdzinski.jpg";
+import URSZULA_GAWLIK from "../assets/IN-MOTION-37.jpg";
 
 export const TEAMMEMBERS = [
   {
     profession: "Terapeuta SI",
     name: "Paweł Żerdziński",
-    image: FIZJOTERAPIAORTOPEDYCZNA,
+    image: PAWEL_ZERDZINSKI,
   },
   {
     profession: "Terapeuta SI",
     name: "Paweł Żerdziński",
-    image: FIZJOTERAPIAORTOPEDYCZNA,
+    image: URSZULA_GAWLIK,
   },
   {
     profession: "Terapeuta SI",
     name: "Paweł Żerdziński",
-    image: FIZJOTERAPIAORTOPEDYCZNA,
+    image: MALGORZANA_ZERDZINSKA,
   },
 ];

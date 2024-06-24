@@ -1,0 +1,9 @@
+.backgroundImage {
+  width: 100%;
+  height: 22rem;
+  background-size: cover;
+  background-position: center;
+  display: flex-end;
+  position: relative;
+  border-radius: 1rem;
+}

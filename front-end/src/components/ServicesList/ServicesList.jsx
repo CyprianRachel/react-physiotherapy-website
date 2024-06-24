@@ -1,11 +1,15 @@
 import { SERVICES } from "../../constants/services";
 import styles from "./ServicesList.module.css";
 
-export function ServicesList() {
+export function ServicesList({ selectedServiceId }) {
+  const filteredServices = selectedServiceId
+    ? SERVICES.filter((service) => service.id === selectedServiceId)
+    : SERVICES;
+
   return (
     <div className={styles.wrapper}>
-      <h2>Nasze usługi</h2>{" "}
-      {SERVICES.map((services) => {
+      <h2>Nasze usługi</h2>
+      {filteredServices.map((services) => {
         const serviceCount = services.servicesList.length;
         return (
           <div className={styles.servicesWrapper} key={services.servicesName}>
@@ -27,7 +31,7 @@ export function ServicesList() {
                     <div className={styles.servicePriceMinButton}>
                       <div className={styles.servicePriceMin}>
                         <span>{service.price} zł</span>
-                        <span>{service.time}min</span>
+                        <span>{service.time} min</span>
                       </div>
                       <button>Umów</button>
                     </div>
