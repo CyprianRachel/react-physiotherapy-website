@@ -1,17 +1,19 @@
 .leftDiv {
-  width: 30%;
+  width: 28rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 2rem;
+  margin-right: 2rem;
 }
 
 .rightDiv {
-  width: 30%;
+  width: 28rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 2rem;
+  margin-left: 2rem;
 }
 
 .location {
@@ -69,4 +71,6 @@
 
 .hero {
   padding-top: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }

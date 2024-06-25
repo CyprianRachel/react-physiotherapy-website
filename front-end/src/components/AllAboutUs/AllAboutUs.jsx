@@ -38,8 +38,8 @@ export function AllAboutUs({ team }) {
       <h4>Kontakt</h4>
       <div className={styles.contactWrapper}>
         <div className={styles.number}>
-          <img src={PHONEICON}></img>
-          <span>666 666 666</span>
+          <img className={styles.icon} src={PHONEICON}></img>
+          <span>660 143 444</span>
         </div>
         <button className={styles.button}>Zadzwoń</button>
       </div>
@@ -63,10 +63,10 @@ export function AllAboutUs({ team }) {
       <h4>Media społecznościowe</h4>
       <div className={styles.contactWrapper}>
         <div className={styles.number}>
-          <img src={INSTAGRAMORANGE}></img>
+          <img className={styles.icon} src={INSTAGRAMORANGE}></img>
           <span>Instagram</span>
         </div>
-        <img src={UPRIGHTICON}></img>
+        <img className={styles.icon} src={UPRIGHTICON}></img>
       </div>
     </div>
   );

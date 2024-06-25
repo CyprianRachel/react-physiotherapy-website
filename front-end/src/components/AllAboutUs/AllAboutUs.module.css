@@ -1,5 +1,5 @@
 .wrapper {
-  width: 30%;
+  width: 28rem;
   display: flex;
   flex-direction: column;
   background-color: var(--color-grey);
@@ -17,9 +17,14 @@
 }
 .memberWrapper {
   background-color: white;
-  padding: 0.5rem;
+  padding: 0.25rem;
   border-top-left-radius: 100px;
   border-bottom-left-radius: 100px;
+}
+
+.icon {
+  width: 1.75rem;
+  height: 1.75rem;
 }
 
 .employeeImage {
@@ -66,11 +71,8 @@
 
 .button {
   border: 1px solid var(--color-orange);
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
   color: Var(--color-orange);
   background-color: white;
 }
