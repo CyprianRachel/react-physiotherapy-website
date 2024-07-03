@@ -74,3 +74,52 @@
   padding-right: 2rem;
   padding-left: 2rem;
 }
+
+@media only screen and (max-width: 1600px) {
+  .leftDiv {
+    width: 26rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-right: 2rem;
+  }
+
+  .rightDiv {
+    width: 26rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-left: 2rem;
+  }
+
+  .employeeImage {
+    width: 4.5rem;
+    height: 4.5rem;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    border: 0.25rem solid white;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mobileDisplayNone {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .wrapper > *:nth-child(1) {
+    order: 1; /* Drugi element jest wyświetlany pierwszy */
+  }
+
+  .rightDiv {
+    display: none;
+  }
+}

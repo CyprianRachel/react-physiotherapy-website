@@ -4,18 +4,22 @@ import { MainBookingButton } from "../MainBookingButton/MainBookingButton";
 import { MainContent } from "../MainContent/MainContent";
 import { MainMenu } from "../MainMenu/MainMenu";
 import { TopBar } from "../TopBar/TopBar";
+import styles from "./Layout.module.css";
 
 export function Layout({ children }) {
   return (
     <>
-      <MainContent>
-        <TopBar>
-          <Logo />
+      <TopBar>
+        <Logo />
+        <div className={styles.mobileDisplayNone}>
           <MainMenu />
-          <MainBookingButton />
-        </TopBar>
-        {children}
-      </MainContent>
+        </div>
+        <MainBookingButton />
+      </TopBar>
+      <div className={styles.mobileDisplayBlock}>
+        <MainMenu />
+      </div>
+      <MainContent>{children}</MainContent>
       <Footer />
     </>
   );

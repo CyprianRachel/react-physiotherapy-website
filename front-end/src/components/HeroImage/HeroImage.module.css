@@ -7,3 +7,15 @@
   position: relative;
   border-radius: 1rem;
 }
+
+@media only screen and (max-width: 1600px) {
+  .backgroundImage {
+    width: 100%;
+    height: 18rem;
+    background-size: cover;
+    background-position: center;
+    display: flex-end;
+    position: relative;
+    border-radius: 1rem;
+  }
+}

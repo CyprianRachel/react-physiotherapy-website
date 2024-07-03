@@ -2,11 +2,41 @@ import { useState } from "react";
 import { SERVICES } from "../../constants/services";
 import { ServicePopup } from "../ServicePopup/ServicePopup";
 import styles from "./ServicesList.module.css";
+import { SearchBar } from "../SearchBar/SearchBar";
+import { Opinions } from "../Opinions/Opinions";
 
 export function ServicesList({ selectedServiceId }) {
-  const filteredServices = selectedServiceId
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredServicesType = selectedServiceId
     ? SERVICES.filter((service) => service.id === selectedServiceId)
     : SERVICES;
+
+  const filteredServices = filteredServicesType
+    .map((serviceCategory) => {
+      if (
+        serviceCategory.servicesName
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase())
+      ) {
+        return serviceCategory;
+      }
+      const filteredServicesList = serviceCategory.servicesList.filter(
+        (service) =>
+          service.serviceName.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      return {
+        ...serviceCategory,
+        servicesList: filteredServicesList,
+      };
+    })
+    .filter(
+      (serviceCategory) =>
+        serviceCategory.servicesName
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase()) ||
+        serviceCategory.servicesList.length > 0
+    );
 
   const [popupData, setPopupData] = useState({
     isPopupOpen: false,
@@ -49,6 +79,19 @@ export function ServicesList({ selectedServiceId }) {
     return description;
   };
 
+  const getServiceCountLabel = (count) => {
+    switch (count) {
+      case 1:
+        return "usługa";
+      case 2:
+      case 3:
+      case 4:
+        return "usługi";
+      default:
+        return "usług";
+    }
+  };
+
   return (
     <div className={styles.wrapper}>
       {popupData.isPopupOpen && (
@@ -60,9 +103,12 @@ export function ServicesList({ selectedServiceId }) {
           onClose={closePopup}
         />
       )}
-      <h2>
-        Nasze <span className={styles.highlighted}>usługi</span>
-      </h2>
+      <div className={styles.h2SearchBarWrapper}>
+        <h2>
+          Nasze <span className={styles.highlighted}>usługi</span>
+        </h2>
+        <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      </div>
       {filteredServices.map((services) => {
         const serviceCount = services.servicesList.length;
         return (
@@ -70,7 +116,7 @@ export function ServicesList({ selectedServiceId }) {
             <div className={styles.servicesCounterName}>
               <h3>{services.servicesName}</h3>
               <span className={styles.servicesCounter}>
-                {serviceCount} usług
+                {serviceCount} {getServiceCountLabel(serviceCount)}
               </span>
             </div>
             <div className={styles.servicesWrapperAll}>
@@ -87,8 +133,13 @@ export function ServicesList({ selectedServiceId }) {
                     key={service.serviceName}
                   >
                     <div className={styles.serviceDescription}>
-                      <p>{service.serviceName}</p>
-                      <span>{descriptionPreview}</span>
+                      <p className={styles.serviceName}>
+                        {service.serviceName}
+                      </p>
+                      <span
+                        className={styles.serviceDescriptionSpan}
+                        dangerouslySetInnerHTML={{ __html: descriptionPreview }}
+                      />
                       {isLongDescription && (
                         <div
                           className={styles.buttonPopup}
@@ -119,6 +170,7 @@ export function ServicesList({ selectedServiceId }) {
           </div>
         );
       })}
+      <Opinions />
     </div>
   );
 }

@@ -1,11 +1,11 @@
 import { Hero } from "../../components/Hero/Hero";
 import { Layout } from "../../components/Layout/Layout";
-import MALGORZANA_ZERDZINSKA from "../../assets/IN-MOTION-38.jpg";
+import TEAMIMAGE from "../../assets/team-image.svg";
 import { ServicesWrapper } from "../../components/ServicesWrapper/ServicesWrapper";
 import { SLIDER_IMAGES } from "../../constants/sliderImages";
 
 const sliderImages = SLIDER_IMAGES.find(
-  (imageSet) => imageSet.id === 3
+  (imageSet) => imageSet.id === 4
 ).servicesImages.map((img) => img.image);
 
 export function IntegracjaSensoryczna() {
@@ -14,7 +14,7 @@ export function IntegracjaSensoryczna() {
       <Hero
         text={"Integracja"}
         highlight={"Sensoryczna"}
-        image={MALGORZANA_ZERDZINSKA}
+        image={TEAMIMAGE}
         slider={sliderImages}
       />
       <ServicesWrapper team={false} selectedServiceId={3} />

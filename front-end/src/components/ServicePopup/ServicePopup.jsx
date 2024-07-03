@@ -18,7 +18,9 @@ export function ServicePopup({
           </div>
           <h2>{serviceName}</h2>
         </div>
-        <div className={styles.descriptionWrapper}>{serviceDescription}</div>
+        <div className={styles.descriptionWrapper}>
+          <span dangerouslySetInnerHTML={{ __html: serviceDescription }} />
+        </div>
         <div className={styles.priceTimeButtonWrapper}>
           <div className={styles.priceTimeWrapper}>
             <div className={styles.price}>{servicePrice}</div>

@@ -25,6 +25,10 @@ h3 {
   font-size: 1.25rem;
 }
 
+strong {
+  font-weight: 600;
+}
+
 a {
   text-decoration: none;
   color: var(--color-text-default);

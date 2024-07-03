@@ -1,26 +1,26 @@
 export const CATEGORIES = [
   {
-    categoryName: "Strona Główna",
+    categoryName: "Strona główna",
     path: "/",
   },
   {
-    categoryName: "Fizjoterapia Ortopedyczna",
+    categoryName: "Fizjoterapia ortopedyczna",
     path: "/fizjoterpia-ortopedyczna",
   },
   {
-    categoryName: "Fizjoteria dzieci i młodzieży",
+    categoryName: "Fizjoterapia dzieci i młodzieży",
     path: "/fizjoterapia-dzieci-i-mlodziezy",
   },
   {
     categoryName: "Integracja sensoryczna",
     path: "/integracja-sensoryczna",
   },
-  {
-    categoryName: "Blog",
-    path: "blog",
-  },
+  // {
+  //   categoryName: "Blog",
+  //   path: "blog",
+  // },
   {
     categoryName: "Kontakt",
-    path: "kontakt",
+    path: "/kontakt",
   },
 ];

@@ -17,6 +17,11 @@
   gap: 1rem;
 }
 
+.h2SearchBarWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .servicesCounter {
   background-color: var(--color-grey);
   padding: 0.5rem 1rem;
@@ -29,12 +34,12 @@
 }
 
 .price {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1rem;
 }
 
 .time {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1rem;
   color: grey;
 }
@@ -61,15 +66,19 @@
   width: 30rem;
 }
 
-.serviceDescription p {
-  font-size: 1rem;
-  font-weight: 500;
+.serviceName {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.serviceDescriptionSpan {
+  font-weight: 300;
 }
 
 .buttonPopup {
   border: 1px solid grey;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
+  font-size: 14px;
   font-weight: 500;
   border-radius: 0.5rem;
   cursor: pointer;

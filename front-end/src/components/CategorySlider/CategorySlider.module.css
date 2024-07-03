@@ -19,6 +19,7 @@
   gap: 1rem;
   padding: 1.5rem;
   overflow: hidden;
+  width: 33%;
 }
 
 .leftDiv {
@@ -53,8 +54,6 @@
   background-color: var(--color-light-orange);
   border-radius: 50%;
   position: absolute;
-  bottom: -2rem;
-  right: 1rem;
   z-index: 0;
 }
 
@@ -64,8 +63,6 @@
   background-color: white;
   border-radius: 50%;
   position: absolute;
-  top: 1rem;
-  right: 6rem;
 }
 
 .black {
@@ -74,4 +71,31 @@
 
 .orange {
   color: var(--color-orange);
+}
+
+@media only screen and (max-width: 768px) {
+  .mainCategories {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .singleCategoryWrapper {
+    display: flex;
+    background-color: var(--color-background-orange);
+    border-radius: 1rem;
+    gap: 1rem;
+    padding: 1.5rem;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .wrapper {
+    width: 100%;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
 }

@@ -1,8 +1,12 @@
 import { Hero } from "../../components/Hero/Hero";
 import { Layout } from "../../components/Layout/Layout";
-import URSZULA_GAWLIK from "../../assets/IN-MOTION-37.jpg";
-import FIZJOTERAPIA_DZIECI_I_MLODZIERZY from "../../assets/IN-MOTION-28.jpg";
+import TEAMIMAGE from "../../assets/team-image.svg";
+import { SLIDER_IMAGES } from "../../constants/sliderImages";
 import { ServicesWrapper } from "../../components/ServicesWrapper/ServicesWrapper";
+
+const sliderImages = SLIDER_IMAGES.find(
+  (imageSet) => imageSet.id === 3
+).servicesImages.map((img) => img.image);
 
 export function FizjoterapiaDzieciIMlodzierzy() {
   return (
@@ -10,8 +14,8 @@ export function FizjoterapiaDzieciIMlodzierzy() {
       <Hero
         text={"Fizjoterapia"}
         highlight={"Dzieci i Młodzieży"}
-        image={URSZULA_GAWLIK}
-        slider={FIZJOTERAPIA_DZIECI_I_MLODZIERZY}
+        image={TEAMIMAGE}
+        slider={sliderImages}
       />
       <ServicesWrapper team={false} selectedServiceId={2} />
     </Layout>

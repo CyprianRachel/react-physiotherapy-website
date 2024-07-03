@@ -1,0 +1,29 @@
+.input {
+  width: 18rem;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.input:focus {
+  border-color: var(--color-light-orange);
+  box-shadow: 0 0 5px var(--color-orange);
+}
+
+.input::placeholder {
+  color: #aaa;
+}
+
+.inputWrapper::before {
+  content: "\1F50D"; /* Unicode dla ikony lupki */
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #aaa;
+}
