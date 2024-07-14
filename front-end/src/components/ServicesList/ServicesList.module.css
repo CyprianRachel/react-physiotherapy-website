@@ -11,6 +11,22 @@
   justify-content: space-between;
 }
 
+.serviceDescriptionSpan ol li {
+  list-style-type: upper-roman;
+}
+
+.serviceDescriptionSpan ul li {
+  list-style-type: disc;
+}
+
+.serviceDescriptionSpan li {
+  margin: 1rem;
+}
+
+.serviceDescriptionSpan ul {
+  margin: 1rem;
+}
+
 .servicesWrapper {
   display: flex;
   flex-direction: column;
@@ -36,12 +52,14 @@
 .price {
   font-weight: 500;
   font-size: 1rem;
+  white-space: nowrap;
 }
 
 .time {
   font-weight: 300;
   font-size: 1rem;
   color: grey;
+  white-space: nowrap;
 }
 
 .servicesWrapperAll {
@@ -56,6 +74,7 @@
   border: 1px solid var(--color-grey);
   padding: 1rem;
   border-radius: 1rem;
+  gap: 1rem;
 }
 
 .serviceDescription {
@@ -63,12 +82,11 @@
   flex-direction: column;
   gap: 0.5rem;
   align-items: flex-start;
-  width: 30rem;
 }
 
 .serviceName {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .serviceDescriptionSpan {
@@ -86,7 +104,7 @@
 
 .servicePriceMinButton {
   display: flex;
-  align-items: center;
+  align-items: top;
   gap: 1rem;
 }
 

@@ -33,7 +33,7 @@ export function Opinions() {
   };
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id="opinie">
       <h2>
         Opinie naszych <span className={styles.highlighted}>klientów</span>
       </h2>

@@ -17,7 +17,11 @@ export function FizjoterapiaDzieciIMlodzierzy() {
         image={TEAMIMAGE}
         slider={sliderImages}
       />
-      <ServicesWrapper team={false} selectedServiceId={2} />
+      <ServicesWrapper
+        team={false}
+        selectedServiceId={[2]}
+        description={true}
+      />
     </Layout>
   );
 }

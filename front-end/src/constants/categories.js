@@ -1,26 +1,132 @@
 export const CATEGORIES = [
   {
-    categoryName: "Strona główna",
-    path: "/",
-  },
-  {
+    id: 1,
     categoryName: "Fizjoterapia ortopedyczna",
     path: "/fizjoterpia-ortopedyczna",
+    title: "Opis",
+    description:
+      "Pracujemy z <strong>pacjentami ortopedycznymi</strong>, <strong>sportowcami po urazach</strong> oraz <strong>pacjentami bólowymi</strong>. Specjalizujemy się w rehabilitacji: <ol><li><h4>Kręgosłupa</h4></li><ul><li>Rehabilitacja pozabiegowa w obrębie kręgosłupa</li><li>Dyskopatie</li><li>Zespoły bólowe kręgosłupa</li><li>Kręgozmyki</li><li>Niestabilność funkcjonalna</li><li>Drętwienia i mrowienia w obrębie kończyn górnych i dolnych</li></ul><li><h4>Stawów obwodowych</h4></li><ul><li>Rehabilitacja po zabiegach po zabiegach endoprotezoplastyki stawów</li><li>Rehabilitacja po zabiegach rekonstrukcji więzadeł, chrząstek, zabiegach w obrębie łąkotek</li><li>Rehabilitacja po zabiegach artroskopii</li><li>W przypadku urazów przeciążeniowych</li><li>Urazów mięśniowych</li><li>W przypadkach problemów bólowych w obrębie mięśni i stawów</li></ul></ol>",
+    subcategory: [
+      {
+        categoryName: "Wizyta diagnostyczna z USG",
+        path: "/wizytka-diagnostyczna-z-usg",
+      },
+      {
+        categoryName: "Terapia manualna",
+        path: "/terapia-manualna",
+      },
+      {
+        categoryName: "Trening/RTS",
+        path: "/trening-rts/",
+      },
+    ],
   },
   {
+    id: 2,
     categoryName: "Fizjoterapia dzieci i młodzieży",
     path: "/fizjoterapia-dzieci-i-mlodziezy",
+    subcategory: [
+      {
+        categoryName: "Wizyta diagnostyczna pierwszorazowa",
+        path: "/wizytka-diagnostyczna-pierwszorazowa",
+      },
+      {
+        categoryName: "Fizjoterapia młodych sportowców",
+        path: "/fizjoterapia-mlodych-sportowcow",
+      },
+      {
+        categoryName: "Fizjoterapia młodzieży",
+        path: "/fizjoterapia-mlodziezy",
+      },
+      {
+        categoryName: "Trening funkcjonalny dzieci i młodzieży",
+        path: "/trening-funkcjonalny-dzieci-i-mlodziezy",
+      },
+      {
+        categoryName: "Fizjoterapia dzieci",
+        path: "/fizjoterapia-dzieci",
+      },
+      {
+        categoryName: "Fizjoterapia niemowląt",
+        path: "/fizjoterapia-niemowlat",
+      },
+    ],
   },
   {
-    categoryName: "Integracja sensoryczna",
+    id: 3,
+    categoryName: "Integracja Sensoryczna",
     path: "/integracja-sensoryczna",
+    subcategory: [
+      {
+        categoryName: "Konsultacja SI",
+        path: "/integracja-sensoryczna/konsultacja-si",
+      },
+      {
+        categoryName: "Diagnoza SI",
+        path: "./diagnoza-si",
+      },
+      {
+        categoryName: "Terapia SI",
+        path: "./terapia-si",
+      },
+    ],
   },
-  // {
-  //   categoryName: "Blog",
-  //   path: "blog",
-  // },
   {
+    id: 4,
+    categoryName: "Masaż",
+    path: "/masaz",
+  },
+  {
+    id: 5,
+    categoryName: "Nasz zespół",
+    path: "/nasz-zespol",
+    subcategory: [
+      {
+        categoryName: "Paweł Żerdziński",
+        path: "/nasz-zespol/pawel-zerdzinski",
+      },
+      {
+        categoryName: "Urszula Gawlik",
+        path: "/nasz-zespol/urszula-gawlik",
+      },
+      {
+        categoryName: "Małgorzata Żerdzińska",
+        path: "/nasz-zespol/malgorzata-zerdzinska",
+      },
+      {
+        categoryName: "Marta Misiejuk",
+        path: "/nasz-zespol/marta-misiejuk",
+      },
+    ],
+  },
+  {
+    id: 6,
+    categoryName: "Cennik",
+    path: "/cennik",
+  },
+
+  {
+    id: 7,
     categoryName: "Kontakt",
     path: "/kontakt",
+  },
+  {
+    id: 8,
+    categoryName: "Więcej",
+    path: "/oferta-dla-klubow",
+    subcategory: [
+      {
+        categoryName: "Oferta dla klubów",
+        path: "/oferta-dla-klubow",
+      },
+      {
+        categoryName: "Zajęcia grupowe",
+        path: "/zajecia-grupowe",
+      },
+      {
+        categoryName: "Blog",
+        path: "/blog",
+      },
+    ],
   },
 ];

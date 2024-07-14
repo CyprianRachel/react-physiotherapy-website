@@ -1,0 +1,60 @@
+/* EmployeeProfil.module.css */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-background-orange);
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.orange {
+  color: var(--color-orange);
+}
+
+.employeeImageWrapper {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14rem;
+  height: 14rem;
+}
+
+.employeeImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.description span {
+  margin-top: 0.5rem;
+}
+
+.description p {
+  color: var(--color-orange);
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.singleMemberWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.membersWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}

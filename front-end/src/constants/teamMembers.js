@@ -5,23 +5,33 @@ import MARTA_MISIEJUK from "../assets/Marta-Misiejuk.jpeg";
 
 export const TEAMMEMBERS = [
   {
-    profession: "Terapeuta SI",
+    id: 1,
+    profession: "Fizjoterapeuta",
     name: "Paweł Żerdziński",
     image: PAWEL_ZERDZINSKI,
+    path: "/nasz-zespol/pawel-zerdzinski",
+    description:
+      "Fizjoterapeuta pracujący z pacjentami ortopedycznymi i sportowcami. Zajmuje się problemami stawów obwodowych, kręgosłupa oraz rehabilitacją pooperacyjną.",
   },
   {
-    profession: "Terapeuta SI",
-    name: "Paweł Żerdziński",
+    id: 2,
+    profession: "Fizjoterapeutka",
+    name: "Urszula Gawlik",
     image: URSZULA_GAWLIK,
+    path: "/nasz-zespol/urszula-gawlik",
   },
   {
+    id: 3,
     profession: "Terapeuta SI",
-    name: "Paweł Żerdziński",
+    name: "Małgorzata Żerdzińska",
     image: MALGORZANA_ZERDZINSKA,
+    path: "/nasz-zespol/malgorzata-zerdzinska",
   },
   {
-    profession: null,
+    id: 4,
+    profession: "Masażystka",
     name: "Marta Misiejuk",
     image: MARTA_MISIEJUK,
+    path: "/nasz-zespol/marta-misiejuk",
   },
 ];

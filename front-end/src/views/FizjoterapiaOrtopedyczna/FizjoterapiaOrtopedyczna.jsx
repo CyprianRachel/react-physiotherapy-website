@@ -17,7 +17,11 @@ export function FizjoterapiaOrtopedyczna() {
         image={TEAMIMAGE}
         slider={sliderImages}
       />
-      <ServicesWrapper team={false} selectedServiceId={1} />
+      <ServicesWrapper
+        team={false}
+        selectedServiceId={[1]}
+        description={true}
+      />
     </Layout>
   );
 }

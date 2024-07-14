@@ -19,7 +19,7 @@ export function MainPage() {
         slider={sliderImages}
       />
       <CategorySlider />
-      <ServicesWrapper team={false} />
+      <ServicesWrapper team={false} description={true} />
     </Layout>
   );
 }

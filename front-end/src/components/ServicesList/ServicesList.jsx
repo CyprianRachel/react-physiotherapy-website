@@ -4,32 +4,39 @@ import { ServicePopup } from "../ServicePopup/ServicePopup";
 import styles from "./ServicesList.module.css";
 import { SearchBar } from "../SearchBar/SearchBar";
 import { Opinions } from "../Opinions/Opinions";
+import { EmployeeProfil } from "../EmployeeProfil/EmployeeProfil";
 
-export function ServicesList({ selectedServiceId }) {
+export function ServicesList({ selectedServiceId, selectedPersonId }) {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredServicesType = selectedServiceId
-    ? SERVICES.filter((service) => service.id === selectedServiceId)
-    : SERVICES;
+  // Ensure selectedServiceId is an array or an empty array if not provided
+  const selectedIds =
+    selectedServiceId && selectedServiceId.length > 0
+      ? selectedServiceId
+      : SERVICES.map((service) => service.id);
 
-  const filteredServices = filteredServicesType
-    .map((serviceCategory) => {
-      if (
-        serviceCategory.servicesName
-          .toLowerCase()
-          .includes(searchTerm.toLowerCase())
-      ) {
-        return serviceCategory;
-      }
-      const filteredServicesList = serviceCategory.servicesList.filter(
+  // Filter categories based on selectedServiceId
+  const filteredServicesType = SERVICES.filter((serviceCategory) =>
+    selectedIds.includes(serviceCategory.id)
+  )
+    .map((serviceCategory) => ({
+      ...serviceCategory,
+      servicesList: serviceCategory.servicesList.filter(
         (service) =>
-          service.serviceName.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      return {
-        ...serviceCategory,
-        servicesList: filteredServicesList,
-      };
-    })
+          !selectedPersonId ||
+          (service.personId && service.personId.includes(selectedPersonId))
+      ),
+    }))
+    .filter((serviceCategory) => serviceCategory.servicesList.length > 0);
+
+  // Filter services within categories based on searchTerm
+  const filteredServices = filteredServicesType
+    .map((serviceCategory) => ({
+      ...serviceCategory,
+      servicesList: serviceCategory.servicesList.filter((service) =>
+        service.serviceName.toLowerCase().includes(searchTerm.toLowerCase())
+      ),
+    }))
     .filter(
       (serviceCategory) =>
         serviceCategory.servicesName
@@ -73,8 +80,8 @@ export function ServicesList({ selectedServiceId }) {
 
   const getDescriptionPreview = (description) => {
     const words = description.split(" ");
-    if (words.length > 10) {
-      return words.slice(0, 10).join(" ") + "...";
+    if (words.length > 20) {
+      return words.slice(0, 20).join(" ") + "...";
     }
     return description;
   };
@@ -103,9 +110,12 @@ export function ServicesList({ selectedServiceId }) {
           onClose={closePopup}
         />
       )}
+      {selectedPersonId && (
+        <EmployeeProfil selectedPersonId={selectedPersonId} />
+      )}
       <div className={styles.h2SearchBarWrapper}>
         <h2>
-          Nasze <span className={styles.highlighted}>usługi</span>
+          Lista <span className={styles.highlighted}>usług</span>
         </h2>
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       </div>
@@ -152,7 +162,7 @@ export function ServicesList({ selectedServiceId }) {
                             )
                           }
                         >
-                          Więcej
+                          Czytaj więcej
                         </div>
                       )}
                     </div>

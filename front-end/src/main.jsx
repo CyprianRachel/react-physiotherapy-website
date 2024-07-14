@@ -9,6 +9,11 @@ import { FizjoterapiaOrtopedyczna } from "./views/FizjoterapiaOrtopedyczna/Fizjo
 import { IntegracjaSensoryczna } from "./views/IntegracjaSensoryczna/IntegracjaSensoryczna.jsx";
 import { FizjoterapiaDzieciIMlodzierzy } from "./views/FizjoterapiaDzieciIMlodzierzy/FizjoterapiaDzieciIMlodzierzy.jsx";
 import { Kontakt } from "./views/Kontakt/Kontakt.jsx";
+import { OurTeam } from "./views/OurTeam/OurTeam.jsx";
+import { PawelZerdzinski } from "./views/PawelZerdzinski/PawelZerdzinski.jsx";
+import { UrszulaGawlik } from "./views/UrszulaGawlik/UrszulaGawlik.jsx";
+import { MalgorzataZerdzinska } from "./views/MalgorzataZerdzinska/MalgorzataZerdzinska.jsx";
+import { MartaMisiejuk } from "./views/MartaMisiejuk/MartaMisiejuk.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,12 +29,36 @@ const router = createBrowserRouter([
     element: <IntegracjaSensoryczna />,
   },
   {
+    path: "/integracja-sensoryczna/konsultacja-si",
+    element: <IntegracjaSensoryczna />,
+  },
+  {
     path: "/fizjoterapia-dzieci-i-mlodziezy",
     element: <FizjoterapiaDzieciIMlodzierzy />,
   },
   {
     path: "/kontakt",
     element: <Kontakt />,
+  },
+  {
+    path: "/nasz-zespol",
+    element: <OurTeam />,
+  },
+  {
+    path: "/nasz-zespol/pawel-zerdzinski",
+    element: <PawelZerdzinski />,
+  },
+  {
+    path: "/nasz-zespol/urszula-gawlik",
+    element: <UrszulaGawlik />,
+  },
+  {
+    path: "/nasz-zespol/malgorzata-zerdzinska",
+    element: <MalgorzataZerdzinska />,
+  },
+  {
+    path: "/nasz-zespol/marta-misiejuk",
+    element: <MartaMisiejuk />,
   },
 ]);
 

@@ -17,7 +17,11 @@ export function IntegracjaSensoryczna() {
         image={TEAMIMAGE}
         slider={sliderImages}
       />
-      <ServicesWrapper team={false} selectedServiceId={3} />
+      <ServicesWrapper
+        team={false}
+        selectedServiceId={[3]}
+        description={true}
+      />
     </Layout>
   );
 }
