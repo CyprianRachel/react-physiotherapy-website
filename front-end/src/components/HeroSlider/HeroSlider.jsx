@@ -42,10 +42,10 @@ export function HeroSlider({ slider }) {
       <div onClick={goToNext} className={styles.rightArrow}>
         <img className={styles.image} src={NEXTARROW} alt="Next" />
       </div>
-      <div className={styles.opinionCounter}>
+      {/* <div className={styles.opinionCounter}>
         <h2>5,0</h2>
         <p>68 opinii</p>
-      </div>
+      </div> */}
       <div
         className={styles.slider}
         style={{ backgroundImage: `url(${slider[currentIndex]})` }}

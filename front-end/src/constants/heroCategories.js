@@ -10,8 +10,8 @@ export const HEROCATEGORIES = [
       "W naszym gabinecie świadczymy usługi kompleksowej <strong>fizjoterapii ortopedycznej</strong>...",
     path: "/fizjoterpia-ortopedyczna",
     image: FIZJOTERAPIAORTOPEDYCZNA,
-    orangeStyle: { top: "auto", bottom: -32, right: 16, left: "auto" },
-    whiteStyle: { top: "auto", bottom: 100, right: 100, left: "auto" },
+    orangeStyle: { top: "auto", bottom: -60, right: -40, left: "auto" },
+    whiteStyle: { top: "auto", bottom: 80, right: -20, left: "auto" },
   },
   {
     id: 2,
@@ -20,8 +20,8 @@ export const HEROCATEGORIES = [
       "W naszym gabinecie świadczymy usługi kompleksowej <strong>fizjoterapii dzieci i młodzieży</strong>...",
     path: "/fizjoterapia-dzieci-i-mlodziezy",
     image: FIZJOTERAPIA_DZIECI_I_MLODZIERZY,
-    orangeStyle: { top: "auto", bottom: -32, right: -16, left: "auto" },
-    whiteStyle: { top: "auto", bottom: 70, right: 110, left: "auto" },
+    orangeStyle: { top: "auto", bottom: -60, right: -40, left: "auto" },
+    whiteStyle: { top: "auto", bottom: 80, right: -20, left: "auto" },
   },
   {
     id: 3,
@@ -29,8 +29,8 @@ export const HEROCATEGORIES = [
     description:
       "W naszym gabinecie świadczymy usługi <strong>terapii integracji sensorycznej</strong>...",
     image: INTEGRACJA_SENSORYCZNA,
-    orangeStyle: { top: "auto", bottom: -48, right: 50, left: "auto" },
-    whiteStyle: { top: "auto", bottom: 80, right: 30, left: "auto" },
+    orangeStyle: { top: "auto", bottom: -60, right: -40, left: "auto" },
+    whiteStyle: { top: "auto", bottom: 80, right: -20, left: "auto" },
     path: "/integracja-sensoryczna",
   },
 ];

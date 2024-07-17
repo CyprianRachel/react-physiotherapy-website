@@ -36,12 +36,14 @@
 .h2SearchBarWrapper {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
 }
 
 .servicesCounter {
   background-color: var(--color-grey);
   padding: 0.5rem 1rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   font-weight: 600;
 }
 

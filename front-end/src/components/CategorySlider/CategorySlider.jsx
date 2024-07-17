@@ -12,9 +12,10 @@ export function CategorySlider() {
           {HEROCATEGORIES.map((category) => {
             const words = category.categoryTitle.split(" ");
             return (
-              <div
+              <Link
+                to={category.path}
+                className={styles.link}
                 key={category.categoryTitle}
-                className={styles.singleCategoryWrapper}
               >
                 <div className={styles.leftDiv}>
                   <h2>
@@ -27,9 +28,6 @@ export function CategorySlider() {
                       </span>
                     ))}
                   </h2>
-                  <p
-                    dangerouslySetInnerHTML={{ __html: category.description }}
-                  ></p>
                 </div>
                 <div className={styles.rightDiv}>
                   <div className={styles.imageWrapper}>
@@ -55,14 +53,14 @@ export function CategorySlider() {
                       style={{
                         backgroundImage: `url(${category.image})`,
                         width: "100%",
-                        height: "17rem",
+                        height: "12rem",
                         position: "relative",
                         backgroundRepeat: "no-repeat",
                         backgroundSize: "contain",
                         backgroundPosition: "bottom",
                       }}
                     ></div>
-                    <Link to={category.path} className={styles.link}>
+                    {/* <Link to={category.path} className={styles.link}>
                       <img
                         style={{
                           marginLeft: "auto",
@@ -73,10 +71,10 @@ export function CategorySlider() {
                         }}
                         src={UPRIGHTICON}
                       ></img>
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>

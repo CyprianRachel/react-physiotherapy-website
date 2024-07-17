@@ -8,7 +8,7 @@ const sliderImages = SLIDER_IMAGES.find(
   (imageSet) => imageSet.id === 4
 ).servicesImages.map((img) => img.image);
 
-export function IntegracjaSensoryczna() {
+export function Masaz() {
   return (
     <Layout>
       <Hero
@@ -19,9 +19,9 @@ export function IntegracjaSensoryczna() {
       />
       <ServicesWrapper
         team={false}
-        selectedServiceId={[3]}
+        selectedServiceId={[4]}
         description={true}
-        selectedEmployeesId={[3]}
+        selectedEmployeesId={[1, 4]}
       />
     </Layout>
   );

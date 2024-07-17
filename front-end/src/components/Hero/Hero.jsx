@@ -3,6 +3,7 @@ import styles from "./Hero.module.css";
 import { HeroSlider } from "../HeroSlider/HeroSlider";
 import { H1 } from "../H1/H1";
 import { HeroImage } from "../HeroImage/HeroImage";
+import { Opinions } from "../Opinions/Opinions";
 
 export function Hero({ text, highlight, image, slider }) {
   return (
@@ -13,6 +14,7 @@ export function Hero({ text, highlight, image, slider }) {
           <div className={styles.mobileDisplayNone}>
             <HeroImage image={image} />
           </div>
+          <Opinions />
         </div>
         <HeroSlider slider={slider} />
       </CenteredContent>

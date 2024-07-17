@@ -5,8 +5,13 @@ import styles from "./ServicesList.module.css";
 import { SearchBar } from "../SearchBar/SearchBar";
 import { Opinions } from "../Opinions/Opinions";
 import { EmployeeProfil } from "../EmployeeProfil/EmployeeProfil";
+import { SubCategory } from "../SubCategory/SubCategory";
 
-export function ServicesList({ selectedServiceId, selectedPersonId }) {
+export function ServicesList({
+  selectedServiceId,
+  selectedPersonId,
+  subCategory,
+}) {
   const [searchTerm, setSearchTerm] = useState("");
 
   // Ensure selectedServiceId is an array or an empty array if not provided
@@ -110,6 +115,7 @@ export function ServicesList({ selectedServiceId, selectedPersonId }) {
           onClose={closePopup}
         />
       )}
+      {subCategory && <SubCategory />}
       {selectedPersonId && (
         <EmployeeProfil selectedPersonId={selectedPersonId} />
       )}

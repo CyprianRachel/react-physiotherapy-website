@@ -21,6 +21,7 @@ export function FizjoterapiaDzieciIMlodzierzy() {
         team={false}
         selectedServiceId={[2]}
         description={true}
+        selectedEmployeesId={[2]}
       />
     </Layout>
   );

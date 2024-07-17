@@ -1,7 +1,6 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 }
 
 .highlighted {
@@ -10,13 +9,19 @@
 
 .opinionWrapper {
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 0.75rem;
   width: 300px;
   justify-content: space-between;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  background-color: var(--color-background-orange);
+  gap: 0.75rem;
+  border: 1px solid #ccc;
+}
+
+.starAverage {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .wrapperOpinions {
@@ -25,12 +30,12 @@
 }
 
 .image {
-  width: 9rem;
+  width: 5rem;
   height: auto;
 }
 
-.upRightIcon {
-  width: 1.75rem;
+.starIcon {
+  width: 1.25rem;
 }
 
 .imageWrapper {
@@ -41,7 +46,7 @@
 
 .average {
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .averageCounterWrapper {

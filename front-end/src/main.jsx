@@ -14,6 +14,9 @@ import { PawelZerdzinski } from "./views/PawelZerdzinski/PawelZerdzinski.jsx";
 import { UrszulaGawlik } from "./views/UrszulaGawlik/UrszulaGawlik.jsx";
 import { MalgorzataZerdzinska } from "./views/MalgorzataZerdzinska/MalgorzataZerdzinska.jsx";
 import { MartaMisiejuk } from "./views/MartaMisiejuk/MartaMisiejuk.jsx";
+import { Cennik } from "./views/Cennik/Cennik.jsx";
+import { Masaz } from "./views/Masaz/Masaz.jsx";
+import { KonsultacjaSI } from "./views/KonsultacjaSI/KonsultacjaSI.jsx";
 
 const router = createBrowserRouter([
   {
@@ -30,7 +33,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/integracja-sensoryczna/konsultacja-si",
-    element: <IntegracjaSensoryczna />,
+    element: <KonsultacjaSI />,
   },
   {
     path: "/fizjoterapia-dzieci-i-mlodziezy",
@@ -59,6 +62,16 @@ const router = createBrowserRouter([
   {
     path: "/nasz-zespol/marta-misiejuk",
     element: <MartaMisiejuk />,
+  },
+
+  {
+    path: "/cennik",
+    element: <Cennik />,
+  },
+
+  {
+    path: "/masaz",
+    element: <Masaz />,
   },
 ]);
 

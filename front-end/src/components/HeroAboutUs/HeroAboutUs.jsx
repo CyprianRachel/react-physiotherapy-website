@@ -31,19 +31,6 @@ export function HeroAboutUs() {
       <div className={styles.aboutUs}>
         <div className={styles.membersContainer}>
           <h2>{category.title}</h2>
-          <div className={styles.membersWrapper}>
-            {TEAMMEMBERS.map((employee) => {
-              return (
-                <div
-                  key={employee.name}
-                  className={styles.employeeImage}
-                  style={{
-                    backgroundImage: `url(${employee.image})`,
-                  }}
-                ></div>
-              );
-            })}
-          </div>
         </div>
         <p
           className={styles.description}

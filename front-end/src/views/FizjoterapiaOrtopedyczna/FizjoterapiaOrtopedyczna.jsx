@@ -21,6 +21,7 @@ export function FizjoterapiaOrtopedyczna() {
         team={false}
         selectedServiceId={[1]}
         description={true}
+        selectedEmployeesId={[1]}
       />
     </Layout>
   );
