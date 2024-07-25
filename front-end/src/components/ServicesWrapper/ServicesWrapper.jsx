@@ -11,6 +11,7 @@ export function ServicesWrapper({
   selectedPersonId,
   selectedEmployeesId,
   subCategory,
+  children,
 }) {
   return (
     <div className={styles.wrapper}>
@@ -19,12 +20,14 @@ export function ServicesWrapper({
           selectedServiceId={selectedServiceId}
           selectedPersonId={selectedPersonId}
           subCategory={subCategory}
+          subCategoryChild={children}
         />
         <AllAboutUs
           team={team}
           person={person}
           selectedPersonId={selectedPersonId}
           description={description}
+          descriptionText={children}
           selectedEmployeesId={selectedEmployeesId}
         />
       </CenteredContent>

@@ -17,6 +17,11 @@ import { MartaMisiejuk } from "./views/MartaMisiejuk/MartaMisiejuk.jsx";
 import { Cennik } from "./views/Cennik/Cennik.jsx";
 import { Masaz } from "./views/Masaz/Masaz.jsx";
 import { KonsultacjaSI } from "./views/KonsultacjaSI/KonsultacjaSI.jsx";
+import { DiagnozaSI } from "./views/DiagnozaSI/DiagnozaSI.jsx";
+import { OfertaDlaKlubow } from "./views/OfertaDlaKlubow/OfertaDlaKlubow.jsx";
+import { ZajeciaGrupowe } from "./views/ZajeciaGrupowe/ZajeciaGrupowe.jsx";
+import { SensorycznyBajtel } from "./views/SensorycznyBajtel/SensorycznyBajtel.jsx";
+import { BajtelWRuchu } from "./views/BajtelWRuchu/BajtelWRuchu.jsx";
 
 const router = createBrowserRouter([
   {
@@ -36,8 +41,16 @@ const router = createBrowserRouter([
     element: <KonsultacjaSI />,
   },
   {
+    path: "/integracja-sensoryczna/diagnoza-si",
+    element: <DiagnozaSI />,
+  },
+  {
     path: "/fizjoterapia-dzieci-i-mlodziezy",
     element: <FizjoterapiaDzieciIMlodzierzy />,
+  },
+  {
+    path: "/oferta-dla-klubow",
+    element: <OfertaDlaKlubow />,
   },
   {
     path: "/kontakt",
@@ -46,6 +59,14 @@ const router = createBrowserRouter([
   {
     path: "/nasz-zespol",
     element: <OurTeam />,
+  },
+  {
+    path: "/zajecia-grupowe/sensoryczny-bajtel",
+    element: <SensorycznyBajtel />,
+  },
+  {
+    path: "/zajecia-grupowe/bajtel-w-ruchu",
+    element: <BajtelWRuchu />,
   },
   {
     path: "/nasz-zespol/pawel-zerdzinski",
@@ -60,10 +81,13 @@ const router = createBrowserRouter([
     element: <MalgorzataZerdzinska />,
   },
   {
+    path: "/zajecia-grupowe",
+    element: <ZajeciaGrupowe />,
+  },
+  {
     path: "/nasz-zespol/marta-misiejuk",
     element: <MartaMisiejuk />,
   },
-
   {
     path: "/cennik",
     element: <Cennik />,

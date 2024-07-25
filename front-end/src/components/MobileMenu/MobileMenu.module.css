@@ -1,0 +1,84 @@
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 1rem;
+  padding: 1rem 1rem;
+}
+
+.menuItem {
+  position: relative;
+}
+
+.menuItem a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  overflow: hidden;
+}
+
+.menuItem a:hover span {
+  color: var(--color-orange);
+}
+
+.menuItem:hover .submenu {
+  display: block;
+}
+
+.submenu:hover .menuItem {
+  display: none;
+}
+
+.submenu {
+  display: none;
+  top: 80%;
+  list-style-type: none;
+  padding: 0.5rem;
+  padding-top: 0.25rem;
+  margin: 0;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  min-width: 100%;
+  border-radius: 0.5rem;
+}
+
+.submenuItem {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.submenuItem a {
+  text-decoration: none;
+  color: black;
+  padding: 0.75rem;
+  display: block;
+  border-radius: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.submenuItem a:hover {
+  background-color: var(--color-background-orange);
+}
+
+.submenuItem a:hover span {
+  color: var(--color-orange);
+}
+
+.submenuItem a:global(.active) span {
+  font-weight: 500;
+  color: black !important;
+}
+
+.submenuItem a:global(.active) {
+  background-color: var(--color-grey);
+}
+
+.menuItem a:global(.active) span {
+  color: var(--color-orange);
+  font-weight: 500;
+}

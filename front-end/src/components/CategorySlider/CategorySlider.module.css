@@ -1,8 +1,5 @@
 .wrapper {
   width: 100%;
-  padding-top: 2rem;
-  padding-right: 2rem;
-  padding-left: 2rem;
 }
 
 .link {
@@ -13,7 +10,7 @@
   padding: 1.5rem;
   overflow: hidden;
   width: 33%;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .mainCategories {
@@ -39,6 +36,7 @@
 .imageWrapper {
   position: relative;
   margin: -1.5rem;
+  margin-left: 0;
 }
 
 .btn {

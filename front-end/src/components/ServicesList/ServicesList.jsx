@@ -3,7 +3,6 @@ import { SERVICES } from "../../constants/services";
 import { ServicePopup } from "../ServicePopup/ServicePopup";
 import styles from "./ServicesList.module.css";
 import { SearchBar } from "../SearchBar/SearchBar";
-import { Opinions } from "../Opinions/Opinions";
 import { EmployeeProfil } from "../EmployeeProfil/EmployeeProfil";
 import { SubCategory } from "../SubCategory/SubCategory";
 
@@ -11,6 +10,7 @@ export function ServicesList({
   selectedServiceId,
   selectedPersonId,
   subCategory,
+  subCategoryChild,
 }) {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -85,8 +85,8 @@ export function ServicesList({
 
   const getDescriptionPreview = (description) => {
     const words = description.split(" ");
-    if (words.length > 20) {
-      return words.slice(0, 20).join(" ") + "...";
+    if (words.length > 10) {
+      return words.slice(0, 10).join(" ") + "...";
     }
     return description;
   };
@@ -115,7 +115,7 @@ export function ServicesList({
           onClose={closePopup}
         />
       )}
-      {subCategory && <SubCategory />}
+      {subCategory && <SubCategory subCategoryChild={subCategoryChild} />}
       {selectedPersonId && (
         <EmployeeProfil selectedPersonId={selectedPersonId} />
       )}
@@ -186,7 +186,6 @@ export function ServicesList({
           </div>
         );
       })}
-      <Opinions />
     </div>
   );
 }

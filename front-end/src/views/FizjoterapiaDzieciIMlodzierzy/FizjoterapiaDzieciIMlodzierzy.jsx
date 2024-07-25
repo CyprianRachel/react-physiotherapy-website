@@ -20,7 +20,7 @@ export function FizjoterapiaDzieciIMlodzierzy() {
       <ServicesWrapper
         team={false}
         selectedServiceId={[2]}
-        description={true}
+        description={false}
         selectedEmployeesId={[2]}
       />
     </Layout>

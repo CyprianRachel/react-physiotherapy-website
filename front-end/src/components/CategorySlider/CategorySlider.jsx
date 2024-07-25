@@ -53,25 +53,13 @@ export function CategorySlider() {
                       style={{
                         backgroundImage: `url(${category.image})`,
                         width: "100%",
-                        height: "12rem",
+                        height: "11rem",
                         position: "relative",
                         backgroundRepeat: "no-repeat",
                         backgroundSize: "contain",
                         backgroundPosition: "bottom",
                       }}
                     ></div>
-                    {/* <Link to={category.path} className={styles.link}>
-                      <img
-                        style={{
-                          marginLeft: "auto",
-                          width: "2.5rem",
-                          position: "absolute",
-                          top: "1.5rem",
-                          right: "1.5rem",
-                        }}
-                        src={UPRIGHTICON}
-                      ></img>
-                    </Link> */}
                   </div>
                 </div>
               </Link>

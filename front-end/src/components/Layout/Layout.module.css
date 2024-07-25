@@ -1,15 +1,16 @@
-.mobileDisplayBlock {
-  display: none;
-  width: 100%;
-  overflow-x: hidden;
+.wrapperButtons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1280px) {
   .mobileDisplayNone {
     display: none;
   }
 
-  .mobileDisplayBlock {
-    display: block;
+  .wrapperButtons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 }

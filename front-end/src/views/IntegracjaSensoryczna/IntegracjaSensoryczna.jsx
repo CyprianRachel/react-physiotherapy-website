@@ -20,7 +20,7 @@ export function IntegracjaSensoryczna() {
       <ServicesWrapper
         team={false}
         selectedServiceId={[3]}
-        description={true}
+        description={false}
         selectedEmployeesId={[3]}
       />
     </Layout>

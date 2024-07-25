@@ -11,16 +11,10 @@ const sliderImages = SLIDER_IMAGES.find(
 export function Masaz() {
   return (
     <Layout>
-      <Hero
-        text={"Integracja"}
-        highlight={"Sensoryczna"}
-        image={TEAMIMAGE}
-        slider={sliderImages}
-      />
       <ServicesWrapper
         team={false}
         selectedServiceId={[4]}
-        description={true}
+        description={false}
         selectedEmployeesId={[1, 4]}
       />
     </Layout>

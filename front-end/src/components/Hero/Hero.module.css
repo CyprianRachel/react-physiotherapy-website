@@ -3,28 +3,19 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-right: 2rem;
   gap: 1.5rem;
 }
 
-.hero {
-  padding-top: 2rem;
-  padding-right: 2rem;
-  padding-left: 2rem;
-}
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1280px) {
   .mobileDisplayNone {
     display: none;
   }
 
-  .hero {
-    padding-top: 1rem;
-    padding-right: 1rem;
-    padding-left: 1rem;
-  }
-
-  .wrapper > *:nth-child(1) {
-    order: 1; /* Drugi element jest wyświetlany pierwszy */
+  .leftDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
   }
 }

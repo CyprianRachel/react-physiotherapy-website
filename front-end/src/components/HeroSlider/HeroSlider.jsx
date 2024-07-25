@@ -1,66 +1,35 @@
-import styles from "./HeroSlider.module.css";
-import NEXTARROW from "../../assets/next.png";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+// import required modules
+import { Pagination, Navigation } from "swiper/modules";
 
 export function HeroSlider({ slider }) {
-  const timerRef = useRef(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const goToPrevious = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slider.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const goToNext = useCallback(() => {
-    const isLastSlide = currentIndex === slider.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  }, [currentIndex, slider]);
-
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-  };
-
-  useEffect(() => {
-    if (timerRef.current) {
-      clearTimeout(timerRef.current);
-    }
-
-    timerRef.current = setTimeout(() => {
-      goToNext();
-    }, 6000);
-
-    return () => clearTimeout(timerRef.current);
-  }, [goToNext]);
-
   return (
-    <div className={styles.centerDiv}>
-      <div onClick={goToPrevious} className={styles.leftArrow}>
-        <img className={styles.image} src={NEXTARROW} alt="Previous" />
-      </div>
-      <div onClick={goToNext} className={styles.rightArrow}>
-        <img className={styles.image} src={NEXTARROW} alt="Next" />
-      </div>
-      {/* <div className={styles.opinionCounter}>
-        <h2>5,0</h2>
-        <p>68 opinii</p>
-      </div> */}
-      <div
-        className={styles.slider}
-        style={{ backgroundImage: `url(${slider[currentIndex]})` }}
-      ></div>
-      <div className={styles.pagination}>
-        {slider.map((slide, slideIndex) => (
-          <div
-            className={`${styles.singleDot} ${
-              currentIndex === slideIndex ? styles.activeDot : ""
-            }`}
-            onClick={() => goToSlide(slideIndex)}
-            key={slideIndex}
-          ></div>
+    <>
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        loop={true}
+        lazy={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
+      >
+        {slider.map((e) => (
+          <SwiperSlide key={e}>
+            <img src={e} loading="lazy" />
+            <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+          </SwiperSlide>
         ))}
-      </div>
-    </div>
+      </Swiper>
+    </>
   );
 }

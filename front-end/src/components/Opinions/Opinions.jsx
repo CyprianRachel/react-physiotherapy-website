@@ -1,6 +1,5 @@
 import styles from "./Opinions.module.css";
 import { OPINIONS } from "../../constants/opinions";
-import UPRIGHTICON from "../../assets/up-right-icon.svg";
 import STAR from "../../assets/star-solid.svg";
 
 export function Opinions() {

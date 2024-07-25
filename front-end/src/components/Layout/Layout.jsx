@@ -7,29 +7,48 @@ import { MainMenu } from "../MainMenu/MainMenu";
 import { SubMenu } from "../SubMenu/SubMenu";
 import { TopBar } from "../TopBar/TopBar";
 import styles from "./Layout.module.css";
+import { MobileMenuIcon } from "../MobileMenuIcon/MobileMenuIcon";
+import { MobileMenu } from "../MobileMenu/MobileMenu";
 
 export function Layout({ children }) {
   const [activeCategory, setActiveCategory] = useState(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleCategoryHover = (category) => {
     setActiveCategory(category);
   };
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen((prev) => !prev);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <>
       <TopBar>
-        <Logo />
-        <MainMenu onCategoryHover={handleCategoryHover} />
-        <MainBookingButton />
+        <Logo onLinkClick={closeMobileMenu} />
+        <div className={styles.mobileDisplayNone}>
+          <MainMenu onCategoryHover={handleCategoryHover} />
+        </div>
+        <div className={styles.wrapperButtons}>
+          <MainBookingButton />
+          <MobileMenuIcon
+            onClick={toggleMobileMenu}
+            isOpen={isMobileMenuOpen}
+          />
+        </div>
       </TopBar>
-      {activeCategory && activeCategory.subcategory && (
-        <SubMenu subcategories={activeCategory.subcategory} />
+      {isMobileMenuOpen ? (
+        <MobileMenu onLinkClick={closeMobileMenu} />
+      ) : (
+        <>
+          <MainContent>{children}</MainContent>
+          {/* <Footer /> */}
+        </>
       )}
-      <div className={styles.mobileDisplayBlock}>
-        <MainMenu onCategoryHover={handleCategoryHover} />
-      </div>
-      <MainContent>{children}</MainContent>
-      <Footer />
     </>
   );
 }

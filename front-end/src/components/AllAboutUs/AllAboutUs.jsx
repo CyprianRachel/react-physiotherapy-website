@@ -5,11 +5,19 @@ import { Employees } from "../Employees/Employees";
 import { IconsWrapper } from "../IconsWrapper/IconsWrapper";
 import { CONTACT_ICONS, ICONS } from "../../constants/aboutUsIcons";
 
-export function AllAboutUs({ description, selectedEmployeesId }) {
+export function AllAboutUs({
+  description,
+  selectedEmployeesId,
+  descriptionText,
+  groupActivity,
+}) {
   return (
     <div className={styles.wrapperAll}>
-      <Employees selectedEmployeesId={selectedEmployeesId} />
-      {description && <HeroAboutUs />}
+      <Employees
+        selectedEmployeesId={selectedEmployeesId}
+        groupActivity={groupActivity}
+      />
+      {description && <HeroAboutUs descriptionText={descriptionText} />}
       <div className={styles.sticky}>
         <div className={styles.wrapper}>
           <h4>Kontakt</h4>

@@ -7,17 +7,20 @@ import { Opinions } from "../Opinions/Opinions";
 
 export function Hero({ text, highlight, image, slider }) {
   return (
-    <div className={styles.hero}>
-      <CenteredContent>
-        <div className={styles.leftDiv}>
-          <H1 text={text} highlight={highlight} />
-          <div className={styles.mobileDisplayNone}>
-            <HeroImage image={image} />
+    <>
+      <div className={styles.hero}>
+        <CenteredContent>
+          <div className={styles.leftDiv}>
+            <H1 text={text} highlight={highlight} />
+            <div className={styles.mobileDisplayNone}>
+              <HeroImage image={image} />
+            </div>
+            <HeroSlider slider={slider} />
+            <Opinions />
           </div>
-          <Opinions />
-        </div>
-        <HeroSlider slider={slider} />
-      </CenteredContent>
-    </div>
+          <HeroSlider slider={slider} />
+        </CenteredContent>
+      </div>
+    </>
   );
 }

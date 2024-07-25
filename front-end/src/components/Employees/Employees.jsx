@@ -3,7 +3,7 @@ import styles from "./Employees.module.css";
 import UPRIGHTICON from "../../assets/up-right-icon.svg";
 import { Link } from "react-router-dom";
 
-export function Employees({ selectedEmployeesId }) {
+export function Employees({ selectedEmployeesId, groupActivity }) {
   if (!selectedEmployeesId || selectedEmployeesId.length === 0) {
     return <></>;
   }
@@ -13,6 +13,7 @@ export function Employees({ selectedEmployeesId }) {
 
   return (
     <div className={styles.wrapper}>
+      {groupActivity && <h3>Prowadzący</h3>}
       {selectedEmployees.map((employee) => (
         <Link to={employee.path} key={employee.name}>
           <div className={styles.employeeWrapper}>
