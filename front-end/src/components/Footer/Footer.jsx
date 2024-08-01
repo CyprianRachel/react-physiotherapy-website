@@ -8,11 +8,6 @@ import { Link } from "react-router-dom";
 export function Footer() {
   return (
     <>
-      <div className={styles.footerContainer}>
-        <div className={styles.maxWidth}>
-          <MainMenu textColor="white" />
-        </div>
-      </div>
       <div className={styles.footer}>
         <div className={styles.secondFooter}>
           <div className={styles.leftFooter}>

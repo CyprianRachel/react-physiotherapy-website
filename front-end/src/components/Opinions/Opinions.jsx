@@ -46,7 +46,8 @@ export function Opinions() {
                 <span className={styles.average}>{opinion.average}</span>
               </div>
               <span className={styles.counter}>
-                {opinion.counter} {getServiceCountLabel(opinion.counter)}
+                <span>{opinion.counter}</span>
+                <span>{getServiceCountLabel(opinion.counter)}</span>
               </span>
             </div>
           </div>

@@ -12,6 +12,7 @@ export const HEROCATEGORIES = [
     image: FIZJOTERAPIAORTOPEDYCZNA,
     orangeStyle: { top: "auto", bottom: -60, right: -40, left: "auto" },
     whiteStyle: { top: "auto", bottom: 80, right: -20, left: "auto" },
+    position: "bottom right",
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ export const HEROCATEGORIES = [
     image: FIZJOTERAPIA_DZIECI_I_MLODZIERZY,
     orangeStyle: { top: "auto", bottom: -60, right: -40, left: "auto" },
     whiteStyle: { top: "auto", bottom: 80, right: -20, left: "auto" },
+    position: "bottom right",
   },
   {
     id: 3,
@@ -32,5 +34,6 @@ export const HEROCATEGORIES = [
     orangeStyle: { top: "auto", bottom: -60, right: -40, left: "auto" },
     whiteStyle: { top: "auto", bottom: 80, right: -20, left: "auto" },
     path: "/integracja-sensoryczna",
+    position: "bottom",
   },
 ];

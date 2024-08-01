@@ -10,8 +10,8 @@ export const TEAMMEMBERS = [
     name: "Paweł Żerdziński",
     image: PAWEL_ZERDZINSKI,
     path: "/nasz-zespol/pawel-zerdzinski",
-    description:
-      "Fizjoterapeuta pracujący z pacjentami ortopedycznymi i sportowcami. Zajmuje się problemami stawów obwodowych, kręgosłupa oraz rehabilitacją pooperacyjną.",
+    description: `Fizjoterapeuta pracujący z pacjentami ortopedycznymi i sportowcami. Zajmuje się problemami stawów obwodowych, 
+      kręgosłupa oraz rehabilitacją pooperacyjną.`,
   },
   {
     id: 2,
@@ -19,6 +19,7 @@ export const TEAMMEMBERS = [
     name: "Urszula Gawlik",
     image: URSZULA_GAWLIK,
     path: "/nasz-zespol/urszula-gawlik",
+    description: ``,
   },
   {
     id: 3,
@@ -26,6 +27,8 @@ export const TEAMMEMBERS = [
     name: "Małgorzata Żerdzińska",
     image: MALGORZANA_ZERDZINSKA,
     path: "/nasz-zespol/malgorzata-zerdzinska",
+    description: `Pedagog, terapeuta integracji sensorycznej. Zajmuje się diagnozą i terapią SI dzieci, 
+    w szczególności w wieku przedszkolnym i wczesnoszkolnym.`,
   },
   {
     id: 4,
@@ -33,5 +36,7 @@ export const TEAMMEMBERS = [
     name: "Marta Misiejuk",
     image: MARTA_MISIEJUK,
     path: "/nasz-zespol/marta-misiejuk",
+    description: `Masażystka i studentka fizjoterapii. Wykonuje masaże lecznicze i relaksacyjne. 
+    Prowadzę także zajęcia ruchowe dla kobiet.`,
   },
 ];

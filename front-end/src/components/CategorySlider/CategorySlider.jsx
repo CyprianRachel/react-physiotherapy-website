@@ -5,6 +5,10 @@ import styles from "./CategorySlider.module.css";
 import { Link } from "react-router-dom";
 
 export function CategorySlider() {
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className={styles.wrapper}>
       <CenteredContent>
@@ -16,6 +20,7 @@ export function CategorySlider() {
                 to={category.path}
                 className={styles.link}
                 key={category.categoryTitle}
+                onClick={handleLinkClick}
               >
                 <div className={styles.leftDiv}>
                   <h2>
@@ -57,7 +62,7 @@ export function CategorySlider() {
                         position: "relative",
                         backgroundRepeat: "no-repeat",
                         backgroundSize: "contain",
-                        backgroundPosition: "bottom",
+                        backgroundPosition: category.position,
                       }}
                     ></div>
                   </div>

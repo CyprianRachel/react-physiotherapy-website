@@ -46,7 +46,7 @@ export function Layout({ children }) {
       ) : (
         <>
           <MainContent>{children}</MainContent>
-          {/* <Footer /> */}
+          <Footer />
         </>
       )}
     </>

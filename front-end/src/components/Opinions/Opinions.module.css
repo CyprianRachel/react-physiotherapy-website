@@ -54,3 +54,78 @@
   justify-content: space-between;
   align-items: flex-end;
 }
+
+.counter {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.25rem;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 1280px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .highlighted {
+    color: var(--color-orange);
+  }
+
+  .opinionWrapper {
+    border-radius: 1rem;
+    padding: 0.75rem;
+    width: 300px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    border: 1px solid #ccc;
+  }
+
+  .starAverage {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    flex-wrap: nowrap;
+  }
+
+  .wrapperOpinions {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .image {
+    width: 4rem;
+    height: auto;
+  }
+
+  .starIcon {
+    width: 1rem;
+  }
+
+  .imageWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .average {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .averageCounterWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 0.5rem;
+  }
+
+  .counter {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.25rem;
+    font-size: 14px;
+  }
+}

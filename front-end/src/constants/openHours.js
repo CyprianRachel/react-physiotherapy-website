@@ -1,7 +1,7 @@
 export const OPENHOURS = [
   {
     day: "Poniedziałek - Piątek",
-    open: "08:00",
+    open: "08:00 - ",
     close: "20:00",
   },
   // {
@@ -26,12 +26,11 @@ export const OPENHOURS = [
   // },
   {
     day: "Sobota",
-    open: "08:00",
+    open: "08:00 - ",
     close: "15:00",
   },
   {
     day: "Niedziela",
-    open: "08:00",
-    close: "19:00",
+    open: "Zamknięte",
   },
 ];

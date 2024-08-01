@@ -15,10 +15,10 @@ export function Hero({ text, highlight, image, slider }) {
             <div className={styles.mobileDisplayNone}>
               <HeroImage image={image} />
             </div>
-            <HeroSlider slider={slider} />
+            <HeroSlider slider={slider} className="mobileDisplayBlock" />
             <Opinions />
           </div>
-          <HeroSlider slider={slider} />
+          <HeroSlider slider={slider} className="mobileDisplayNone" />
         </CenteredContent>
       </div>
     </>

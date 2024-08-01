@@ -22,6 +22,7 @@ import { OfertaDlaKlubow } from "./views/OfertaDlaKlubow/OfertaDlaKlubow.jsx";
 import { ZajeciaGrupowe } from "./views/ZajeciaGrupowe/ZajeciaGrupowe.jsx";
 import { SensorycznyBajtel } from "./views/SensorycznyBajtel/SensorycznyBajtel.jsx";
 import { BajtelWRuchu } from "./views/BajtelWRuchu/BajtelWRuchu.jsx";
+import { TerapiaSI } from "./views/TerapiaSI/TerapiaSI.jsx";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
   {
     path: "/fizjoterapia-dzieci-i-mlodziezy",
     element: <FizjoterapiaDzieciIMlodzierzy />,
+  },
+  {
+    path: "/integracja-sensoryczna/terapia-si",
+    element: <TerapiaSI />,
   },
   {
     path: "/oferta-dla-klubow",

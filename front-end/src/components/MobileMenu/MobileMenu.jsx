@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { CATEGORIES } from "../../constants/categories";
 import styles from "./MobileMenu.module.css";
+import CARROT_DOWN from "../../assets/caret-down-solid.svg";
 
 export function MobileMenu({ onLinkClick }) {
   return (

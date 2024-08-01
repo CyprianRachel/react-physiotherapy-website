@@ -3,6 +3,7 @@ export const CATEGORIES = [
     id: 1,
     categoryName: "Fizjoterapia ortopedyczna",
     path: "/fizjoterpia-ortopedyczna",
+    more: false,
     // subcategory: [
     //   {
     //     categoryName: "Wizyta diagnostyczna z USG",
@@ -22,6 +23,7 @@ export const CATEGORIES = [
     id: 2,
     categoryName: "Fizjoterapia dzieci i młodzieży",
     path: "/fizjoterapia-dzieci-i-mlodziezy",
+    more: false,
     subcategory: [
       {
         categoryName: "Wizyta diagnostyczna pierwszorazowa",
@@ -53,6 +55,7 @@ export const CATEGORIES = [
     id: 3,
     categoryName: "Integracja Sensoryczna",
     path: "/integracja-sensoryczna",
+    more: false,
     subcategory: [
       {
         categoryName: "Konsultacja SI",
@@ -72,58 +75,59 @@ export const CATEGORIES = [
     id: 4,
     categoryName: "Masaż",
     path: "/masaz",
+    more: false,
+  },
+  {
+    id: 5,
+    categoryName: "Nasz zespół",
+    path: "/nasz-zespol",
+    more: true,
+    // subcategory: [
+    //   {
+    //     categoryName: "Paweł Żerdziński",
+    //     path: "/nasz-zespol/pawel-zerdzinski",
+    //   },
+    //   {
+    //     categoryName: "Urszula Gawlik",
+    //     path: "/nasz-zespol/urszula-gawlik",
+    //   },
+    //   {
+    //     categoryName: "Małgorzata Żerdzińska",
+    //     path: "/nasz-zespol/malgorzata-zerdzinska",
+    //   },
+    //   {
+    //     categoryName: "Marta Misiejuk",
+    //     path: "/nasz-zespol/marta-misiejuk",
+    //   },
+    // ],
+  },
+  {
+    id: 6,
+    categoryName: "Cennik",
+    path: "/cennik",
+    more: true,
+  },
+  {
+    id: 7,
+    categoryName: "Kontakt",
+    path: "/kontakt",
   },
   {
     id: 8,
-    categoryName: "Więcej",
-    path: "/blog",
-    subcategory: [
-      {
-        id: 5,
-        categoryName: "Nasz zespół",
-        path: "/nasz-zespol",
-        // subcategory: [
-        //   {
-        //     categoryName: "Paweł Żerdziński",
-        //     path: "/nasz-zespol/pawel-zerdzinski",
-        //   },
-        //   {
-        //     categoryName: "Urszula Gawlik",
-        //     path: "/nasz-zespol/urszula-gawlik",
-        //   },
-        //   {
-        //     categoryName: "Małgorzata Żerdzińska",
-        //     path: "/nasz-zespol/malgorzata-zerdzinska",
-        //   },
-        //   {
-        //     categoryName: "Marta Misiejuk",
-        //     path: "/nasz-zespol/marta-misiejuk",
-        //   },
-        // ],
-      },
-      {
-        id: 6,
-        categoryName: "Cennik",
-        path: "/cennik",
-      },
-
-      {
-        id: 7,
-        categoryName: "Kontakt",
-        path: "/kontakt",
-      },
-      {
-        categoryName: "Oferta dla klubów",
-        path: "/oferta-dla-klubow",
-      },
-      {
-        categoryName: "Zajęcia grupowe",
-        path: "/zajecia-grupowe",
-      },
-      {
-        categoryName: "Blog",
-        path: "/blog",
-      },
-    ],
+    categoryName: "Oferta dla klubów",
+    path: "/oferta-dla-klubow",
+    more: true,
   },
+  {
+    id: 9,
+    categoryName: "Zajęcia grupowe",
+    path: "/zajecia-grupowe",
+    more: true,
+  },
+  // {
+  //   id: 10,
+  //   categoryName: "Blog",
+  //   path: "/blog",
+  //   more: true,
+  // },
 ];

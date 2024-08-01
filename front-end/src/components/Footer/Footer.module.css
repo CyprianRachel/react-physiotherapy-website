@@ -1,27 +1,6 @@
-.footerContainer {
-  border-bottom: 1px solid var(--color-grey);
-  width: 100%;
-  background-color: black;
-  margin-top: 2rem;
-  padding-right: 2rem;
-  padding-left: 2rem;
-}
-
-.maxWidth {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  max-width: 100rem;
-  margin: 0 auto;
-  align-items: center;
-}
-
 .footer {
-  border-bottom: 1px solid var(--color-grey);
   width: 100%;
   background-color: black;
-  padding-right: 2rem;
-  padding-left: 2rem;
 }
 
 .leftFooter {
@@ -38,7 +17,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  max-width: 100rem;
+  max-width: 86rem;
   margin: 0 auto;
+  padding: 0 2rem;
   align-items: center;
 }

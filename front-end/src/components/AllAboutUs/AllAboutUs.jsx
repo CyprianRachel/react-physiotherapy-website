@@ -30,7 +30,8 @@ export function AllAboutUs({
                   <span>{hours.day}</span>
                   <div>
                     <span className={styles.hours}>
-                      {hours.open} - {hours.close}
+                      {hours.open}
+                      {hours.close}
                     </span>
                   </div>
                 </div>

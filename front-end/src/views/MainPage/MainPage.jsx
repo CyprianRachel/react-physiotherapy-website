@@ -20,7 +20,7 @@ export function MainPage() {
         slider={sliderImages}
       />
       <CategorySlider />
-      {/* <ServicesWrapper team={false} description={true}>
+      <ServicesWrapper team={false} description={true}>
         <div className={styles.h1DescriptionWrapper}>
           <div className={styles.h1Wrapper}>
             <h3>
@@ -40,7 +40,7 @@ export function MainPage() {
             </p>
           </div>
         </div>
-      </ServicesWrapper> */}
+      </ServicesWrapper>
     </Layout>
   );
 }
