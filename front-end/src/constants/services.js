@@ -346,6 +346,13 @@ export const SERVICES = [
         time: "1g",
         personId: [4],
       },
+      {
+        serviceName: "Masaż kobido",
+        description: `<p>Japoński lifting twarzy, który ujędrnia skórę, poprawia kontury twarzy i zmniejsza widoczność zmarszczek. Ponadto zmniejsza napięcie mięśniowe i wspomaga krążenie krwi i limfy, co przyczynia się do lepszego dotlenienia i odżywienia skóry.</p>`,
+        price: "130,00 zł",
+        time: "1g",
+        personId: [4],
+      },
     ],
   },
 ];

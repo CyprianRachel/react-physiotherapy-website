@@ -140,3 +140,154 @@
   border-radius: 1rem;
   display: none;
 }
+
+@media only screen and (max-width: 1280px) {
+  .wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .servicesCounterName {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .serviceDescriptionSpan ol li {
+    list-style-type: upper-roman;
+  }
+
+  .serviceDescriptionSpan ul li {
+    list-style-type: disc;
+  }
+
+  .serviceDescriptionSpan li {
+    margin: 1rem;
+  }
+
+  .infoIcon {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    padding: 4px;
+    background-color: var(--color-background-orange);
+  }
+
+  .infoWrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .serviceDescriptionSpan ul {
+    margin: 1rem;
+  }
+
+  .servicesWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .h2SearchBarWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border-bottom: 0px solid #ccc;
+    padding-bottom: 0rem;
+    gap: 1rem;
+  }
+
+  .h2SearchBarWrapper h2 {
+    display: none;
+  }
+
+  .servicesCounter {
+    background-color: var(--color-grey);
+    padding: 0.5rem 1rem;
+    border-radius: 4rem;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .highlighted {
+    color: var(--color-orange);
+  }
+
+  .price {
+    font-weight: 500;
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  .time {
+    font-weight: 300;
+    font-size: 1rem;
+    color: grey;
+    white-space: nowrap;
+  }
+
+  .servicesWrapperAll {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .singleServiceWrapper {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--color-grey);
+    padding: 1rem;
+    border-radius: 1rem;
+    gap: 1rem;
+  }
+
+  .serviceDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .serviceName {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .serviceDescriptionSpan {
+    font-weight: 300;
+    color: grey;
+    font-size: 14px;
+  }
+
+  .buttonPopup {
+    padding: 0.5rem 0.75rem;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-color: var(--color-grey);
+  }
+
+  .servicePriceMinButton {
+    display: flex;
+    align-items: top;
+    gap: 1rem;
+  }
+
+  .servicePriceMin {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: flex-end;
+  }
+
+  .servicePriceMinButton button {
+    background-color: var(--color-orange);
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: none;
+  }
+}
