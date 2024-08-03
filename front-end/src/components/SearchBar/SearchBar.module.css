@@ -9,6 +9,24 @@
   transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+.searchContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.searchIcon {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  left: 1rem;
+}
+
+.searchLabel {
+  display: flex;
+  align-items: center;
+}
+
 .input:focus {
   border-color: var(--color-light-orange);
   box-shadow: 0 0 5px var(--color-orange);
@@ -31,9 +49,9 @@
 @media only screen and (max-width: 1280px) {
   .input {
     width: 100%;
-    padding: 10px 15px;
+    padding: 0.75rem 2.5rem;
     box-sizing: border-box;
-    font-size: 1rem;
+    font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 0.5rem;
     outline: none;
@@ -46,7 +64,7 @@
   }
 
   .input::placeholder {
-    color: #aaa;
+    color: #ccc;
   }
 
   .inputWrapper::before {
