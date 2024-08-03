@@ -149,9 +149,9 @@ export function ServicesList({
                     key={service.serviceName}
                   >
                     <div className={styles.serviceDescription}>
-                      <p className={styles.serviceName}>
+                      <h4 className={styles.serviceName}>
                         {service.serviceName}
-                      </p>
+                      </h4>
                       <span
                         className={styles.serviceDescriptionSpan}
                         dangerouslySetInnerHTML={{ __html: descriptionPreview }}

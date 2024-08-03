@@ -101,8 +101,6 @@
 }
 
 .serviceName {
-  font-size: 18px;
-  font-weight: 500;
 }
 
 .serviceDescriptionSpan {
@@ -248,11 +246,6 @@
     flex-direction: column;
     gap: 0.5rem;
     align-items: flex-start;
-  }
-
-  .serviceName {
-    font-size: 18px;
-    font-weight: 500;
   }
 
   .serviceDescriptionSpan {

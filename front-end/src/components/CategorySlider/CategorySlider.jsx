@@ -37,34 +37,14 @@ export function CategorySlider() {
                 </div>
                 <div className={styles.rightDiv}>
                   <div className={styles.imageWrapper}>
-                    <div
-                      className={styles.whiteCircle}
-                      style={{
-                        top: category.whiteStyle.top,
-                        bottom: category.whiteStyle.bottom,
-                        right: category.whiteStyle.right,
-                        left: category.whiteStyle.left,
-                      }}
-                    ></div>
-                    <div
-                      className={styles.orangeCircle}
-                      style={{
-                        top: category.orangeStyle.top,
-                        bottom: category.orangeStyle.bottom,
-                        right: category.orangeStyle.right,
-                        left: category.orangeStyle.left,
-                      }}
-                    ></div>
+                    <div className={styles.whiteCircle}></div>
+                    <div className={styles.orangeCircle}></div>
                     <div
                       style={{
                         backgroundImage: `url(${category.image})`,
-                        width: "100%",
-                        height: "11rem",
-                        position: "relative",
-                        backgroundRepeat: "no-repeat",
-                        backgroundSize: "contain",
                         backgroundPosition: category.position,
                       }}
+                      className={styles.image}
                     ></div>
                   </div>
                 </div>

@@ -69,12 +69,19 @@
     overflow-x: auto;
   }
 
+  .wrapper::-webkit-scrollbar {
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    display: none; /* Safari and Chrome */
+  }
+
   .highlighted {
     color: var(--color-orange);
   }
 
   .opinionWrapper {
-    border-radius: 1rem;
+    border-radius: 4rem;
     padding: 0.75rem;
     width: 300px;
     justify-content: space-between;
