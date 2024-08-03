@@ -151,6 +151,7 @@
     background-color: var(--color-grey);
     margin: 0 -1rem;
     padding: 1.5rem 1rem;
+    box-shadow: 0px 2px 6px #ccc;
   }
 
   .serviceDescriptionSpan ol li {
@@ -203,7 +204,7 @@
   }
 
   .servicesCounter {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 14px;
   }
 
