@@ -97,7 +97,7 @@
     background-color: var(--color-background-orange);
     border-radius: 1rem;
     gap: 1.5rem;
-    padding: 1.5rem;
+    padding: 1rem;
     overflow: hidden;
     width: 100%;
     align-items: center;
@@ -122,7 +122,7 @@
 
   .imageWrapper {
     position: relative;
-    margin: -1.5rem;
+    margin: -1rem;
     margin-left: 0;
   }
 
