@@ -135,6 +135,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    margin: 0 -1rem;
   }
 
   .sticky {
@@ -142,8 +143,8 @@
     display: flex;
     flex-direction: column;
     background-color: var(--color-grey);
-    border-radius: 1rem;
-    padding: 1.5rem;
+    border-radius: 0rem;
+    padding: 1.5rem 1rem;
     gap: 1rem;
     align-self: start;
     position: sticky;

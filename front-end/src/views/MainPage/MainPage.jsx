@@ -23,9 +23,9 @@ export function MainPage() {
       <ServicesWrapper team={false} description={true}>
         <div className={styles.h1DescriptionWrapper}>
           <div className={styles.h1Wrapper}>
-            <h3>
+            <h2>
               O <span className={styles.orange}>nas</span>
-            </h3>
+            </h2>
           </div>
 
           <div className={styles.description}>
