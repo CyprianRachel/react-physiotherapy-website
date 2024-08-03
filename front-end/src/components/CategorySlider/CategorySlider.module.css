@@ -95,7 +95,7 @@
   .link {
     display: flex;
     background-color: var(--color-background-orange);
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     gap: 1.5rem;
     padding: 1rem;
     overflow: hidden;
