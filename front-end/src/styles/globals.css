@@ -157,6 +157,11 @@ body {
     font-weight: 500;
   }
 
+  .read-more {
+    font-weight: 400;
+    color: var(--color-orange);
+  }
+
   .swiper-button-prev,
   .swiper-button-next {
     position: absolute;

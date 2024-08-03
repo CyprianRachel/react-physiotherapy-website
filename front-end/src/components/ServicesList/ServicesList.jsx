@@ -86,7 +86,8 @@ export function ServicesList({
   const getDescriptionPreview = (description) => {
     const words = description.split(" ");
     if (words.length > 10) {
-      return words.slice(0, 10).join(" ") + "...";
+      const previewText = words.slice(0, 10).join(" ") + "...";
+      return `${previewText} <span class="read-more">więcej</span>`;
     }
     return description;
   };
@@ -147,6 +148,18 @@ export function ServicesList({
                   <div
                     className={styles.singleServiceWrapper}
                     key={service.serviceName}
+                    // Warunkowe przypisanie onClick
+                    onClick={
+                      isLongDescription
+                        ? () =>
+                            openPopup(
+                              service.serviceName,
+                              service.description,
+                              service.price,
+                              service.time
+                            )
+                        : undefined
+                    }
                   >
                     <div className={styles.serviceDescription}>
                       <h4 className={styles.serviceName}>
@@ -156,7 +169,8 @@ export function ServicesList({
                         className={styles.serviceDescriptionSpan}
                         dangerouslySetInnerHTML={{ __html: descriptionPreview }}
                       />
-                      {isLongDescription && (
+                    </div>
+                    {/* {isLongDescription && (
                         <div
                           className={styles.buttonPopup}
                           onClick={() =>
@@ -170,8 +184,7 @@ export function ServicesList({
                         >
                           Czytaj więcej
                         </div>
-                      )}
-                    </div>
+                      )} */}
                     <div className={styles.servicePriceMinButton}>
                       <div className={styles.servicePriceMin}>
                         <span className={styles.price}>{service.price}</span>
