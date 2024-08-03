@@ -158,7 +158,8 @@ body {
   }
 
   .read-more {
-    font-weight: 600;
+    font-weight: 500;
+    color: var(--color-orange);
   }
 
   .swiper-button-prev,
