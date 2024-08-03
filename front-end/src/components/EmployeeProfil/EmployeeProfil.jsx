@@ -21,11 +21,13 @@ export function EmployeeProfil({ selectedPersonId }) {
           />
         </div>
         <div className={styles.description}>
-          <p>{filteredEmployee.profession}</p>
+          <h3>{filteredEmployee.profession}</h3>
           <h1>{filteredEmployee.name}</h1>
-          <span>{filteredEmployee.description}</span>
         </div>
       </div>
+      {filteredEmployee.description && (
+        <p className={styles.descriptionP}>{filteredEmployee.description}</p>
+      )}
     </div>
   );
 }
