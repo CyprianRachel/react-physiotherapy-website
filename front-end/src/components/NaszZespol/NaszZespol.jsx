@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { TEAMMEMBERS } from "../../constants/teamMembers";
 import styles from "./NaszZespol.module.css";
+import { scrollToTop } from "../../hooks/scrollToTop";
 
 export function NaszZespol() {
   return (
@@ -11,7 +12,7 @@ export function NaszZespol() {
       <div className={styles.membersWrapper}>
         {TEAMMEMBERS.map((employee) => {
           return (
-            <Link to={employee.path} key={employee.name}>
+            <Link to={employee.path} key={employee.name} onClick={scrollToTop}>
               <div className={styles.singleMemberWrapper}>
                 <div
                   className={styles.employeeImage}

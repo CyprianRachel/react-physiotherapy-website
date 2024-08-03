@@ -2,6 +2,7 @@ import { TEAMMEMBERS } from "../../constants/teamMembers";
 import styles from "./Employees.module.css";
 import UPRIGHTICON from "../../assets/up-right-icon.svg";
 import { Link } from "react-router-dom";
+import { scrollToTop } from "../../hooks/scrollToTop";
 
 export function Employees({ selectedEmployeesId, groupActivity }) {
   if (!selectedEmployeesId || selectedEmployeesId.length === 0) {
@@ -15,7 +16,7 @@ export function Employees({ selectedEmployeesId, groupActivity }) {
     <div className={styles.wrapper}>
       {groupActivity && <h3>Prowadzący</h3>}
       {selectedEmployees.map((employee) => (
-        <Link to={employee.path} key={employee.name}>
+        <Link to={employee.path} key={employee.name} onClick={scrollToTop}>
           <div className={styles.employeeWrapper}>
             <div className={styles.left}>
               <div
