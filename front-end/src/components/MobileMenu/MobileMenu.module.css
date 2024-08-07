@@ -23,6 +23,10 @@
   border-bottom: none;
 }
 
+.arrowContainer .arrowDiv.rotated {
+  display: block; /* Pokaż tylko, gdy submenu jest otwarte */
+}
+
 .menuItem {
   position: relative;
   width: 100%;
