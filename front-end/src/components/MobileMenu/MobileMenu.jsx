@@ -14,7 +14,12 @@ export function MobileMenu({ onLinkClick }) {
                 {category.categoryName}
               </span>
             </NavLink>
-            <div className={styles.arrowDiv} />
+            <div
+              className={styles.arrowDiv}
+              style={{
+                backgroundImage: `url(${CARROT_DOWN})`,
+              }}
+            />
           </div>
           {category.subcategory && (
             <ul className={styles.submenu}>
