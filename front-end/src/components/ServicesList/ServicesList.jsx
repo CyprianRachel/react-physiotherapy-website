@@ -20,7 +20,7 @@ export function ServicesList({
       ? selectedServiceId
       : SERVICES.map((service) => service.id);
 
-  // Filter categories based on selectedServiceId and searchTerm
+  // Filter categories based on selectedServiceId
   const filteredServicesType = SERVICES.filter((serviceCategory) =>
     selectedIds.includes(serviceCategory.id)
   )
@@ -53,6 +53,10 @@ export function ServicesList({
           service.serviceName.toLowerCase().includes(searchTerm.toLowerCase())
         ),
   }));
+
+  // If no results, show all services
+  const displayServices =
+    filteredServices.length > 0 ? filteredServices : SERVICES;
 
   const [popupData, setPopupData] = useState({
     isPopupOpen: false,
@@ -130,7 +134,8 @@ export function ServicesList({
         </h2>
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       </div>
-      {filteredServices.map((services) => {
+      {filteredServices.length === 0 && <p>Brak wyników</p>}
+      {displayServices.map((services) => {
         const serviceCount = services.servicesList.length;
         return (
           <div className={styles.servicesWrapper} key={services.servicesName}>
