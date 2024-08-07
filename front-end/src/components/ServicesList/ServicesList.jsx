@@ -5,6 +5,7 @@ import styles from "./ServicesList.module.css";
 import { SearchBar } from "../SearchBar/SearchBar";
 import { EmployeeProfil } from "../EmployeeProfil/EmployeeProfil";
 import { SubCategory } from "../SubCategory/SubCategory";
+import { NothingFound } from "../NothingFound/NothingFound";
 
 export function ServicesList({
   selectedServiceId,
@@ -20,7 +21,7 @@ export function ServicesList({
       ? selectedServiceId
       : SERVICES.map((service) => service.id);
 
-  // Filter categories based on selectedServiceId
+  // Filter categories based on selectedServiceId and searchTerm
   const filteredServicesType = SERVICES.filter((serviceCategory) =>
     selectedIds.includes(serviceCategory.id)
   )
@@ -53,10 +54,6 @@ export function ServicesList({
           service.serviceName.toLowerCase().includes(searchTerm.toLowerCase())
         ),
   }));
-
-  // If no results, show all services
-  const displayServices =
-    filteredServices.length > 0 ? filteredServices : SERVICES;
 
   const [popupData, setPopupData] = useState({
     isPopupOpen: false,
@@ -134,64 +131,69 @@ export function ServicesList({
         </h2>
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       </div>
-      {filteredServices.length === 0 && <p>Brak wyników</p>}
-      {displayServices.map((services) => {
-        const serviceCount = services.servicesList.length;
-        return (
-          <div className={styles.servicesWrapper} key={services.servicesName}>
-            <div className={styles.servicesCounterName}>
-              <h3>{services.servicesName}</h3>
-              <span className={styles.servicesCounter}>
-                {serviceCount} {getServiceCountLabel(serviceCount)}
-              </span>
-            </div>
-            <div className={styles.servicesWrapperAll}>
-              {services.servicesList.map((service) => {
-                const words = service.description.split(" ");
-                const isLongDescription = words.length > 10;
-                const descriptionPreview = getDescriptionPreview(
-                  service.description
-                );
+      {filteredServices.length === 0 ? (
+        <NothingFound />
+      ) : (
+        filteredServices.map((services) => {
+          const serviceCount = services.servicesList.length;
+          return (
+            <div className={styles.servicesWrapper} key={services.servicesName}>
+              <div className={styles.servicesCounterName}>
+                <h3>{services.servicesName}</h3>
+                <span className={styles.servicesCounter}>
+                  {serviceCount} {getServiceCountLabel(serviceCount)}
+                </span>
+              </div>
+              <div className={styles.servicesWrapperAll}>
+                {services.servicesList.map((service) => {
+                  const words = service.description.split(" ");
+                  const isLongDescription = words.length > 10;
+                  const descriptionPreview = getDescriptionPreview(
+                    service.description
+                  );
 
-                return (
-                  <div
-                    className={styles.singleServiceWrapper}
-                    key={service.serviceName}
-                    onClick={
-                      isLongDescription
-                        ? () =>
-                            openPopup(
-                              service.serviceName,
-                              service.description,
-                              service.price,
-                              service.time
-                            )
-                        : undefined
-                    }
-                  >
-                    <div className={styles.serviceDescription}>
-                      <h4 className={styles.serviceName}>
-                        {service.serviceName}
-                      </h4>
-                      <span
-                        className={styles.serviceDescriptionSpan}
-                        dangerouslySetInnerHTML={{ __html: descriptionPreview }}
-                      />
-                    </div>
-                    <div className={styles.servicePriceMinButton}>
-                      <div className={styles.servicePriceMin}>
-                        <span className={styles.price}>{service.price}</span>
-                        <span className={styles.time}>{service.time}</span>
+                  return (
+                    <div
+                      className={styles.singleServiceWrapper}
+                      key={service.serviceName}
+                      onClick={
+                        isLongDescription
+                          ? () =>
+                              openPopup(
+                                service.serviceName,
+                                service.description,
+                                service.price,
+                                service.time
+                              )
+                          : undefined
+                      }
+                    >
+                      <div className={styles.serviceDescription}>
+                        <h4 className={styles.serviceName}>
+                          {service.serviceName}
+                        </h4>
+                        <span
+                          className={styles.serviceDescriptionSpan}
+                          dangerouslySetInnerHTML={{
+                            __html: descriptionPreview,
+                          }}
+                        />
                       </div>
-                      <button>Umów</button>
+                      <div className={styles.servicePriceMinButton}>
+                        <div className={styles.servicePriceMin}>
+                          <span className={styles.price}>{service.price}</span>
+                          <span className={styles.time}>{service.time}</span>
+                        </div>
+                        <button>Umów</button>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })
+      )}
     </div>
   );
 }
