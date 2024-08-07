@@ -6,8 +6,7 @@
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  gap: 0.75rem;
-  padding: 1rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .arrowContainer {
@@ -16,7 +15,7 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #ccc;
-  padding-bottom: 0.75rem;
+  height: 3.25rem;
 }
 
 .arrowContainer.lastArrowContainer {
