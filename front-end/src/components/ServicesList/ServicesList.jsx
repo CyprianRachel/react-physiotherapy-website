@@ -20,7 +20,7 @@ export function ServicesList({
       ? selectedServiceId
       : SERVICES.map((service) => service.id);
 
-  // Filter categories based on selectedServiceId
+  // Filter categories based on selectedServiceId and searchTerm
   const filteredServicesType = SERVICES.filter((serviceCategory) =>
     selectedIds.includes(serviceCategory.id)
   )
@@ -32,23 +32,27 @@ export function ServicesList({
           (service.personId && service.personId.includes(selectedPersonId))
       ),
     }))
-    .filter((serviceCategory) => serviceCategory.servicesList.length > 0);
-
-  // Filter services within categories based on searchTerm
-  const filteredServices = filteredServicesType
-    .map((serviceCategory) => ({
-      ...serviceCategory,
-      servicesList: serviceCategory.servicesList.filter((service) =>
-        service.serviceName.toLowerCase().includes(searchTerm.toLowerCase())
-      ),
-    }))
     .filter(
       (serviceCategory) =>
         serviceCategory.servicesName
           .toLowerCase()
           .includes(searchTerm.toLowerCase()) ||
-        serviceCategory.servicesList.length > 0
+        serviceCategory.servicesList.some((service) =>
+          service.serviceName.toLowerCase().includes(searchTerm.toLowerCase())
+        )
     );
+
+  // Filter services within categories based on searchTerm
+  const filteredServices = filteredServicesType.map((serviceCategory) => ({
+    ...serviceCategory,
+    servicesList: serviceCategory.servicesName
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase())
+      ? serviceCategory.servicesList
+      : serviceCategory.servicesList.filter((service) =>
+          service.serviceName.toLowerCase().includes(searchTerm.toLowerCase())
+        ),
+  }));
 
   const [popupData, setPopupData] = useState({
     isPopupOpen: false,
@@ -148,7 +152,6 @@ export function ServicesList({
                   <div
                     className={styles.singleServiceWrapper}
                     key={service.serviceName}
-                    // Warunkowe przypisanie onClick
                     onClick={
                       isLongDescription
                         ? () =>
@@ -170,21 +173,6 @@ export function ServicesList({
                         dangerouslySetInnerHTML={{ __html: descriptionPreview }}
                       />
                     </div>
-                    {/* {isLongDescription && (
-                        <div
-                          className={styles.buttonPopup}
-                          onClick={() =>
-                            openPopup(
-                              service.serviceName,
-                              service.description,
-                              service.price,
-                              service.time
-                            )
-                          }
-                        >
-                          Czytaj więcej
-                        </div>
-                      )} */}
                     <div className={styles.servicePriceMinButton}>
                       <div className={styles.servicePriceMin}>
                         <span className={styles.price}>{service.price}</span>

@@ -6,9 +6,12 @@ import { scrollToTop } from "../../hooks/scrollToTop";
 export function NaszZespol() {
   return (
     <div className={styles.wrapper}>
-      <h1 className={styles.mainText}>
-        Nasz <span className={styles.orange}>zespół</span>
-      </h1>
+      <div className={styles.mainTextWrapper}>
+        <h1 className={styles.mainText}>
+          Nasz <span className={styles.orange}>zespół</span>
+        </h1>
+        <div className={styles.line}></div>
+      </div>
       <div className={styles.membersWrapper}>
         {TEAMMEMBERS.map((employee) => {
           return (
