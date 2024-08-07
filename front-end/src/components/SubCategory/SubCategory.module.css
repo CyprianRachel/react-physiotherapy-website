@@ -6,8 +6,8 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 1rem;
+  border-bottom: 0px solid #ccc;
+  padding-bottom: 0rem;
   align-items: flex-start;
 }
 
