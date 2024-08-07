@@ -14,13 +14,13 @@ export function MobileMenu({ onLinkClick }) {
   return (
     <ul className={styles.menu}>
       {CATEGORIES.map((category, index) => {
+        // Check if this is the last item
         const isLastItem = index === CATEGORIES.length - 1;
-        const isOpen = openSubmenuIndex === index;
         return (
           <li key={index} className={styles.menuItem}>
             <div
               className={`${styles.arrowContainer} ${
-                isOpen ? styles.noBorder : ""
+                isLastItem ? styles.lastArrowContainer : ""
               }`}
             >
               <NavLink onClick={onLinkClick} to={category.path}>
@@ -29,14 +29,16 @@ export function MobileMenu({ onLinkClick }) {
                 </span>
               </NavLink>
               <div
-                className={`${styles.arrowDiv} ${isOpen ? styles.rotated : ""}`}
+                className={`${styles.arrowDiv} ${
+                  openSubmenuIndex === index ? styles.rotated : ""
+                }`}
                 onClick={() => toggleSubmenu(index)}
                 style={{
                   backgroundImage: `url(${CARROT_DOWN})`,
                 }}
               />
             </div>
-            {category.subcategory && isOpen && (
+            {category.subcategory && openSubmenuIndex === index && (
               <ul className={styles.submenu}>
                 {category.subcategory.map((subcat, subindex) => (
                   <li key={subindex} className={styles.submenuItem}>
