@@ -10,6 +10,9 @@
   padding: 1rem 1rem;
 }
 
+.categoryName {
+}
+
 .arrowContainer {
   display: flex;
   width: 100%;
@@ -40,11 +43,11 @@
   background-position: center;
   background-size: 1rem 1rem;
   background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .arrowDiv.rotated {
   transform: rotate(180deg);
+  background-color: var(--color-background-orange);
 }
 
 .categoryName a {
