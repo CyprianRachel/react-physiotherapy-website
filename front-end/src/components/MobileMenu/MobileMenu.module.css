@@ -19,6 +19,10 @@
   padding-bottom: 0.75rem;
 }
 
+.arrowContainer.lastArrowContainer {
+  border-bottom: none;
+}
+
 .menuItem {
   position: relative;
   width: 100%;
@@ -45,6 +49,10 @@
 .arrowDiv.rotated {
   transform: rotate(180deg);
   background-color: var(--color-background-orange);
+}
+
+.arrowContainer.noBorder {
+  border-bottom: 0px solid #ccc;
 }
 
 .categoryName a {

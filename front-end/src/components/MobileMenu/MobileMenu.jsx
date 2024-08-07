@@ -13,42 +13,48 @@ export function MobileMenu({ onLinkClick }) {
 
   return (
     <ul className={styles.menu}>
-      {CATEGORIES.map((category, index) => (
-        <li key={index} className={styles.menuItem}>
-          <div className={styles.arrowContainer}>
-            <NavLink onClick={onLinkClick} to={category.path}>
-              <span className={styles.categoryName}>
-                {category.categoryName}
-              </span>
-            </NavLink>
+      {CATEGORIES.map((category, index) => {
+        const isLastItem = index === CATEGORIES.length - 1;
+        const isOpen = openSubmenuIndex === index;
+        return (
+          <li key={index} className={styles.menuItem}>
             <div
-              className={`${styles.arrowDiv} ${
-                openSubmenuIndex === index ? styles.rotated : ""
+              className={`${styles.arrowContainer} ${
+                isOpen ? styles.noBorder : ""
               }`}
-              onClick={() => toggleSubmenu(index)}
-              style={{
-                backgroundImage: `url(${CARROT_DOWN})`,
-              }}
-            />
-          </div>
-          {category.subcategory && openSubmenuIndex === index && (
-            <ul className={styles.submenu}>
-              {category.subcategory.map((subcat, subindex) => (
-                <li key={subindex} className={styles.submenuItem}>
-                  <NavLink
-                    to={subcat.path}
-                    key={subindex}
-                    activeClassName={styles.active}
-                    onClick={onLinkClick}
-                  >
-                    <span>{subcat.categoryName}</span>
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-          )}
-        </li>
-      ))}
+            >
+              <NavLink onClick={onLinkClick} to={category.path}>
+                <span className={styles.categoryName}>
+                  {category.categoryName}
+                </span>
+              </NavLink>
+              <div
+                className={`${styles.arrowDiv} ${isOpen ? styles.rotated : ""}`}
+                onClick={() => toggleSubmenu(index)}
+                style={{
+                  backgroundImage: `url(${CARROT_DOWN})`,
+                }}
+              />
+            </div>
+            {category.subcategory && isOpen && (
+              <ul className={styles.submenu}>
+                {category.subcategory.map((subcat, subindex) => (
+                  <li key={subindex} className={styles.submenuItem}>
+                    <NavLink
+                      to={subcat.path}
+                      key={subindex}
+                      activeClassName={styles.active}
+                      onClick={onLinkClick}
+                    >
+                      <span>{subcat.categoryName}</span>
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        );
+      })}
     </ul>
   );
 }
