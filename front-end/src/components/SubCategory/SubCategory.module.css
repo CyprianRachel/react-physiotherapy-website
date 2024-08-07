@@ -120,7 +120,7 @@
 }
 
 .toggleButton {
-  background-color: var(--color-light-orange); /* Przykładowy kolor */
+  background-color: var(--color-orange); /* Przykładowy kolor */
   color: white;
   border: none;
   padding: 10px;

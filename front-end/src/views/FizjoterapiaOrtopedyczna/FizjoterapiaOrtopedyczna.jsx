@@ -35,10 +35,10 @@ export function FizjoterapiaOrtopedyczna() {
       >
         <div className={styles.h1DescriptionWrapper}>
           <div className={styles.h1Wrapper}>
-            <h3>
+            <h2>
               Fizjoterapia <span className={styles.orange}>Ortopedyczna</span> z
               in.motion
-            </h3>
+            </h2>
           </div>
 
           <div className={styles.description}>

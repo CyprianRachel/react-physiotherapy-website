@@ -20,9 +20,9 @@ export function AllAboutUs({
       {description && <HeroAboutUs descriptionText={descriptionText} />}
       <div className={styles.sticky}>
         <div className={styles.wrapper}>
-          <h4>Kontakt</h4>
+          <h3>Kontakt</h3>
           <IconsWrapper icons={CONTACT_ICONS} />
-          <h4>Godziny otwarcia</h4>
+          <h3>Godziny otwarcia</h3>
           <div className={styles.openHoursWrapper}>
             {OPENHOURS.map((hours) => {
               return (
@@ -38,7 +38,7 @@ export function AllAboutUs({
               );
             })}
           </div>
-          <h4>Media społecznościowe</h4>
+          <h3>Media społecznościowe</h3>
           <IconsWrapper icons={ICONS} />
         </div>
       </div>

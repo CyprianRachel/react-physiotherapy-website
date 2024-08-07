@@ -26,8 +26,8 @@ export function Employees({ selectedEmployeesId, groupActivity }) {
                 }}
               ></div>
               <div className={styles.aboutWrapper}>
-                <p>{employee.profession}</p>
-                <h4>{employee.name}</h4>
+                <span>{employee.profession}</span>
+                <h3>{employee.name}</h3>
               </div>
             </div>
             <img className={styles.icon} src={UPRIGHTICON}></img>
