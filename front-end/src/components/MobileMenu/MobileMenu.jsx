@@ -1,16 +1,21 @@
 import { NavLink } from "react-router-dom";
 import { CATEGORIES } from "../../constants/categories";
 import styles from "./MobileMenu.module.css";
-import CARROT_DOWN from "../../assets/caret-down-solid.svg";
+import CARROT_DOWN from "../../assets/angle-down-solid.svg";
 
 export function MobileMenu({ onLinkClick }) {
   return (
     <ul className={styles.menu}>
       {CATEGORIES.map((category, index) => (
         <li key={index} className={styles.menuItem}>
-          <NavLink onClick={onLinkClick} to={category.path}>
-            <span>{category.categoryName}</span>
-          </NavLink>
+          <div className={styles.arrowContainer}>
+            <NavLink onClick={onLinkClick} to={category.path}>
+              <span className={styles.categoryName}>
+                {category.categoryName}
+              </span>
+            </NavLink>
+            <div className={styles.arrowDiv} />
+          </div>
           {category.subcategory && (
             <ul className={styles.submenu}>
               {category.subcategory.map((subcat, subindex) => (
