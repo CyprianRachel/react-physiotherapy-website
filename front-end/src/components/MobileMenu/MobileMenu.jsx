@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { CATEGORIES } from "../../constants/categories";
 import styles from "./MobileMenu.module.css";
-import CARROT_DOWN from "../../assets/down-solid.svg";
+import CARROT_DOWN from "../../assets/arrow-down-sign-to-navigate.png";
 
 export function MobileMenu({ onLinkClick }) {
   const [openSubmenuIndex, setOpenSubmenuIndex] = useState(null);
