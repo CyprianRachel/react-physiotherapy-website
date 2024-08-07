@@ -43,6 +43,7 @@
   background-position: center;
   background-size: 1rem 1rem;
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .categoryName a {
@@ -56,16 +57,7 @@
   color: var(--color-orange);
 }
 
-.menuItem:hover .submenu {
-  display: block;
-}
-
-.submenu:hover .menuItem {
-  display: none;
-}
-
 .submenu {
-  display: none;
   top: 80%;
   list-style-type: none;
   padding: 0.5rem;

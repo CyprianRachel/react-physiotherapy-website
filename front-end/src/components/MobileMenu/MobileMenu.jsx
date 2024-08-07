@@ -1,9 +1,16 @@
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { CATEGORIES } from "../../constants/categories";
 import styles from "./MobileMenu.module.css";
 import CARROT_DOWN from "../../assets/angle-down-solid.svg";
 
 export function MobileMenu({ onLinkClick }) {
+  const [openSubmenuIndex, setOpenSubmenuIndex] = useState(null);
+
+  const toggleSubmenu = (index) => {
+    setOpenSubmenuIndex(openSubmenuIndex === index ? null : index);
+  };
+
   return (
     <ul className={styles.menu}>
       {CATEGORIES.map((category, index) => (
@@ -15,13 +22,16 @@ export function MobileMenu({ onLinkClick }) {
               </span>
             </NavLink>
             <div
-              className={styles.arrowDiv}
+              className={`${styles.arrowDiv} ${
+                openSubmenuIndex === index ? styles.rotated : ""
+              }`}
+              onClick={() => toggleSubmenu(index)}
               style={{
                 backgroundImage: `url(${CARROT_DOWN})`,
               }}
             />
           </div>
-          {category.subcategory && (
+          {category.subcategory && openSubmenuIndex === index && (
             <ul className={styles.submenu}>
               {category.subcategory.map((subcat, subindex) => (
                 <li key={subindex} className={styles.submenuItem}>
