@@ -1,3 +1,7 @@
 .highlight {
   color: var(--color-orange);
 }
+
+.h1 {
+  margin-bottom: 1rem;
+}

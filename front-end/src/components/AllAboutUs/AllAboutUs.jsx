@@ -3,7 +3,7 @@ import { OPENHOURS } from "../../constants/openHours";
 import { HeroAboutUs } from "../HeroAboutUs/HeroAboutUs";
 import { Employees } from "../Employees/Employees";
 import { IconsWrapper } from "../IconsWrapper/IconsWrapper";
-import { CONTACT_ICONS, ICONS } from "../../constants/aboutUsIcons";
+import { CONTACT_ICONS, ICONS, LOCATION } from "../../constants/aboutUsIcons";
 
 export function AllAboutUs({
   description,
@@ -22,6 +22,8 @@ export function AllAboutUs({
         <div className={styles.wrapper}>
           <h3>Kontakt</h3>
           <IconsWrapper icons={CONTACT_ICONS} />
+          <h3>Lokalizacja</h3>
+          <IconsWrapper icons={LOCATION} />
           <h3>Godziny otwarcia</h3>
           <div className={styles.openHoursWrapper}>
             {OPENHOURS.map((hours) => {
