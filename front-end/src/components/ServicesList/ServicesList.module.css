@@ -141,7 +141,7 @@
   .wrapper {
     flex: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: columsn;
     gap: 0rem;
   }
 
@@ -151,7 +151,8 @@
     background-color: var(--color-grey);
     margin: 0 -1rem;
     padding: 1.5rem 1rem;
-    box-shadow: 0px 2px 6px #e0e0e0;
+    /* border-bottom: 2px solid #ccc; */
+    /* box-shadow: 0px 2px 6px #e0e0e0; */
   }
 
   .serviceDescriptionSpan ol li {
