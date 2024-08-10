@@ -23,6 +23,7 @@ import { ZajeciaGrupowe } from "./views/ZajeciaGrupowe/ZajeciaGrupowe.jsx";
 import { SensorycznyBajtel } from "./views/SensorycznyBajtel/SensorycznyBajtel.jsx";
 import { BajtelWRuchu } from "./views/BajtelWRuchu/BajtelWRuchu.jsx";
 import { TerapiaSI } from "./views/TerapiaSI/TerapiaSI.jsx";
+import { Blog } from "./views/Blog/Blog.jsx";
 
 const router = createBrowserRouter([
   {
@@ -101,6 +102,11 @@ const router = createBrowserRouter([
   {
     path: "/masaz",
     element: <Masaz />,
+  },
+
+  {
+    path: "/blog",
+    element: <Blog />,
   },
 ]);
 
