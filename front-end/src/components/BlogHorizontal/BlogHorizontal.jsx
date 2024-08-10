@@ -23,7 +23,7 @@ export function BlogHorizontal({ postId }) {
                   src={post.postImage}
                   alt={post.postName}
                 />
-                {/* <span className={styles.category}>{post.category}</span> */}
+                <span className={styles.category}>{post.category}</span>
               </div>
               <h3 className={styles.h3}>{post.postName}</h3>
               <div className={styles.wrapperDate}>
