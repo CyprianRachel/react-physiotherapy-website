@@ -1,3 +1,4 @@
+import { BlogHorizontal } from "../../components/BlogHorizontal/BlogHorizontal";
 import { Layout } from "../../components/Layout/Layout";
 import { ServicesWrapper } from "../../components/ServicesWrapper/ServicesWrapper";
 
@@ -11,6 +12,7 @@ export function PawelZerdzinski() {
         selectedServiceId={[1, 4]}
         selectedPersonId={1}
       />
+      <BlogHorizontal postId="1" />
     </Layout>
   );
 }
