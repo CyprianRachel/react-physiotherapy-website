@@ -5,6 +5,7 @@ import { ServicesWrapper } from "../../components/ServicesWrapper/ServicesWrappe
 import TEAMIMAGE from "../../assets/team-image.svg";
 import { SLIDER_IMAGES } from "../../constants/sliderImages";
 import styles from "../../components/SubCategory/SubCategory.module.css";
+import { BlogHorizontal } from "../../components/BlogHorizontal/BlogHorizontal";
 
 const sliderImages = SLIDER_IMAGES.find(
   (imageSet) => imageSet.id === 1
@@ -41,6 +42,7 @@ export function MainPage() {
           </div>
         </div>
       </ServicesWrapper>
+      <BlogHorizontal />
     </Layout>
   );
 }
