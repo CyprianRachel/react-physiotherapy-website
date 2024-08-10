@@ -1,10 +1,8 @@
 import styles from "./LogoFooter.module.css";
-import LOGOFOOTER from "../../assets/logo-footer.svg";
+import LOGOFOOTER from "../../assets/logo-footer.png";
 
 export function LogoFooter() {
   return (
-    <div className={styles.LogoFooter}>
-      <img src={LOGOFOOTER} alt="LogoFooter"></img>
-    </div>
+    <img className={styles.logoFooter} src={LOGOFOOTER} alt="LogoFooter"></img>
   );
 }

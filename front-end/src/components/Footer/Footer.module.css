@@ -9,16 +9,34 @@
   align-items: center;
 }
 
-.leftFooter p {
-  color: white;
-}
-
 .secondFooter {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   max-width: 86rem;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+}
+
+.copyrgith {
+  color: white;
+  font-size: 14px;
   margin: 0 auto;
-  padding: 0 2rem;
+}
+
+.firstLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons {
+  width: 1.25rem;
+  height: auto;
+}
+
+.iconsWrapper {
+  display: flex;
+  gap: 0.75rem;
   align-items: center;
 }

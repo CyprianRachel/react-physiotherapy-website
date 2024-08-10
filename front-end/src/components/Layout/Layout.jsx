@@ -9,6 +9,7 @@ import { TopBar } from "../TopBar/TopBar";
 import styles from "./Layout.module.css";
 import { MobileMenuIcon } from "../MobileMenuIcon/MobileMenuIcon";
 import { MobileMenu } from "../MobileMenu/MobileMenu";
+import { HorizontalMenu } from "../HorizontalMenu/HorizontalMenu";
 
 export function Layout({ children }) {
   const [activeCategory, setActiveCategory] = useState(null);
@@ -42,7 +43,9 @@ export function Layout({ children }) {
         </div>
       </TopBar>
       {isMobileMenuOpen ? (
-        <MobileMenu onLinkClick={closeMobileMenu} />
+        <>
+          <MobileMenu onLinkClick={closeMobileMenu} />
+        </>
       ) : (
         <>
           <MainContent>{children}</MainContent>

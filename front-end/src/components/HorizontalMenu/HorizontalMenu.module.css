@@ -1,0 +1,10 @@
+.menu {
+  display: flex;
+  overflow: hidden;
+  overflow-x: auto;
+  gap: 1rem;
+}
+
+.categoryName {
+  text-wrap: nowrap;
+}
