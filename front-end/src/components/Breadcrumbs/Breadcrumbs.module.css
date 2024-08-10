@@ -1,0 +1,26 @@
+/* Breadcrumbs.module.css */
+.breadcrumbs ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumbs li {
+  margin-right: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  content: "›";
+  margin-left: 0.25rem;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #666;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
