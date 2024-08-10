@@ -20,11 +20,11 @@ export function AllAboutUs({
       {description && <HeroAboutUs descriptionText={descriptionText} />}
       <div className={styles.sticky}>
         <div className={styles.wrapper}>
-          <h3>Kontakt</h3>
+          <h3 className={styles.h3}>Kontakt</h3>
           <IconsWrapper icons={CONTACT_ICONS} />
-          <h3>Lokalizacja</h3>
+          <h3 className={styles.h3}>Lokalizacja</h3>
           <IconsWrapper icons={LOCATION} />
-          <h3>Godziny otwarcia</h3>
+          <h3 className={styles.h3}>Godziny otwarcia</h3>
           <div className={styles.openHoursWrapper}>
             {OPENHOURS.map((hours) => {
               return (
@@ -40,7 +40,7 @@ export function AllAboutUs({
               );
             })}
           </div>
-          <h3>Media społecznościowe</h3>
+          <h3 className={styles.h3}>Media społecznościowe</h3>
           <IconsWrapper icons={ICONS} />
         </div>
       </div>

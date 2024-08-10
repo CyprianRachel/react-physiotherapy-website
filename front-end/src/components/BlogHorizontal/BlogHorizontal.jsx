@@ -1,25 +1,35 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import { BLOG } from "../../constants/blog";
 import styles from "./BlogHorizontal.module.css";
 import { scrollToTop } from "../../hooks/scrollToTop";
 
-export function BlogHorizontal() {
+export function BlogHorizontal({ postId }) {
+  // Jeśli postId jest przekazane, filtrujemy posty; w przeciwnym razie zwracamy wszystkie posty
+  const filteredPosts = postId
+    ? BLOG.filter((post) => post.postId == postId)
+    : BLOG;
+
   return (
     <>
       <h2 className={styles.h2}>Blog</h2>
       <div className={styles.wrapperAll}>
-        {BLOG.map((e) => (
-          <Link onClick={scrollToTop} to={`/blog/${e.id}`} key={e.id}>
+        {filteredPosts.map((post) => (
+          <Link onClick={scrollToTop} to={`/blog/${post.id}`} key={post.id}>
             <div className={styles.singlePost}>
               <div className={styles.wrapper}>
-                <img className={styles.img} src={e.postImage} />
-                <span className={styles.category}>{e.category}</span>
+                <img
+                  className={styles.img}
+                  src={post.postImage}
+                  alt={post.postName}
+                />
+                {/* <span className={styles.category}>{post.category}</span> */}
               </div>
-              <h3 className={styles.h3}>{e.postName}</h3>
+              <h3 className={styles.h3}>{post.postName}</h3>
               <div className={styles.wrapperDate}>
-                <p>{e.data}</p>
+                <p>{post.data}</p>
                 <span className={styles.point}>•</span>
-                <p>{e.postAuthor}</p>
+                <p>{post.postAuthor}</p>
               </div>
             </div>
           </Link>

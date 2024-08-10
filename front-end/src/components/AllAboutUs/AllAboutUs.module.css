@@ -123,12 +123,12 @@
   font-size: 14px;
 }
 
-.wrapperAll h3 {
+.wrapperAll .h3 {
   margin-bottom: 1rem;
   margin-top: 1.5rem;
 }
 
-.wrapperAll h3:first-child {
+.wrapperAll .h3:first-child {
   margin-top: 0rem;
 }
 
@@ -260,6 +260,6 @@
     font-size: 14px;
   }
 
-  .wrapperAll h3 {
+  .wrapperAll .h3 {
   }
 }

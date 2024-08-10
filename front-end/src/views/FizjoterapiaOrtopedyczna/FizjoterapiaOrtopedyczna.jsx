@@ -6,6 +6,7 @@ import { ServicesWrapper } from "../../components/ServicesWrapper/ServicesWrappe
 import { SLIDER_IMAGES } from "../../constants/sliderImages";
 import styles from "../../components/SubCategory/SubCategory.module.css";
 import CARROT_DOWN from "../../assets/caret-down-solid.svg";
+import { BlogHorizontal } from "../../components/BlogHorizontal/BlogHorizontal";
 
 const sliderImages = SLIDER_IMAGES.find(
   (imageSet) => imageSet.id === 2
@@ -95,6 +96,7 @@ export function FizjoterapiaOrtopedyczna() {
           </div>
         </div>
       </ServicesWrapper>
+      <BlogHorizontal postId="1" />
     </Layout>
   );
 }

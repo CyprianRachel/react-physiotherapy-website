@@ -9,6 +9,7 @@ export const BLOG = [
     data: "10.08.2024",
     hour: "11:04",
     path: "/blog/dla-kogo-drenaz-limfatyczny",
+    postId: 1,
     category: "Fizjoterapia ortopedyczna",
     postImage: DRENAZ_LIMFATYCZNY,
     postName: "Dla kogo drenaż limfatyczny?",
