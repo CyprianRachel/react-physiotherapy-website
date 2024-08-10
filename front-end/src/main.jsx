@@ -24,6 +24,7 @@ import { SensorycznyBajtel } from "./views/SensorycznyBajtel/SensorycznyBajtel.j
 import { BajtelWRuchu } from "./views/BajtelWRuchu/BajtelWRuchu.jsx";
 import { TerapiaSI } from "./views/TerapiaSI/TerapiaSI.jsx";
 import { Blog } from "./views/Blog/Blog.jsx";
+import { BlogPost } from "./views/BlogPost/BlogPost.jsx";
 
 const router = createBrowserRouter([
   {
@@ -107,6 +108,10 @@ const router = createBrowserRouter([
   {
     path: "/blog",
     element: <Blog />,
+  },
+  {
+    path: "/blog/:postId", // Dynamiczna ścieżka dla pojedynczego posta
+    element: <BlogPost />,
   },
 ]);
 

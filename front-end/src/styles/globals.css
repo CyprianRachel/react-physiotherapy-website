@@ -78,6 +78,7 @@ p {
 
 li {
   list-style: none;
+  line-height: 1.5;
 }
 
 h1,

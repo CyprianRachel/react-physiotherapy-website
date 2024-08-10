@@ -8,6 +8,7 @@ export const BLOG = [
     id: 1,
     data: "10.08.2024",
     hour: "11:04",
+    path: "/blog/dla-kogo-drenaz-limfatyczny",
     category: "Fizjoterapia ortopedyczna",
     postImage: DRENAZ_LIMFATYCZNY,
     postName: "Dla kogo drenaż limfatyczny?",
@@ -36,7 +37,7 @@ export const BLOG = [
         <li>Daje efekt ujędrniający</li> 
     </ul>
 
-    <h2>Drenaż w chorobach przewlekłych:
+    <h2>Drenaż w chorobach przewlekłych:</h2>
 
     <ul>
         <li>Cukrzyca</li>

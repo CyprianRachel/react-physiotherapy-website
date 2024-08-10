@@ -1,0 +1,82 @@
+.img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.wrapperAll {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.h2 {
+  margin-bottom: 0.5rem;
+}
+
+.category {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  background-color: rgb(255, 255, 255, 0.7);
+  padding: 0.5rem 1rem;
+  border-radius: 4rem;
+  color: black;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+.wrapperDate {
+  display: flex;
+  gap: 0.25rem;
+  font-size: 14px;
+  color: #666;
+}
+.point {
+  color: var(--color-orange);
+}
+
+.description ol li {
+  list-style-type: decimal;
+  margin: 0rem;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.description li::marker {
+  color: var(--color-orange);
+}
+
+.description ul li {
+  list-style-type: disc;
+  margin: 0rem;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.description ul li:last-child {
+  margin-bottom: 0rem;
+}
+
+.description h2 {
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.description h2:first-child {
+  margin-bottom: 1rem;
+  margin-top: 0rem;
+}
+
+.description ol {
+  margin-bottom: 1rem;
+}

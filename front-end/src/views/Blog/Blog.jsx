@@ -7,8 +7,8 @@ import { ServicesWrapper } from "../../components/ServicesWrapper/ServicesWrappe
 export function Blog() {
   return (
     <Layout>
-      <H1 text={"Blog"} />
       <CenteredContent>
+        <H1 text={"Blog"} />
         <BlogSite />
       </CenteredContent>
     </Layout>
