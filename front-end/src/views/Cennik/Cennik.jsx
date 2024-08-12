@@ -6,7 +6,10 @@ import { ServicesWrapper } from "../../components/ServicesWrapper/ServicesWrappe
 export function Cennik() {
   return (
     <Layout>
-      <H1 text={"Cennik"} />
+      <CenteredContent>
+        {" "}
+        <H1 text={"Cennik"} />
+      </CenteredContent>
       <ServicesWrapper team={false} />
     </Layout>
   );
