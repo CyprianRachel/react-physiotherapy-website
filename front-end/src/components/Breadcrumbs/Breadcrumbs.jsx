@@ -1,14 +1,22 @@
 import { Link, useLocation } from "react-router-dom";
 import styles from "./Breadcrumbs.module.css";
-import CARRET from "../../assets/caret-down-solid.svg";
 
-export function Breadcrumbs() {
+export function Breadcrumbs({ text }) {
   const location = useLocation();
   const pathnames = location.pathname.split("/").filter((x) => x);
 
   // Jeżeli jesteś na stronie głównej, nie pokazuj breadcrumbs
   if (pathnames.length === 0) {
     return null;
+  }
+
+  // Sprawdź, czy ścieżka zawiera "blog"
+  const blogIndex = pathnames.indexOf("blog");
+
+  // Jeżeli "blog" jest w ścieżce i ma dalszą część
+  if (blogIndex !== -1 && blogIndex < pathnames.length - 1) {
+    // Zastąp wszystko po "blog" props text
+    pathnames.splice(blogIndex + 1, pathnames.length - blogIndex - 1, text);
   }
 
   return (
@@ -20,9 +28,13 @@ export function Breadcrumbs() {
         {pathnames.map((value, index) => {
           const to = `/${pathnames.slice(0, index + 1).join("/")}`;
 
+          const formattedValue = value
+            .replace(/-/g, " ") // zamień myślniki na spacje
+            .replace(/^./, (char) => char.toUpperCase()); // zamień tylko pierwszą literę na wielką
+
           return (
             <li key={to}>
-              <Link to={to}>{value.replace(/-/g, " ")}</Link>
+              <Link to={to}>{formattedValue}</Link>
             </li>
           );
         })}

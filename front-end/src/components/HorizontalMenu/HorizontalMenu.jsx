@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { CATEGORIES } from "../../constants/categories";
 import styles from "./HorizontalMenu.module.css";
-import CARROT_DOWN from "../../assets/arrow-down-sign-to-navigate.png";
 
 export function HorizontalMenu() {
   return (

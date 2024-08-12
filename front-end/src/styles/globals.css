@@ -158,12 +158,6 @@ body {
     font-weight: 500;
   }
 
-  .read-more {
-    font-weight: 500;
-    color: var(--color-orange);
-    font-size: 12px;
-  }
-
   .swiper-button-prev,
   .swiper-button-next {
     position: absolute;

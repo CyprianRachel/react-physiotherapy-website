@@ -6,7 +6,7 @@ export function BlogSite() {
   return (
     <div className={styles.wrapperAll}>
       {BLOG.map((e) => (
-        <Link to={`/blog/${e.id}`} key={e.id}>
+        <Link to={`/blog/${e.path}`} key={e.id}>
           <div className={styles.singlePost}>
             <div className={styles.wrapper}>
               <img className={styles.img} src={e.postImage} />

@@ -92,7 +92,7 @@ export function ServicesList({
     const words = description.split(" ");
     if (words.length > 8) {
       const previewText = words.slice(0, 8).join(" ") + "...";
-      return `${previewText} <span class="read-more">więcej</span>`;
+      return previewText;
     }
     return description;
   };
@@ -172,12 +172,20 @@ export function ServicesList({
                         <h4 className={styles.serviceName}>
                           {service.serviceName}
                         </h4>
-                        <span
-                          className={styles.serviceDescriptionSpan}
-                          dangerouslySetInnerHTML={{
-                            __html: descriptionPreview,
-                          }}
-                        />
+                        <div className={styles.decriptionContainer}>
+                          <div
+                            className={styles.serviceDescriptionSpan}
+                            dangerouslySetInnerHTML={{
+                              __html: descriptionPreview,
+                            }}
+                          />
+                          {isLongDescription && (
+                            <div className={styles.readmoreContainter}>
+                              <div className={styles.space}></div>
+                              <p className={styles.readMore}>więcej</p>
+                            </div>
+                          )}
+                        </div>
                       </div>
                       <div className={styles.servicePriceMinButton}>
                         <div className={styles.servicePriceMin}>

@@ -253,12 +253,44 @@
     flex-direction: column;
     gap: 0.5rem;
     align-items: flex-start;
+    overflow: hidden;
+  }
+
+  .decriptionContainer {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+    align-items: center;
   }
 
   .serviceDescriptionSpan {
     font-weight: 300;
     color: grey;
     font-size: 14px;
+    white-space: nowrap;
+    max-width: calc(100% - 500px);
+  }
+
+  .readMore {
+    font-size: 14px;
+    color: var(--color-orange);
+    font-weight: 500;
+    background-color: white;
+    padding-left: 0.5rem;
+  }
+
+  .space {
+    width: 1rem;
+    height: auto;
+    background-image: linear-gradient(to right, transparent, white);
+  }
+
+  .readmoreContainter {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 
   .buttonPopup {

@@ -4,7 +4,7 @@ import styles from "./H1.module.css";
 export function H1({ text, highlight }) {
   return (
     <div className={styles.wrapper}>
-      <Breadcrumbs />
+      <Breadcrumbs text={text} />
       <h1 className={styles.h1}>
         {text} <span className={styles.highlight}>{highlight}</span>
       </h1>

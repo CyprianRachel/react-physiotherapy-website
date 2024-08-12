@@ -19,8 +19,18 @@
 .breadcrumbs a {
   text-decoration: none;
   color: #666;
+  text-wrap: nowrap;
 }
 
 .breadcrumbs a:hover {
   text-decoration: underline;
+}
+
+.breadcrumbs {
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.breadcrumbs::-webkit-scrollbar {
+  display: none;
 }
