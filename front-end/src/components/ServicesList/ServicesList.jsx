@@ -90,8 +90,8 @@ export function ServicesList({
 
   const getDescriptionPreview = (description) => {
     const words = description.split(" ");
-    if (words.length > 8) {
-      const previewText = words.slice(0, 8).join(" ");
+    if (words.length > 12) {
+      const previewText = words.slice(0, 12).join(" ");
       return previewText;
     }
     return description;
