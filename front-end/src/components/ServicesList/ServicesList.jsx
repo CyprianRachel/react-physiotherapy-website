@@ -91,7 +91,7 @@ export function ServicesList({
   const getDescriptionPreview = (description) => {
     const words = description.split(" ");
     if (words.length > 8) {
-      const previewText = words.slice(0, 8).join(" ") + "...";
+      const previewText = words.slice(0, 8).join(" ");
       return previewText;
     }
     return description;
@@ -182,7 +182,9 @@ export function ServicesList({
                           {isLongDescription && (
                             <div className={styles.readmoreContainter}>
                               <div className={styles.space}></div>
-                              <p className={styles.readMore}>więcej</p>
+                              <div className={styles.readMoreContainer}>
+                                <p className={styles.readMore}>więcej</p>
+                              </div>
                             </div>
                           )}
                         </div>
