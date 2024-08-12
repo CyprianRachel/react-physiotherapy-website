@@ -182,9 +182,7 @@ export function ServicesList({
                           {isLongDescription && (
                             <div className={styles.readmoreContainter}>
                               <div className={styles.space}></div>
-                              <div className={styles.readMoreContainer}>
-                                <p className={styles.readMore}>więcej</p>
-                              </div>
+                              <p className={styles.readMore}>więcej</p>
                             </div>
                           )}
                         </div>
