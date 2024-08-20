@@ -13,4 +13,8 @@
     border-radius: 0rem;
     border-top: 0.5rem solid var(--color-grey);
   }
+
+  .description p {
+    display: none;
+  }
 }
