@@ -141,7 +141,6 @@
   .wrapper {
     flex: 1;
     display: flex;
-    flex-direction: columsn;
     gap: 0rem;
   }
 
@@ -201,7 +200,6 @@
   }
 
   .h2SearchBarWrapper h2 {
-    display: none;
   }
 
   .servicesCounter {
@@ -220,7 +218,7 @@
   }
 
   .time {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 12px;
     color: #666;
     white-space: nowrap;
