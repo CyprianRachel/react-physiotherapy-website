@@ -9,6 +9,7 @@ export function CategorySlider() {
   return (
     <div className={styles.wrapper}>
       <CenteredContent>
+        <h2>Kategorie usług</h2>
         <div className={styles.mainCategories}>
           {HEROCATEGORIES.map((category) => {
             const words = category.categoryTitle.split(" ");
@@ -20,7 +21,7 @@ export function CategorySlider() {
                 onClick={scrollToTop}
               >
                 <div className={styles.leftDiv}>
-                  <h2>
+                  <h3>
                     {words.map((word, index) => (
                       <span
                         key={index}
@@ -29,7 +30,7 @@ export function CategorySlider() {
                         {word}{" "}
                       </span>
                     ))}
-                  </h2>
+                  </h3>
                 </div>
                 <div className={styles.rightDiv}>
                   <div className={styles.imageWrapper}>
