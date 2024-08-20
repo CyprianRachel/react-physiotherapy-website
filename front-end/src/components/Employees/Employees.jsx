@@ -14,7 +14,7 @@ export function Employees({ selectedEmployeesId, groupActivity }) {
 
   return (
     <div className={styles.wrapper}>
-      {groupActivity && <h3>Prowadzący</h3>}
+      {groupActivity ? <h3>Prowadzący</h3> : <h2>Pracownicy</h2>}
       {selectedEmployees.map((employee) => (
         <Link to={employee.path} key={employee.name} onClick={scrollToTop}>
           <div className={styles.employeeWrapper}>
