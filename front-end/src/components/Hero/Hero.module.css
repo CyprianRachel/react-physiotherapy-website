@@ -16,4 +16,8 @@
     flex-direction: column;
     justify-content: space-between;
   }
+
+  .hero {
+    padding: 1.5rem 1rem;
+  }
 }

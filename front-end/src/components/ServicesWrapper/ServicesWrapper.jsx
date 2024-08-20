@@ -22,15 +22,15 @@ export function ServicesWrapper({
           subCategory={subCategory}
           subCategoryChild={children}
         />
-        <AllAboutUs
-          team={team}
-          person={person}
-          selectedPersonId={selectedPersonId}
-          description={description}
-          descriptionText={children}
-          selectedEmployeesId={selectedEmployeesId}
-        />
       </CenteredContent>
+      <AllAboutUs
+        team={team}
+        person={person}
+        selectedPersonId={selectedPersonId}
+        description={description}
+        descriptionText={children}
+        selectedEmployeesId={selectedEmployeesId}
+      />
     </div>
   );
 }

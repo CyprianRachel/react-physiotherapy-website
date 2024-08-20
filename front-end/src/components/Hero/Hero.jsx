@@ -9,17 +9,15 @@ export function Hero({ text, highlight, image, slider }) {
   return (
     <>
       <div className={styles.hero}>
-        <CenteredContent>
-          <div className={styles.leftDiv}>
-            <H1 text={text} highlight={highlight} />
-            <div className={styles.mobileDisplayNone}>
-              <HeroImage image={image} />
-            </div>
-            <HeroSlider slider={slider} className="mobileDisplayBlock" />
-            <Opinions />
+        <div className={styles.leftDiv}>
+          <H1 text={text} highlight={highlight} />
+          <div className={styles.mobileDisplayNone}>
+            <HeroImage image={image} />
           </div>
-          <HeroSlider slider={slider} className="mobileDisplayNone" />
-        </CenteredContent>
+          <HeroSlider slider={slider} className="mobileDisplayBlock" />
+          <Opinions />
+        </div>
+        <HeroSlider slider={slider} className="mobileDisplayNone" />
       </div>
     </>
   );

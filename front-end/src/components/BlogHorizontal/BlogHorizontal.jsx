@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { BLOG } from "../../constants/blog";
 import styles from "./BlogHorizontal.module.css";
 import { scrollToTop } from "../../hooks/scrollToTop";
+import { CenteredContent } from "../CenteredContent/CenteredContent";
 
 export function BlogHorizontal({ postId }) {
   // Jeśli postId jest przekazane, filtrujemy posty; w przeciwnym razie zwracamy wszystkie posty
@@ -11,7 +12,7 @@ export function BlogHorizontal({ postId }) {
     : BLOG;
 
   return (
-    <>
+    <CenteredContent>
       <h2 className={styles.h2}>Blog</h2>
       <div className={styles.wrapperAll}>
         {filteredPosts.map((post) => (
@@ -35,6 +36,6 @@ export function BlogHorizontal({ postId }) {
           </Link>
         ))}
       </div>
-    </>
+    </CenteredContent>
   );
 }
