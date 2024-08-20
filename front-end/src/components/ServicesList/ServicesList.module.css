@@ -264,7 +264,7 @@
 
   .serviceDescriptionSpan {
     font-weight: 400;
-    color: grey;
+    color: #666;
     font-size: 12px;
     white-space: nowrap;
     max-width: 100%;
