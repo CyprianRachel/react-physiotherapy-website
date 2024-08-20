@@ -21,7 +21,7 @@ export function CategorySlider() {
                 onClick={scrollToTop}
               >
                 <div className={styles.leftDiv}>
-                  <h3>
+                  <h3 className={styles.h3}>
                     {words.map((word, index) => (
                       <span
                         key={index}
