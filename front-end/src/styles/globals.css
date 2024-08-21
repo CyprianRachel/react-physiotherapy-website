@@ -5,6 +5,43 @@
   --swiper-navigation-size: 3rem;
 }
 
+.booksy-business-link {
+  display: none !important;
+}
+
+.booksy-widget-container-default.booksy-widget-container-pl
+  .booksy-widget-button {
+  background: none !important;
+  background-color: var(--color-orange) !important;
+}
+
+.booksy-widget-container-dialog {
+  display: inline-block;
+  width: auto !important;
+  height: auto !important;
+  text-align: center;
+}
+
+.booksy-widget-container-dialog .booksy-widget-button {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
+  width: 8rem !important;
+  height: 2.25rem !important;
+  background-size: cover !important;
+  transition: all 0.5s ease 0s;
+  border-radius: 16px;
+  -moz-border-radius: 0px !important;
+  -webkit-border-radius: 0px !important;
+  border-radius: 6rem !important;
+}
+
+.booksy-widget-container-dialog .booksy-widget-button:hover {
+  transform: scale(1) !important;
+  transition: none !important;
+}
+
 .swiper {
   width: 100%;
   height: 100%;
