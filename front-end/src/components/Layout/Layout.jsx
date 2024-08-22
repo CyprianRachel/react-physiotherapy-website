@@ -10,6 +10,7 @@ import styles from "./Layout.module.css";
 import { MobileMenuIcon } from "../MobileMenuIcon/MobileMenuIcon";
 import { MobileMenu } from "../MobileMenu/MobileMenu";
 import { HorizontalMenu } from "../HorizontalMenu/HorizontalMenu";
+import { Booksy } from "../Booksy/Booksy";
 
 export function Layout({ children }) {
   const [activeCategory, setActiveCategory] = useState(null);

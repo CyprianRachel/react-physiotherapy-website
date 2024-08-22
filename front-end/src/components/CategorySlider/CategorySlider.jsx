@@ -12,7 +12,6 @@ export function CategorySlider() {
         <h2>Kategorie usług</h2>
         <div className={styles.mainCategories}>
           {HEROCATEGORIES.map((category) => {
-            const words = category.categoryTitle.split(" ");
             return (
               <Link
                 to={category.path}
@@ -21,16 +20,12 @@ export function CategorySlider() {
                 onClick={scrollToTop}
               >
                 <div className={styles.leftDiv}>
-                  <h3 className={styles.h3}>
-                    {words.map((word, index) => (
-                      <span
-                        key={index}
-                        className={index === 0 ? styles.black : styles.orange}
-                      >
-                        {word}{" "}
-                      </span>
-                    ))}
-                  </h3>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: category.categoryTitle,
+                    }}
+                    className={styles.h3}
+                  ></div>
                 </div>
                 <div className={styles.rightDiv}>
                   <div className={styles.imageWrapper}>

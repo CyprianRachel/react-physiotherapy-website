@@ -97,7 +97,7 @@
     display: flex;
     background-color: var(--color-background-orange);
     border-radius: 0.5rem;
-    gap: 1.5rem;
+    gap: 1rem;
     padding: 1rem;
     overflow: hidden;
     width: 100%;
@@ -171,7 +171,11 @@
     background-size: contain;
   }
 
-  .h3 {
+  .leftDiv h3 {
     font-size: 18px;
+  }
+
+  .leftDiv h3 span {
+    color: var(--color-orange);
   }
 }

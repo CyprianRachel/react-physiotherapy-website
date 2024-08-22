@@ -1,27 +1,28 @@
-import { useEffect } from "react";
+import { useRef, useEffect } from "react";
 import styles from "./MainBookingButton.module.css";
 
 export function MainBookingButton() {
+  const buttonRef = useRef(null);
+  const widgetButtonRef = useRef(null);
+
   useEffect(() => {
-    // Tworzymy element <script>
-    const script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src =
-      "https://booksy.com/widget/code.js?id=119503&country=pl&lang=pl";
-    script.async = true;
-
-    // Dodajemy skrypt do kontenera w dokumencie
-    document.getElementById("booking-container").appendChild(script);
-
-    // Opcjonalnie, usuwamy skrypt po demontażu komponentu
-    return () => {
-      document.getElementById("booking-container").removeChild(script);
-    };
+    // Przechwyć element z klasą `booksy-widget-button` po zamontowaniu komponentu
+    widgetButtonRef.current = document.querySelector(".booksy-widget-button");
   }, []);
 
+  const handleClick = () => {
+    if (widgetButtonRef.current) {
+      widgetButtonRef.current.click();
+    }
+  };
+
   return (
-    <div>
-      <div id="booking-container"></div>
-    </div>
+    <button
+      ref={buttonRef}
+      className={styles.MainBookingButton}
+      onClick={handleClick}
+    >
+      Zarezerwuj
+    </button>
   );
 }
