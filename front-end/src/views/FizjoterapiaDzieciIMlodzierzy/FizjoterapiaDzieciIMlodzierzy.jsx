@@ -22,6 +22,8 @@ export function FizjoterapiaDzieciIMlodzierzy() {
         selectedServiceId={[2]}
         description={false}
         selectedEmployeesId={[2]}
+        borderTop={true}
+        sectionH2={true}
       />
     </Layout>
   );

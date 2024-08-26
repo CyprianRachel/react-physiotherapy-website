@@ -6,6 +6,7 @@ import TEAMIMAGE from "../../assets/team-image.svg";
 import { SLIDER_IMAGES } from "../../constants/sliderImages";
 import styles from "../../components/SubCategory/SubCategory.module.css";
 import { BlogHorizontal } from "../../components/BlogHorizontal/BlogHorizontal";
+import { BorderTop } from "../../components/BorderTop/BorderTop";
 
 const sliderImages = SLIDER_IMAGES.find(
   (imageSet) => imageSet.id === 1
@@ -20,8 +21,14 @@ export function MainPage() {
         image={TEAMIMAGE}
         slider={sliderImages}
       />
+      <BorderTop borderTop={true} />
       <CategorySlider />
-      <ServicesWrapper team={false} description={true}>
+      <ServicesWrapper
+        borderTop={true}
+        sectionH2={true}
+        team={false}
+        description={true}
+      >
         <div className={styles.h1DescriptionWrapper}>
           <div className={styles.h1Wrapper}>
             <h2>
@@ -42,7 +49,7 @@ export function MainPage() {
           </div>
         </div>
       </ServicesWrapper>
-      <BlogHorizontal />
+      <BlogHorizontal borderTop={true} postId="1" />
     </Layout>
   );
 }

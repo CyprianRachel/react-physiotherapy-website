@@ -10,7 +10,12 @@ export function Cennik() {
         {" "}
         <H1 text={"Cennik"} />
       </CenteredContent>
-      <ServicesWrapper team={false} />
+      <ServicesWrapper
+        team={false}
+        sectionH2={false}
+        borderTop={true}
+        cennik={true}
+      />
     </Layout>
   );
 }

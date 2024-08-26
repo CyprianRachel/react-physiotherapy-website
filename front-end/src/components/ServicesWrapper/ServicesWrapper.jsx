@@ -1,4 +1,5 @@
 import { AllAboutUs } from "../AllAboutUs/AllAboutUs";
+import { BorderTop } from "../BorderTop/BorderTop";
 import { CenteredContent } from "../CenteredContent/CenteredContent";
 import { ServicesList } from "../ServicesList/ServicesList";
 import styles from "./ServicesWrapper.module.css";
@@ -12,17 +13,21 @@ export function ServicesWrapper({
   selectedEmployeesId,
   subCategory,
   children,
+  sectionH2,
+  borderTop,
+  cennik,
 }) {
   return (
     <div className={styles.wrapper}>
-      <CenteredContent>
-        <ServicesList
-          selectedServiceId={selectedServiceId}
-          selectedPersonId={selectedPersonId}
-          subCategory={subCategory}
-          subCategoryChild={children}
-        />
-      </CenteredContent>
+      <ServicesList
+        selectedServiceId={selectedServiceId}
+        selectedPersonId={selectedPersonId}
+        subCategory={subCategory}
+        subCategoryChild={children}
+        sectionH2={sectionH2}
+        borderTop={borderTop}
+        cennik={cennik}
+      />
       <AllAboutUs
         team={team}
         person={person}
@@ -30,6 +35,8 @@ export function ServicesWrapper({
         description={description}
         descriptionText={children}
         selectedEmployeesId={selectedEmployeesId}
+        borderTop={borderTop}
+        sectionH2={sectionH2}
       />
     </div>
   );

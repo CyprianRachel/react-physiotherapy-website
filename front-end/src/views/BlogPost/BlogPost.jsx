@@ -6,11 +6,11 @@ import { Layout } from "../../components/Layout/Layout";
 import styles from "./BlogPost.module.css";
 
 export function BlogPost() {
-  const { postPath } = useParams();
-  const post = BLOG.find((item) => item.path === postPath);
+  const singlePostPath = useParams();
+  const post = BLOG.find((item) => (item.postId = singlePostPath));
 
   if (!post) {
-    return <div>Post not found</div>;
+    return <div>Post nie został znaleziony</div>;
   }
 
   return (

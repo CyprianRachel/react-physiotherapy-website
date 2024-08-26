@@ -8,8 +8,8 @@ export function Kontakt() {
     <Layout>
       <CenteredContent>
         <H1 text={"Kontakt"} />
-        <AllAboutUs />
       </CenteredContent>
+      <AllAboutUs borderTop={false} sectionH2={false} />
     </Layout>
   );
 }

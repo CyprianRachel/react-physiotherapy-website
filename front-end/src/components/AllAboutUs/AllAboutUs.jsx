@@ -5,22 +5,32 @@ import { Employees } from "../Employees/Employees";
 import { IconsWrapper } from "../IconsWrapper/IconsWrapper";
 import { CONTACT_ICONS, ICONS, LOCATION } from "../../constants/aboutUsIcons";
 import { CenteredContent } from "../CenteredContent/CenteredContent";
+import { BorderTop } from "../BorderTop/BorderTop";
 
 export function AllAboutUs({
   description,
   selectedEmployeesId,
   descriptionText,
   groupActivity,
+  borderTop,
+  sectionH2,
 }) {
   return (
     <div className={styles.wrapperAll}>
       <Employees
         selectedEmployeesId={selectedEmployeesId}
         groupActivity={groupActivity}
+        borderTop={borderTop}
       />
-      {description && <HeroAboutUs descriptionText={descriptionText} />}
+      {description && (
+        <>
+          <BorderTop borderTop={borderTop} />{" "}
+          <HeroAboutUs descriptionText={descriptionText} />
+        </>
+      )}
+      <BorderTop borderTop={borderTop} />
       <CenteredContent>
-        <h2>Kontakt</h2>
+        {sectionH2 && <h2>Kontakt</h2>}
         <div className={styles.sticky}>
           <div className={styles.wrapper}>
             <h3 className={styles.h3}>Kontakt</h3>

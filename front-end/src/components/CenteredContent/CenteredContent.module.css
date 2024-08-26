@@ -20,6 +20,8 @@
     gap: 1rem;
     padding: 0rem 1rem;
     padding-top: 1.5rem;
-    border-top: 0.5rem solid var(--color-grey);
+  }
+
+  .borderTop {
   }
 }

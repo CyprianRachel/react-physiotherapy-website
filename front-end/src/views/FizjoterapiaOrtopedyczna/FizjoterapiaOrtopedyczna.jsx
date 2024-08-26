@@ -33,6 +33,8 @@ export function FizjoterapiaOrtopedyczna() {
         description={true}
         selectedEmployeesId={[1]}
         subCategory={false}
+        borderTop={true}
+        sectionH2={true}
       >
         <div className={styles.h1DescriptionWrapper}>
           <div className={styles.h1Wrapper}>
@@ -96,7 +98,7 @@ export function FizjoterapiaOrtopedyczna() {
           </div>
         </div>
       </ServicesWrapper>
-      <BlogHorizontal postId="1" />
+      <BlogHorizontal postId="1" borderTop={true} />
     </Layout>
   );
 }

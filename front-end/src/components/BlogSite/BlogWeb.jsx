@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { BLOG } from "../../constants/blog";
-import styles from "./BlogSite.module.css";
+import styles from "./BlogWeb.module.css";
 
-export function BlogSite() {
+export function BlogWeb() {
   return (
     <div className={styles.wrapperAll}>
       {BLOG.map((e) => (

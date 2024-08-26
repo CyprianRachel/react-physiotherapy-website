@@ -22,6 +22,8 @@ export function IntegracjaSensoryczna() {
         selectedServiceId={[3]}
         description={false}
         selectedEmployeesId={[3]}
+        borderTop={true}
+        sectionH2={true}
       />
     </Layout>
   );
