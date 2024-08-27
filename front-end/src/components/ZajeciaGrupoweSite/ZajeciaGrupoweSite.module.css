@@ -1,8 +1,29 @@
-.wrapper {
+.membersWrapper {
+  width: 100%;
+  flex-wrap: wrap;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.singleMemberWrapper {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  background-color: var(--color-background-orange);
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.singleMemberWrapper:hover .employeeImageWrapper {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  transition: 0.2s ease;
 }
 
 .orange {
@@ -10,16 +31,8 @@
 }
 
 .employeeImage {
-  height: 100%;
-  width: 100%;
-}
-
-.employeeImageWrapper {
-  border-radius: 50%;
-  background-color: var(--color-background-orange);
-  width: 18rem;
-  height: 18rem;
-  padding: 3rem;
+  height: 8rem;
+  width: 8rem;
 }
 
 .description {
@@ -27,7 +40,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .description p {
@@ -36,35 +49,10 @@
 }
 
 .description button {
-  margin-top: 1rem;
   color: white;
   background-color: var(--color-orange);
-  font-size: 1rem;
+  font-size: 14px;
   border-radius: 10rem;
   padding: 0.75rem 1.75rem;
   font-weight: 500;
-}
-
-.singleMemberWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 2rem 1rem;
-  width: 20rem;
-  text-align: center;
-}
-
-.membersWrapper {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.singleMemberWrapper:hover .employeeImageWrapper {
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
-  transition: 0.2s ease;
 }
