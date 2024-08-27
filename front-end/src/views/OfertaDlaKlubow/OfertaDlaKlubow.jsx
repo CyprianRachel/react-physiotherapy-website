@@ -1,3 +1,5 @@
+import { CenteredContent } from "../../components/CenteredContent/CenteredContent";
+import { H1 } from "../../components/H1/H1";
 import { Layout } from "../../components/Layout/Layout";
 import { ServicesWrapper } from "../../components/ServicesWrapper/ServicesWrapper";
 import styles from "../../components/SubCategory/SubCategory.module.css";
@@ -5,19 +7,17 @@ import styles from "../../components/SubCategory/SubCategory.module.css";
 export function OfertaDlaKlubow() {
   return (
     <Layout>
+      <CenteredContent>
+        <H1 text={"Oferta dla"} highlight={"klubów"}></H1>
+      </CenteredContent>
       <ServicesWrapper
         team={false}
-        selectedServiceId={[3]}
         description={false}
         subCategory={true}
+        borderTop={true}
+        sectionH2={true}
       >
         <div className={styles.h1DescriptionWrapper}>
-          <div className={styles.h1Wrapper}>
-            <h1>
-              Oferta dla <span className={styles.orange}>klubów</span>
-            </h1>
-          </div>
-
           <div className={styles.description}>
             <p>
               Specjalizujemy się w kompleksowej opiece medycznej sportowców,

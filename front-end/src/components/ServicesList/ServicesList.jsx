@@ -8,6 +8,7 @@ import { SubCategory } from "../SubCategory/SubCategory";
 import { NothingFound } from "../NothingFound/NothingFound";
 import { BorderTop } from "../BorderTop/BorderTop";
 import { CenteredContent } from "../CenteredContent/CenteredContent";
+import { H1 } from "../H1/H1";
 
 export function ServicesList({
   selectedServiceId,
@@ -117,6 +118,12 @@ export function ServicesList({
 
   return (
     <>
+      {subCategory && (
+        <CenteredContent>
+          <SubCategory subCategoryChild={subCategoryChild} />
+        </CenteredContent>
+      )}
+
       {!cennik && <BorderTop borderTop={borderTop} />}
       <CenteredContent>
         <div className={styles.wrapper}>
@@ -128,10 +135,6 @@ export function ServicesList({
               serviceTime={popupData.serviceTime}
               onClose={closePopup}
             />
-          )}
-          {subCategory && <SubCategory subCategoryChild={subCategoryChild} />}
-          {selectedPersonId && (
-            <EmployeeProfil selectedPersonId={selectedPersonId} />
           )}
           <div className={styles.h2SearchBarWrapper}>
             {sectionH2 && (

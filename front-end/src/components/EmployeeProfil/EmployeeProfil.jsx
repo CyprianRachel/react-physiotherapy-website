@@ -1,4 +1,5 @@
 import { TEAMMEMBERS } from "../../constants/teamMembers";
+import { CenteredContent } from "../CenteredContent/CenteredContent";
 import styles from "./EmployeeProfil.module.css";
 
 export function EmployeeProfil({ selectedPersonId }) {
@@ -11,23 +12,25 @@ export function EmployeeProfil({ selectedPersonId }) {
   }
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.singleMemberWrapper}>
-        <div className={styles.employeeImageWrapper}>
-          <img
-            src={filteredEmployee.image}
-            alt={filteredEmployee.name}
-            className={styles.employeeImage}
-          />
+    <CenteredContent>
+      <div className={styles.wrapper}>
+        <div className={styles.singleMemberWrapper}>
+          <div className={styles.employeeImageWrapper}>
+            <img
+              src={filteredEmployee.image}
+              alt={filteredEmployee.name}
+              className={styles.employeeImage}
+            />
+          </div>
+          <div className={styles.description}>
+            <h1>{filteredEmployee.name}</h1>
+            <h3>{filteredEmployee.profession}</h3>
+          </div>
         </div>
-        <div className={styles.description}>
-          <h3>{filteredEmployee.profession}</h3>
-          <h1>{filteredEmployee.name}</h1>
-        </div>
+        {filteredEmployee.description && (
+          <p className={styles.descriptionP}>{filteredEmployee.description}</p>
+        )}
       </div>
-      {filteredEmployee.description && (
-        <p className={styles.descriptionP}>{filteredEmployee.description}</p>
-      )}
-    </div>
+    </CenteredContent>
   );
 }
