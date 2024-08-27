@@ -15,17 +15,19 @@ export function NaszZespol() {
             key={employee.name}
             onClick={scrollToTop}
           >
-            <div
-              className={styles.employeeImage}
-              style={{
-                backgroundImage: `url(${employee.image})`,
-              }}
-            ></div>
+            <div className={styles.circularBorder}>
+              <div
+                className={styles.employeeImage}
+                style={{
+                  backgroundImage: `url(${employee.image})`,
+                }}
+              ></div>
+            </div>
             <div className={styles.description}>
               <h2>{employee.name}</h2>
               <h3>{employee.profession}</h3>
+              <button>Zobacz usługi</button>
             </div>
-            <img src={UP_RIGHT_ICON} className={styles.img}></img>
           </Link>
         );
       })}
