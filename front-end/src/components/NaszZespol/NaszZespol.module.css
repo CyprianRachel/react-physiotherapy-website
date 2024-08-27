@@ -61,8 +61,8 @@
       white 75% 100%
     ); /* Gradient do obramowania */
     border-radius: 50%; /* Zaokrąglenie elementu */
-    width: 10rem;
-    height: 10rem;
+    width: 12rem;
+    height: 12rem;
     margin-top: -5rem;
     padding: 0.5rem;
   }
