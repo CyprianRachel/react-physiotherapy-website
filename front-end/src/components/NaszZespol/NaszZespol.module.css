@@ -3,7 +3,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
     margin-bottom: 1.5rem;
   }
 
@@ -16,7 +16,7 @@
     border-radius: 0.5rem;
     width: 100%;
     background-color: var(--color-background-orange);
-    margin-top: 4.5rem;
+    margin-top: 5.5rem;
   }
 
   .singleMemberWrapper:hover .employeeImage {
@@ -63,7 +63,7 @@
     border-radius: 50%; /* Zaokrąglenie elementu */
     width: 12rem;
     height: 12rem;
-    margin-top: -5rem;
+    margin-top: -6rem;
     padding: 0.5rem;
   }
 
