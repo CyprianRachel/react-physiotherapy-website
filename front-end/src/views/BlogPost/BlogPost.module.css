@@ -45,6 +45,10 @@
   color: var(--color-orange);
 }
 
+.description {
+  margin-bottom: 1.5rem;
+}
+
 .description ol li {
   list-style-type: decimal;
   margin: 0rem;
