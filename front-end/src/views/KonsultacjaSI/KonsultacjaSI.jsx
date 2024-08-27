@@ -1,3 +1,5 @@
+import { CenteredContent } from "../../components/CenteredContent/CenteredContent";
+import { H1 } from "../../components/H1/H1";
 import { Layout } from "../../components/Layout/Layout";
 import { ServicesWrapper } from "../../components/ServicesWrapper/ServicesWrapper";
 import styles from "../../components/SubCategory/SubCategory.module.css";
@@ -5,20 +7,20 @@ import styles from "../../components/SubCategory/SubCategory.module.css";
 export function KonsultacjaSI() {
   return (
     <Layout>
+      <CenteredContent>
+        <H1 text={"Konsultacja"} highlight={"SI"}></H1>
+      </CenteredContent>
+
       <ServicesWrapper
         team={false}
         selectedServiceId={[3]}
         description={false}
         selectedEmployeesId={[3]}
         subCategory={true}
+        borderTop={true}
+        sectionH2={true}
       >
         <div className={styles.h1DescriptionWrapper}>
-          <div className={styles.h1Wrapper}>
-            <h1>
-              Konsultacja <span className={styles.orange}>SI</span>
-            </h1>
-          </div>
-
           <p className={styles.description}>
             <p>
               Konsultacja z terapeutą SI to badanie przesiewowe dedykowane dla

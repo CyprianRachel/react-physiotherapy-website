@@ -1,4 +1,5 @@
 import { TEAMMEMBERS } from "../../constants/teamMembers";
+import { Breadcrumbs } from "../Breadcrumbs/Breadcrumbs";
 import { CenteredContent } from "../CenteredContent/CenteredContent";
 import styles from "./EmployeeProfil.module.css";
 
@@ -13,6 +14,7 @@ export function EmployeeProfil({ selectedPersonId }) {
 
   return (
     <CenteredContent>
+      <Breadcrumbs />
       <div className={styles.wrapper}>
         <div className={styles.singleMemberWrapper}>
           <div className={styles.employeeImageWrapper}>

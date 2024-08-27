@@ -1,3 +1,5 @@
+import { CenteredContent } from "../../components/CenteredContent/CenteredContent";
+import { H1 } from "../../components/H1/H1";
 import { Layout } from "../../components/Layout/Layout";
 import { ServicesWrapper } from "../../components/ServicesWrapper/ServicesWrapper";
 import styles from "../../components/SubCategory/SubCategory.module.css";
@@ -5,23 +7,22 @@ import styles from "../../components/SubCategory/SubCategory.module.css";
 export function DiagnozaSI() {
   return (
     <Layout>
+      <CenteredContent>
+        <H1 text={"Diagnoza"} highlight={"SI"}></H1>
+      </CenteredContent>
       <ServicesWrapper
         team={false}
         selectedServiceId={[3]}
         description={false}
         selectedEmployeesId={[3]}
         subCategory={true}
+        borderTop={true}
+        sectionH2={true}
       >
         {/* <div className={styles.leftDiv}>
         <HeroImage image={image} />
       </div> */}
         <div className={styles.h1DescriptionWrapper}>
-          <div className={styles.h1Wrapper}>
-            <h1>
-              Diagnoza <span className={styles.orange}>SI</span>
-            </h1>
-          </div>
-
           <p className={styles.description}>
             <p>
               <strong>
