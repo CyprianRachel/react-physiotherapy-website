@@ -26,3 +26,9 @@
   flex-direction: column;
   gap: 0.5rem;
 }
+
+@media only screen and (max-width: 1280px) {
+  .wrapperAll {
+    padding: 0rem 1rem;
+  }
+}
