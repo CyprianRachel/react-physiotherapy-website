@@ -77,7 +77,6 @@ export function OfertaDlaKlubow() {
           <AllAboutUs borderTop={true} sectionH2={true} />
         </div>
       </CenteredContent>
-      ;
     </Layout>
   );
 }
