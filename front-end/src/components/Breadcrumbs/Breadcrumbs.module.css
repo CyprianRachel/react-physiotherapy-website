@@ -66,6 +66,7 @@
   .breadcrumbs {
     overflow: hidden;
     overflow-x: auto;
+    margin-right: 1rem;
   }
 
   .breadcrumbs::-webkit-scrollbar {
