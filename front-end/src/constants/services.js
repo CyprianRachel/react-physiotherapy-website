@@ -85,7 +85,7 @@ export const SERVICES = [
           <p>Wizyta diagnostyczna fizjoterapeutyczna dziecka jest kluczowym elementem procesu terapeutycznego, zapewniającym indywidualne podejście i skuteczne wsparcie w rozwoju ruchowym i zdrowotnym dziecka.</p>
         </ol>
         `,
-        price: "15,00 zł",
+        price: "150,00 zł",
         time: "1g 15min",
         personId: [2],
       },
