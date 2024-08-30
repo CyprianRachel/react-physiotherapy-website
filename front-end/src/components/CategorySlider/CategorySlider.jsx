@@ -4,6 +4,7 @@ import { CenteredContent } from "../CenteredContent/CenteredContent";
 import styles from "./CategorySlider.module.css";
 import { Link } from "react-router-dom";
 import { scrollToTop } from "../../hooks/scrollToTop";
+import { BorderTop } from "../BorderTop/BorderTop";
 
 export function CategorySlider() {
   return (
@@ -44,6 +45,7 @@ export function CategorySlider() {
             );
           })}
         </div>
+        <BorderTop />
       </CenteredContent>
     </div>
   );

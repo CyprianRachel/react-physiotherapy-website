@@ -9,7 +9,6 @@
 @media only screen and (max-width: 1280px) {
   .mobileDisplayBlock {
     display: block !important;
-    margin-top: 1.5rem;
   }
 
   .mobileDisplayNone {

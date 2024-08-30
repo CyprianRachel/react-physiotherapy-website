@@ -1,4 +1,3 @@
-/* Breadcrumbs.module.css */
 .breadcrumbs ul {
   list-style: none;
   display: flex;
@@ -7,13 +6,13 @@
 }
 
 .breadcrumbs li {
-  margin-right: 0.25rem;
-  font-size: 0.75rem;
+  margin-right: 0.5rem;
+  font-size: 14px;
 }
 
 .breadcrumbs li:not(:last-child)::after {
   content: "›";
-  margin-left: 0.25rem;
+  margin-left: 0.5rem;
 }
 
 .breadcrumbs a {
@@ -33,4 +32,43 @@
 
 .breadcrumbs::-webkit-scrollbar {
   display: none;
+}
+
+/* Breadcrumbs.module.css */
+@media only screen and (max-width: 1280px) {
+  .breadcrumbs ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+
+  .breadcrumbs li {
+    margin-right: 0.25rem;
+    font-size: 0.75rem;
+  }
+
+  .breadcrumbs li:not(:last-child)::after {
+    content: "›";
+    margin-left: 0.25rem;
+  }
+
+  .breadcrumbs a {
+    text-decoration: none;
+    color: #666;
+    text-wrap: nowrap;
+  }
+
+  .breadcrumbs a:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumbs {
+    overflow: hidden;
+    overflow-x: auto;
+  }
+
+  .breadcrumbs::-webkit-scrollbar {
+    display: none;
+  }
 }

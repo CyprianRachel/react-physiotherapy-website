@@ -1,5 +1,5 @@
 import styles from "./BorderTop.module.css";
 
-export function BorderTop({ borderTop }) {
-  return <>{borderTop && <div className={styles.borderTop} />}</>;
+export function BorderTop() {
+  return <div className={styles.borderTop} />;
 }

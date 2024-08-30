@@ -1,3 +1,112 @@
+.membersWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.singleMemberWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 0rem 1rem 2rem 1rem;
+  border-radius: 1rem;
+  background-color: var(--color-background-orange);
+  margin-top: 5.5rem;
+  width: 100%;
+}
+
+.singleMemberWrapper:hover .employeeImage {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  transition: 0.2s ease;
+}
+
+.mainTextWrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.line {
+  width: 2rem;
+  height: 2px;
+  background-color: var(--color-orange);
+}
+
+.orange {
+  color: var(--color-orange);
+}
+
+.employeeImage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.circularBorder {
+  background: conic-gradient(
+    white 0% 25%,
+    white 25% 50%,
+    white 50% 75%,
+    white 75% 100%
+  ); /* Gradient do obramowania */
+  border-radius: 50%; /* Zaokrąglenie elementu */
+  width: 12rem;
+  height: 12rem;
+  margin-top: -6rem;
+  padding: 0.5rem;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.25rem;
+  white-space: nowrap;
+  flex: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.description h2 {
+  width: 100%; /* Ograniczenie szerokości nagłówka */
+  white-space: nowrap; /* Zapobieganie zawijaniu tekstu */
+  overflow: hidden; /* Ukrycie części tekstu, która wychodzi poza obszar */
+  text-overflow: ellipsis; /* Dodanie wielokropka na końcu przyciętego tekstu */
+}
+
+.description h3 {
+  color: var(--color-orange);
+  font-weight: 500;
+}
+
+.description button {
+  margin-top: 1rem;
+  color: white;
+  background-color: var(--color-orange);
+  font-size: 14px;
+  border-radius: 10rem;
+  padding: 0.75rem 1.75rem;
+  font-weight: 500;
+}
+
+.img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: auto;
+}
+
 @media only screen and (max-width: 1280px) {
   .membersWrapper {
     width: 100%;
@@ -5,6 +114,8 @@
     flex-direction: column;
     gap: 1.5rem;
     margin-bottom: 1.5rem;
+    margin-top: 0rem;
+    padding: 0 1rem;
   }
 
   .singleMemberWrapper {

@@ -11,11 +11,7 @@ export function IconsWrapper({ icons }) {
             <span className={styles.instagram}>{icon.name}</span>
           </div>
           {icon.arrow ? (
-            <a
-              target="_blank"
-              className={styles.a}
-              href="https://www.instagram.com/in.motion.gabinet/"
-            >
+            <a target="_blank" className={styles.a} href={icon.path}>
               <img className={styles.icon} src={UPRIGHTICON}></img>
             </a>
           ) : (

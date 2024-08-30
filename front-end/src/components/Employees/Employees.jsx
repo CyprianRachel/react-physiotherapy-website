@@ -1,6 +1,6 @@
 import { TEAMMEMBERS } from "../../constants/teamMembers";
 import styles from "./Employees.module.css";
-import UPRIGHTICON from "../../assets/up-right-icon.svg";
+import UPRIGHTICON from "../../assets/next.png";
 import { Link } from "react-router-dom";
 import { scrollToTop } from "../../hooks/scrollToTop";
 import { BorderTop } from "../BorderTop/BorderTop";
@@ -17,7 +17,11 @@ export function Employees({ selectedEmployeesId, groupActivity, borderTop }) {
     <>
       <BorderTop borderTop={borderTop} />
       <div className={styles.wrapper}>
-        {groupActivity ? <h3>Prowadzący</h3> : <h2>Pracownicy</h2>}
+        {groupActivity ? (
+          <h3>Prowadzący</h3>
+        ) : (
+          <h2 className={styles.h2}>Pracownicy</h2>
+        )}
         {selectedEmployees.map((employee) => (
           <Link to={employee.path} key={employee.name} onClick={scrollToTop}>
             <div className={styles.employeeWrapper}>

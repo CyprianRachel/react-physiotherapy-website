@@ -25,6 +25,12 @@ import { BajtelWRuchu } from "./views/BajtelWRuchu/BajtelWRuchu.jsx";
 import { TerapiaSI } from "./views/TerapiaSI/TerapiaSI.jsx";
 import { Blog } from "./views/Blog/Blog.jsx";
 import { BlogPost } from "./views/BlogPost/BlogPost.jsx";
+import { WizytaDiagnostycznaPierwszorazowa } from "./views/WizytaDiagnostycznaPierwszorazowa/WizytaDiagnostycznaPierwszorazowa.jsx";
+import { FizjoterapiaNiemowlat } from "./views/FizjoterapiaNiemowlat/FizjoterapiaNiemowlat.jsx";
+import { FizjoterapiaDzieci } from "./views/FizjoterapiaDzieci/FizjoterapiaDzieci.jsx";
+import { TreningFunkcjonalnyDzieciIMlodziezy } from "./views/TreningFunkcjonalnyDzieciIMlodziezy/TreningFunkcjonalnyDzieciIMlodziezy.jsx";
+import { FizjoterapiaMlodziezy } from "./views/FizjoterapiaMlodziezy/FizjoterapiaMlodziezy.jsx";
+import { FizjoterapiaMlodychSportowcow } from "./views/FizjoterapiaMlodychSportowcow/FizjoterapiaMlodychSportowcow.jsx";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +60,30 @@ const router = createBrowserRouter([
   {
     path: "/integracja-sensoryczna/terapia-si",
     element: <TerapiaSI />,
+  },
+  {
+    path: "/fizjoterapia-dzieci-i-mlodziezy/wizyta-diagnostyczna-pierwszorazowa",
+    element: <WizytaDiagnostycznaPierwszorazowa />,
+  },
+  {
+    path: "/fizjoterapia-dzieci-i-mlodziezy/fizjoterapia-mlodych-sportowcow",
+    element: <FizjoterapiaMlodychSportowcow />,
+  },
+  {
+    path: "/fizjoterapia-dzieci-i-mlodziezy/fizjoterapia-mlodziezy",
+    element: <FizjoterapiaMlodziezy />,
+  },
+  {
+    path: "/fizjoterapia-dzieci-i-mlodziezy/trening-funkcjonalny-dzieci-i-mlodziezy",
+    element: <TreningFunkcjonalnyDzieciIMlodziezy />,
+  },
+  {
+    path: "/fizjoterapia-dzieci-i-mlodziezy/fizjoterapia-dzieci",
+    element: <FizjoterapiaDzieci />,
+  },
+  {
+    path: "/fizjoterapia-dzieci-i-mlodziezy/fizjoterapia-niemowlat",
+    element: <FizjoterapiaNiemowlat />,
   },
   {
     path: "/oferta-dla-klubow",

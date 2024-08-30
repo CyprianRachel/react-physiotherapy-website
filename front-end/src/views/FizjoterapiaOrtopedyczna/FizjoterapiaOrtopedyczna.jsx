@@ -98,7 +98,7 @@ export function FizjoterapiaOrtopedyczna() {
           </div>
         </div>
       </ServicesWrapper>
-      <BlogHorizontal postId="1" borderTop={true} />
+      {/* <BlogHorizontal postId="1" borderTop={true} /> */}
     </Layout>
   );
 }

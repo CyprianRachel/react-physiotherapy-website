@@ -202,7 +202,7 @@ export const SERVICES = [
       },
       {
         serviceName: "Wydanie dokumentu",
-        description: `Pisemna ocena rozwoju procesów integracji sensorycznej, informacja na temat postępów dziecka w toku terapii.`,
+        description: `<p>Pisemna ocena rozwoju procesów integracji sensorycznej, informacja na temat postępów dziecka w toku terapii.</p>`,
         price: "130,00 zł",
         time: "50min",
         personId: [3],

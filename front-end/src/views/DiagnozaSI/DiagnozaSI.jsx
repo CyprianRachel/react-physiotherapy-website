@@ -1,29 +1,28 @@
+import { AllAboutUs } from "../../components/AllAboutUs/AllAboutUs";
+import { BorderTop } from "../../components/BorderTop/BorderTop";
+import { Breadcrumbs } from "../../components/Breadcrumbs/Breadcrumbs";
 import { CenteredContent } from "../../components/CenteredContent/CenteredContent";
 import { H1 } from "../../components/H1/H1";
+import { H1Wrapper } from "../../components/H1Wrapper/H1Wrapper";
 import { Layout } from "../../components/Layout/Layout";
+import { ServicesList } from "../../components/ServicesList/ServicesList";
 import { ServicesWrapper } from "../../components/ServicesWrapper/ServicesWrapper";
-import styles from "../../components/SubCategory/SubCategory.module.css";
+import styles from "../KonsultacjaSI/KonsultacjaSI.module.css";
 
 export function DiagnozaSI() {
   return (
     <Layout>
-      <CenteredContent>
-        <H1 text={"Diagnoza"} highlight={"SI"}></H1>
-      </CenteredContent>
-      <ServicesWrapper
-        team={false}
-        selectedServiceId={[3]}
-        description={false}
-        selectedEmployeesId={[3]}
-        subCategory={true}
-        borderTop={true}
-        sectionH2={true}
-      >
-        {/* <div className={styles.leftDiv}>
-        <HeroImage image={image} />
-      </div> */}
-        <div className={styles.h1DescriptionWrapper}>
-          <p className={styles.description}>
+      <div className={styles.wrapper}>
+        <div className={styles.leftWrapper}>
+          <H1Wrapper>
+            <Breadcrumbs />
+            <div className={styles.groupWrapperWithoutMarginBottom}>
+              <h1>
+                Diagnoza <span className={styles.orange}>SI</span>
+              </h1>
+            </div>
+          </H1Wrapper>
+          <div className={styles.description}>
             <p>
               <strong>
                 W in.motion Diagnoza Procesów Przetwarzania Sensorycznego
@@ -103,9 +102,20 @@ export function DiagnozaSI() {
               Spotkanie odbywa się bez obecności dziecka, trwa około 30 minut i
               kończy się wydaniem pisemnej opinii.
             </p>
-          </p>
+          </div>
+          <BorderTop />
+          <ServicesList
+            team={false}
+            sectionH2={true}
+            borderTop={true}
+            selectedServiceId={[3]}
+            description={false}
+            selectedEmployeesId={[3]}
+          />
         </div>
-      </ServicesWrapper>
+
+        <AllAboutUs sectionH2={true} selectedEmployeesId={[3]} />
+      </div>
     </Layout>
   );
 }

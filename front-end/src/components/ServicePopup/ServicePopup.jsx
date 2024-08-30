@@ -19,7 +19,10 @@ export function ServicePopup({
           <h2>{serviceName}</h2>
         </div>
         <div className={styles.descriptionWrapper}>
-          <span dangerouslySetInnerHTML={{ __html: serviceDescription }} />
+          <div
+            className={styles.description}
+            dangerouslySetInnerHTML={{ __html: serviceDescription }}
+          />
         </div>
         <div className={styles.priceTimeButtonWrapper}>
           <div className={styles.priceTimeWrapper}>

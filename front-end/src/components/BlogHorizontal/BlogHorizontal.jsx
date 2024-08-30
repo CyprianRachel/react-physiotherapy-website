@@ -15,7 +15,7 @@ export function BlogHorizontal({ postId, borderTop }) {
   return (
     <>
       <BorderTop borderTop={borderTop} />
-      <CenteredContent>
+      <div className={styles.blogWrapper}>
         <h2 className={styles.h2}>Blog</h2>
         <div className={styles.wrapperAll}>
           {filteredPosts.map((post) => (
@@ -39,7 +39,7 @@ export function BlogHorizontal({ postId, borderTop }) {
             </Link>
           ))}
         </div>
-      </CenteredContent>
+      </div>
     </>
   );
 }

@@ -1,16 +1,26 @@
 .wrapper {
   width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.wrapper h2 {
+  display: none;
 }
 
 .link {
   display: flex;
   background-color: var(--color-background-orange);
   border-radius: 1rem;
-  gap: 1.5rem;
+  gap: 1rem;
   padding: 1.5rem;
   overflow: hidden;
   width: 33%;
   align-items: center;
+}
+
+.link:hover {
+  box-shadow: 0px 2px 8px rgb(0, 0, 0, 0.1);
 }
 
 .mainCategories {
@@ -64,7 +74,7 @@
   border-radius: 50%;
   position: absolute;
   right: -1rem;
-  bottom: 4rem;
+  bottom: 5rem;
 }
 
 .black {
@@ -83,6 +93,10 @@
   background-size: contain;
 }
 
+.leftDiv h3 span {
+  color: var(--color-orange);
+}
+
 @media only screen and (max-width: 1280px) {
   .mainCategories {
     width: 100%;
@@ -91,6 +105,14 @@
     justify-content: space-between;
     gap: 1rem;
     padding-bottom: 1.5rem;
+    padding: 0 1rem 1.5rem 1rem;
+  }
+
+  .wrapper h2 {
+    display: block;
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .link {
@@ -106,6 +128,8 @@
 
   .wrapper {
     width: 100%;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
   }
 
   .leftDiv {

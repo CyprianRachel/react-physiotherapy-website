@@ -36,7 +36,12 @@ export function Opinions() {
     <div className={styles.wrapper} id="opinie">
       <div className={styles.wrapperOpinions}>
         {OPINIONS.map((opinion) => (
-          <div key={opinion.id} className={styles.opinionWrapper}>
+          <a
+            target="_blank"
+            href={opinion.path}
+            key={opinion.id}
+            className={styles.opinionWrapper}
+          >
             <div className={styles.imageWrapper}>
               <img src={opinion.image} className={styles.image} />
             </div>
@@ -50,7 +55,7 @@ export function Opinions() {
                 <span>{getServiceCountLabel(opinion.counter)}</span>
               </span>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>

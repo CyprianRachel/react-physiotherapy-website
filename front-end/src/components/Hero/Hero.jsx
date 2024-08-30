@@ -4,6 +4,7 @@ import { HeroSlider } from "../HeroSlider/HeroSlider";
 import { H1 } from "../H1/H1";
 import { HeroImage } from "../HeroImage/HeroImage";
 import { Opinions } from "../Opinions/Opinions";
+import { BorderTop } from "../BorderTop/BorderTop";
 
 export function Hero({ text, highlight, image, slider }) {
   return (
@@ -19,6 +20,7 @@ export function Hero({ text, highlight, image, slider }) {
         </div>
         <HeroSlider slider={slider} className="mobileDisplayNone" />
       </div>
+      <BorderTop />
     </>
   );
 }

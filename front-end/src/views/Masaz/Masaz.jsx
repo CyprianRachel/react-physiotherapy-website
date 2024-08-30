@@ -5,6 +5,11 @@ import { ServicesWrapper } from "../../components/ServicesWrapper/ServicesWrappe
 import { SLIDER_IMAGES } from "../../constants/sliderImages";
 import { CenteredContent } from "../../components/CenteredContent/CenteredContent";
 import { H1 } from "../../components/H1/H1";
+import { H1Wrapper } from "../../components/H1Wrapper/H1Wrapper";
+import { BorderTop } from "../../components/BorderTop/BorderTop";
+import { ServicesList } from "../../components/ServicesList/ServicesList";
+import { AllAboutUs } from "../../components/AllAboutUs/AllAboutUs";
+import styles from "./Masaz.module.css";
 
 const sliderImages = SLIDER_IMAGES.find(
   (imageSet) => imageSet.id === 4
@@ -13,17 +18,23 @@ const sliderImages = SLIDER_IMAGES.find(
 export function Masaz() {
   return (
     <Layout>
-      <CenteredContent>
-        <H1 text={"Masaż"} />
-      </CenteredContent>
-      <ServicesWrapper
-        team={false}
-        selectedServiceId={[4]}
-        description={false}
-        selectedEmployeesId={[1, 4]}
-        borderTop={true}
-        cennik={true}
-      />
+      <div className={styles.wrapper}>
+        <div className={styles.leftWrapper}>
+          <H1Wrapper>
+            <H1 text={"Masaż"} />
+          </H1Wrapper>
+          <BorderTop />
+          <ServicesList
+            team={false}
+            sectionH2={true}
+            borderTop={true}
+            selectedEmployeesId={[1, 4]}
+            description={false}
+            selectedServiceId={[4]}
+          />
+        </div>
+        <AllAboutUs sectionH2={true} />
+      </div>
     </Layout>
   );
 }

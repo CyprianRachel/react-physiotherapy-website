@@ -1,4 +1,5 @@
 import { TEAMMEMBERS } from "../../constants/teamMembers";
+import { BorderTop } from "../BorderTop/BorderTop";
 import { Breadcrumbs } from "../Breadcrumbs/Breadcrumbs";
 import { CenteredContent } from "../CenteredContent/CenteredContent";
 import styles from "./EmployeeProfil.module.css";
@@ -9,13 +10,13 @@ export function EmployeeProfil({ selectedPersonId }) {
   );
 
   if (!filteredEmployee) {
-    return <div className={styles.wrapper}>Pracownik nie znaleziony</div>;
+    return <div className={styles.wrapper2} />;
   }
 
   return (
-    <CenteredContent>
-      <Breadcrumbs />
+    <>
       <div className={styles.wrapper}>
+        <Breadcrumbs />
         <div className={styles.singleMemberWrapper}>
           <div className={styles.employeeImageWrapper}>
             <img
@@ -33,6 +34,7 @@ export function EmployeeProfil({ selectedPersonId }) {
           <p className={styles.descriptionP}>{filteredEmployee.description}</p>
         )}
       </div>
-    </CenteredContent>
+      <BorderTop />
+    </>
   );
 }

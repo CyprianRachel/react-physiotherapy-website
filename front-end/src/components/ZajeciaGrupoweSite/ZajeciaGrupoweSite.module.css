@@ -1,12 +1,27 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-top: 2rem;
+}
+
+.leftContant {
+  flex: 1;
+}
+
+.margin {
+  margin-top: 2rem;
+  height: auto;
+}
+
 .membersWrapper {
   width: 100%;
   flex-wrap: wrap;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-bottom: 1.5rem;
-  margin-top: 0.5rem;
 }
 
 .singleMemberWrapper {
@@ -19,7 +34,7 @@
   text-align: center;
   background-color: var(--color-background-orange);
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
 }
 
 .singleMemberWrapper:hover .employeeImageWrapper {
@@ -56,4 +71,83 @@
   border-radius: 10rem;
   padding: 0.75rem 1.75rem;
   font-weight: 500;
+}
+
+@media only screen and (max-width: 1280px) {
+  .wrapper {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 0rem;
+    flex-direction: column;
+  }
+
+  .leftContant {
+    flex: 1;
+    padding: 0 1rem;
+  }
+
+  .margin {
+    margin-top: 2rem;
+    height: auto;
+  }
+
+  .membersWrapper {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .singleMemberWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    background-color: var(--color-background-orange);
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+
+  .singleMemberWrapper:hover .employeeImageWrapper {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    transition: 0.2s ease;
+  }
+
+  .orange {
+    color: var(--color-orange);
+  }
+
+  .employeeImage {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  .description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .description p {
+    color: var(--color-orange);
+    font-weight: 500;
+  }
+
+  .description button {
+    color: white;
+    background-color: var(--color-orange);
+    font-size: 14px;
+    border-radius: 10rem;
+    padding: 0.75rem 1.75rem;
+    font-weight: 500;
+  }
 }

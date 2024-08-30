@@ -1,9 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
 import styles from "./Breadcrumbs.module.css";
+// import { CATEGORIES } from "../../constants/categories";
 
 export function Breadcrumbs({ text }) {
   const location = useLocation();
   const pathnames = location.pathname.split("/").filter((x) => x);
+  // console.log(CATEGORIES.find((y) => (y.subcategory.path = location.pathname)));
 
   // Jeżeli jesteś na stronie głównej, nie pokazuj breadcrumbs
   if (pathnames.length === 0) {

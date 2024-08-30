@@ -3,21 +3,21 @@
   width: 100%;
   gap: 0.75rem;
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 .employeeImage {
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
   background-position: center;
   background-size: cover;
   border-radius: 50%;
-  border: 0.25rem solid white;
 }
 
 .employeeWrapper {
   background-color: var(--color-background-orange);
-  border-radius: 6rem 3rem 3rem 6rem;
-  padding: 0 1rem 0 0;
+  border-radius: 1rem;
+  padding: 1rem;
   width: 100%;
   display: flex;
   gap: 0.5rem;
@@ -29,6 +29,12 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  color: var(--color-orange);
+  font-weight: 500;
+}
+
+.h2 {
+  margin-bottom: 0.5rem;
 }
 
 .employeeWrapper p {
@@ -43,8 +49,8 @@
 }
 
 .icon {
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .left {
@@ -60,6 +66,11 @@
     gap: 1rem;
     flex-direction: column;
     padding: 1.5rem 1rem 1.5rem 1rem;
+    margin-bottom: 0rem;
+  }
+
+  .h2 {
+    margin-bottom: 0rem;
   }
 
   .employeeImage {

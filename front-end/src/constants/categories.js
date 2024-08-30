@@ -27,27 +27,27 @@ export const CATEGORIES = [
     subcategory: [
       {
         categoryName: "Wizyta diagnostyczna pierwszorazowa",
-        path: "/wizytka-diagnostyczna-pierwszorazowa",
+        path: "/fizjoterapia-dzieci-i-mlodziezy/wizyta-diagnostyczna-pierwszorazowa",
       },
       {
         categoryName: "Fizjoterapia młodych sportowców",
-        path: "/fizjoterapia-mlodych-sportowcow",
+        path: "/fizjoterapia-dzieci-i-mlodziezy/fizjoterapia-mlodych-sportowcow",
       },
       {
         categoryName: "Fizjoterapia młodzieży",
-        path: "/fizjoterapia-mlodziezy",
+        path: "/fizjoterapia-dzieci-i-mlodziezy/fizjoterapia-mlodziezy",
       },
       {
         categoryName: "Trening funkcjonalny dzieci i młodzieży",
-        path: "/trening-funkcjonalny-dzieci-i-mlodziezy",
+        path: "/fizjoterapia-dzieci-i-mlodziezy/trening-funkcjonalny-dzieci-i-mlodziezy",
       },
       {
         categoryName: "Fizjoterapia dzieci",
-        path: "/fizjoterapia-dzieci",
+        path: "/fizjoterapia-dzieci-i-mlodziezy/fizjoterapia-dzieci",
       },
       {
         categoryName: "Fizjoterapia niemowląt",
-        path: "/fizjoterapia-niemowlat",
+        path: "/fizjoterapia-dzieci-i-mlodziezy/fizjoterapia-niemowlat",
       },
     ],
   },
@@ -124,10 +124,10 @@ export const CATEGORIES = [
     path: "/zajecia-grupowe",
     more: true,
   },
-  {
-    id: 10,
-    categoryName: "Blog",
-    path: "/blog",
-    more: true,
-  },
+  // {
+  //   id: 10,
+  //   categoryName: "Blog",
+  //   path: "/blog",
+  //   more: true,
+  // },
 ];

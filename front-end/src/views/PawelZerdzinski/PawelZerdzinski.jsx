@@ -6,7 +6,6 @@ import { ServicesWrapper } from "../../components/ServicesWrapper/ServicesWrappe
 export function PawelZerdzinski() {
   return (
     <Layout>
-      <EmployeeProfil selectedPersonId={1} />
       <ServicesWrapper
         team={false}
         person={true}
@@ -14,8 +13,9 @@ export function PawelZerdzinski() {
         selectedServiceId={[1, 4]}
         borderTop={true}
         sectionH2={true}
+        selectedPersonId={1}
       />
-      <BlogHorizontal borderTop={true} postId="1" />
+      {/* <BlogHorizontal borderTop={true} postId="1" /> */}
     </Layout>
   );
 }

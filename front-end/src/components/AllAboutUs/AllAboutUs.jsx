@@ -29,35 +29,33 @@ export function AllAboutUs({
         </>
       )}
       <BorderTop borderTop={borderTop} />
-      <CenteredContent>
-        {sectionH2 && <h2>Kontakt</h2>}
-        <div className={styles.sticky}>
-          <div className={styles.wrapper}>
-            <h3 className={styles.h3}>Kontakt</h3>
-            <IconsWrapper icons={CONTACT_ICONS} />
-            <h3 className={styles.h3}>Lokalizacja</h3>
-            <IconsWrapper icons={LOCATION} />
-            <h3 className={styles.h3}>Godziny otwarcia</h3>
-            <div className={styles.openHoursWrapper}>
-              {OPENHOURS.map((hours) => {
-                return (
-                  <div className={styles.singleOpenHours} key={hours.day}>
-                    <span>{hours.day}</span>
-                    <div>
-                      <span className={styles.hours}>
-                        {hours.open}
-                        {hours.close}
-                      </span>
-                    </div>
+      {sectionH2 && <h2 className={styles.contact}>Kontakt</h2>}
+      <div className={styles.sticky}>
+        <div className={styles.wrapper}>
+          <h3 className={styles.h3}>Telefon - Email</h3>
+          <IconsWrapper icons={CONTACT_ICONS} />
+          <h3 className={styles.h3}>Lokalizacja</h3>
+          <IconsWrapper icons={LOCATION} />
+          <h3 className={styles.h3}>Godziny otwarcia</h3>
+          <div className={styles.openHoursWrapper}>
+            {OPENHOURS.map((hours) => {
+              return (
+                <div className={styles.singleOpenHours} key={hours.day}>
+                  <span>{hours.day}</span>
+                  <div>
+                    <span className={styles.hours}>
+                      {hours.open}
+                      {hours.close}
+                    </span>
                   </div>
-                );
-              })}
-            </div>
-            <h3 className={styles.h3}>Media społecznościowe</h3>
-            <IconsWrapper icons={ICONS} />
+                </div>
+              );
+            })}
           </div>
+          <h3 className={styles.h3}>Media społecznościowe</h3>
+          <IconsWrapper icons={ICONS} />
         </div>
-      </CenteredContent>
+      </div>
     </div>
   );
 }

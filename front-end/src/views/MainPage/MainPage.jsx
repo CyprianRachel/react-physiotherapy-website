@@ -21,7 +21,6 @@ export function MainPage() {
         image={TEAMIMAGE}
         slider={sliderImages}
       />
-      <BorderTop borderTop={true} />
       <CategorySlider />
       <ServicesWrapper
         borderTop={true}
@@ -49,7 +48,7 @@ export function MainPage() {
           </div>
         </div>
       </ServicesWrapper>
-      <BlogHorizontal borderTop={true} postId="1" />
+      {/* <BlogHorizontal borderTop={true} postId="1" /> */}
     </Layout>
   );
 }

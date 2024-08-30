@@ -1,4 +1,11 @@
 .logoFooter {
-  width: 5rem;
+  width: 6rem;
   height: auto;
+}
+
+@media only screen and (max-width: 1280px) {
+  .logoFooter {
+    width: 5rem;
+    height: auto;
+  }
 }

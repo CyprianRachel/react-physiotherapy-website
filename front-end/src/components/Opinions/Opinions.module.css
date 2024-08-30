@@ -1,6 +1,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+  margin-top: 1.5rem;
 }
 
 .highlighted {
@@ -16,6 +17,10 @@
   flex-direction: column;
   gap: 0.75rem;
   border: 1px solid #ccc;
+}
+
+.opinionWrapper:hover {
+  box-shadow: 0px 2px 8px rgb(0, 0, 0, 0.1);
 }
 
 .starAverage {

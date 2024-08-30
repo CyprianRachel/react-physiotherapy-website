@@ -96,8 +96,8 @@ export function ServicesList({
 
   const getDescriptionPreview = (description) => {
     const words = description.split(" ");
-    if (words.length > 12) {
-      const previewText = words.slice(0, 12).join(" ");
+    if (words.length > 16) {
+      const previewText = words.slice(0, 16).join(" ");
       return previewText;
     }
     return description;
@@ -123,10 +123,10 @@ export function ServicesList({
           <SubCategory subCategoryChild={subCategoryChild} />
         </CenteredContent>
       )}
-
-      {!cennik && <BorderTop borderTop={borderTop} />}
       <CenteredContent>
         <div className={styles.wrapper}>
+          <EmployeeProfil selectedPersonId={selectedPersonId} />
+
           {popupData.isPopupOpen && (
             <ServicePopup
               serviceName={popupData.serviceName}

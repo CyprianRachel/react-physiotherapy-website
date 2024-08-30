@@ -5,7 +5,6 @@ import { ServicesWrapper } from "../../components/ServicesWrapper/ServicesWrappe
 export function UrszulaGawlik() {
   return (
     <Layout>
-      <EmployeeProfil selectedPersonId={2} />
       <ServicesWrapper
         team={false}
         person={true}
@@ -13,6 +12,7 @@ export function UrszulaGawlik() {
         selectedServiceId={[2]}
         borderTop={true}
         sectionH2={true}
+        selectedPersonId={2}
       />
     </Layout>
   );

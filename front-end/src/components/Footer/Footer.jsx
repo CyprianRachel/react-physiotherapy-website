@@ -30,12 +30,12 @@ export function Footer() {
               </a>
               <a
                 target="_blank"
-                href="https://www.instagram.com/in.motion.gabinet/"
+                href="https://www.facebook.com/in.motion.gabinet"
               >
                 <img
                   className={styles.icons}
                   src={FACEBOOK}
-                  alt="Instagram"
+                  alt="Facebook"
                 ></img>
               </a>
             </div>
