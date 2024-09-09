@@ -39,6 +39,13 @@ export const SERVICES = [
         time: "1g 15min",
         personId: [1],
       },
+      {
+        serviceName: "Drenaż limfatyczny mechaniczny",
+        description: `<p>Drenaż limfatyczny mechaniczny wykonywany jest aparatem Normatec. Pozwala na zmniejszenie obrzęków, redukcje uczucia ciężkich nóg, przyspiesza powrót do sprawności po zabiegach endoprotezy biodra i kolana, rozluźnia mięśnie oraz jest świetnym rozwiązaniem regeneracyjnym po intensywnym treningu.</p>`,
+        price: "85,00 zł",
+        time: "45min",
+        personId: [4],
+      },
     ],
   },
   {
@@ -321,13 +328,6 @@ export const SERVICES = [
       {
         serviceName: "Drenaż limfatyczny ",
         description: `<p>Drenaż limfatyczny wspomaga pracę układu krążenia, redukuje obrzęki, wspiera przepływ limfy w organizmie. Zalecany osobom pracującym w pozycji stojącej oraz z tendencją do pojawiania się obrzęków nóg.</p>`,
-        price: "150,00 zł",
-        time: "1g",
-        personId: [4],
-      },
-      {
-        serviceName: "Drenaż limfatyczny mechaniczny",
-        description: `<p>Drenaż limfatyczny mechaniczny wykonywany jest aparatem Normatec. Pozwala na zmniejszenie obrzęków, redukcje uczucia ciężkich nóg, przyspiesza powrót do sprawności po zabiegach endoprotezy biodra i kolana, rozluźnia mięśnie oraz jest świetnym rozwiązaniem regeneracyjnym po intensywnym treningu.</p>`,
         price: "150,00 zł",
         time: "1g",
         personId: [4],

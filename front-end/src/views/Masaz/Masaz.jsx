@@ -28,12 +28,11 @@ export function Masaz() {
             team={false}
             sectionH2={true}
             borderTop={true}
-            selectedEmployeesId={[1, 4]}
             description={false}
             selectedServiceId={[4]}
           />
         </div>
-        <AllAboutUs sectionH2={true} />
+        <AllAboutUs selectedEmployeesId={[1, 4]} sectionH2={true} />
       </div>
     </Layout>
   );
