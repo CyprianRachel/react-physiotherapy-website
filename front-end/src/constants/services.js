@@ -342,8 +342,8 @@ export const SERVICES = [
       {
         serviceName: "Masaż pistoletem do masażu",
         description: `<p>Masaż pistoletem do masażu jest nowoczesnym sposobem na radzenie sobie ze wzmożonym napięciem mięśniowym. Wykorzystując pistolet do masażu mamy możliwość precyzyjnego rozluźnienia struktur mięśniowych, co znacząco poprawia skuteczność i zadowolenie</p>`,
-        price: "150,00 zł",
-        time: "1g",
+        price: "50,00 zł",
+        time: "30min",
         personId: [4],
       },
       {
