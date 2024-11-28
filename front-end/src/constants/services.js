@@ -44,7 +44,7 @@ export const SERVICES = [
         description: `<p>Drenaż limfatyczny mechaniczny wykonywany jest aparatem Normatec. Pozwala na zmniejszenie obrzęków, redukcje uczucia ciężkich nóg, przyspiesza powrót do sprawności po zabiegach endoprotezy biodra i kolana, rozluźnia mięśnie oraz jest świetnym rozwiązaniem regeneracyjnym po intensywnym treningu.</p>`,
         price: "85,00 zł",
         time: "45min",
-        personId: [4],
+        personId: [1],
       },
     ],
   },

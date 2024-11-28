@@ -4,20 +4,12 @@ export const CATEGORIES = [
     categoryName: "Fizjoterapia ortopedyczna",
     path: "/fizjoterpia-ortopedyczna",
     more: false,
-    // subcategory: [
-    //   {
-    //     categoryName: "Wizyta diagnostyczna z USG",
-    //     path: "/wizytka-diagnostyczna-z-usg",
-    //   },
-    //   {
-    //     categoryName: "Terapia manualna",
-    //     path: "/terapia-manualna",
-    //   },
-    //   {
-    //     categoryName: "Trening/RTS",
-    //     path: "/trening-rts/",
-    //   },
-    // ],
+    subcategory: [
+      {
+        categoryName: "Drenaż limfatyczny mechaniczny",
+        path: "/fizjoterpia-ortopedyczna/drenaz-limfatyczny-mechaniczny",
+      },
+    ],
   },
   {
     id: 2,
@@ -124,10 +116,10 @@ export const CATEGORIES = [
     path: "/zajecia-grupowe",
     more: true,
   },
-  // {
-  //   id: 10,
-  //   categoryName: "Blog",
-  //   path: "/blog",
-  //   more: true,
-  // },
+  {
+    id: 10,
+    categoryName: "Blog",
+    path: "/blog",
+    more: true,
+  },
 ];

@@ -31,11 +31,16 @@ import { FizjoterapiaDzieci } from "./views/FizjoterapiaDzieci/FizjoterapiaDziec
 import { TreningFunkcjonalnyDzieciIMlodziezy } from "./views/TreningFunkcjonalnyDzieciIMlodziezy/TreningFunkcjonalnyDzieciIMlodziezy.jsx";
 import { FizjoterapiaMlodziezy } from "./views/FizjoterapiaMlodziezy/FizjoterapiaMlodziezy.jsx";
 import { FizjoterapiaMlodychSportowcow } from "./views/FizjoterapiaMlodychSportowcow/FizjoterapiaMlodychSportowcow.jsx";
+import { DrenazLimfatyczny } from "./views/DrenazLimfatyczny/DrenazLimfatyczny.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/fizjoterpia-ortopedyczna",
     element: <FizjoterapiaOrtopedyczna />,
+  },
+  {
+    path: "/fizjoterpia-ortopedyczna/drenaz-limfatyczny-mechaniczny",
+    element: <DrenazLimfatyczny />,
   },
   {
     path: "/",

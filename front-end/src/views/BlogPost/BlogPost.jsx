@@ -7,7 +7,7 @@ import styles from "./BlogPost.module.css";
 
 export function BlogPost() {
   const singlePostPath = useParams();
-  const post = BLOG.find((item) => (item.postId = singlePostPath));
+  const post = BLOG.find((item) => item.path === singlePostPath.postId);
 
   if (!post) {
     return <div>Post nie został znaleziony</div>;
