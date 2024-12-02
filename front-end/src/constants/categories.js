@@ -116,10 +116,10 @@ export const CATEGORIES = [
     path: "/zajecia-grupowe",
     more: true,
   },
-  {
-    id: 10,
-    categoryName: "Blog",
-    path: "/blog",
-    more: true,
-  },
+  // {
+  //   id: 10,
+  //   categoryName: "Blog",
+  //   path: "/blog",
+  //   more: true,
+  // },
 ];

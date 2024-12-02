@@ -32,6 +32,8 @@ import { TreningFunkcjonalnyDzieciIMlodziezy } from "./views/TreningFunkcjonalny
 import { FizjoterapiaMlodziezy } from "./views/FizjoterapiaMlodziezy/FizjoterapiaMlodziezy.jsx";
 import { FizjoterapiaMlodychSportowcow } from "./views/FizjoterapiaMlodychSportowcow/FizjoterapiaMlodychSportowcow.jsx";
 import { DrenazLimfatyczny } from "./views/DrenazLimfatyczny/DrenazLimfatyczny.jsx";
+import { DawidOlszowka } from "./views/DawidOlszowka/DawidOlszowka.jsx";
+import { KatarzynaGala } from "./views/KatarzynaGala/KatarzynaGala.jsx";
 
 const router = createBrowserRouter([
   {
@@ -113,6 +115,14 @@ const router = createBrowserRouter([
   {
     path: "/nasz-zespol/pawel-zerdzinski",
     element: <PawelZerdzinski />,
+  },
+  {
+    path: "/nasz-zespol/dawid-olszowka",
+    element: <DawidOlszowka />,
+  },
+  {
+    path: "/nasz-zespol/katarzyna-gala",
+    element: <KatarzynaGala />,
   },
   {
     path: "/nasz-zespol/urszula-gawlik",

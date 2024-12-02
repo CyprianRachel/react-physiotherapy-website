@@ -11,26 +11,67 @@ export const SERVICES = [
       //   price: "80,00 zł",
       //   time: "45min",
       // },
+      // {
+      //   serviceName: "Terapia manualna",
+      //   description: `<p>Kolejna wizyta polega na ocenie efektów leczenia oraz kontynuowanie terapii korzystając z całej gamy metod:</p>
+      //     <ul>
+      //       <li>Terapia manualna w oparciu o koncepcje Maitland®</li>
+      //       <li>Terapia manualna tkanek miękkich: punkty spustowe, masaż tanek głębokich, suche igłowanie, pinoterapia, stretching, tejping</li>
+      //     </ul>`,
+      //   price: "130,00 zł",
+      //   time: "50min",
+      //   personId: [1],
+      // },
       {
-        serviceName: "Terapia manualna",
-        description: `<p>Kolejna wizyta polega na ocenie efektów leczenia oraz kontynuowanie terapii korzystając z całej gamy metod:</p>
+        serviceName: "Fizjoterapia + Diagnostyka - Pierwsza wizyta",
+        description: `<p>Kompleksowa diagnostyka i fizjoterapia w zakresie:
+        </p>
           <ul>
-            <li>Terapia manualna w oparciu o koncepcje Maitland®</li>
-            <li>Terapia manualna tkanek miękkich: punkty spustowe, masaż tanek głębokich, suche igłowanie, pinoterapia, stretching, tejping</li>
-          </ul>`,
-        price: "130,00 zł",
-        time: "50min",
+            <li>bólu kręgosłupa szyjnego, piersiowego i lędźwiowego</li>
+            <li>rehablitacji przedoperacyjnej</li>
+            <li>rehabilitacji pooperacyjnej</li>
+            <li>fizjoterapii ortopedycznej</li>
+            <li>rehabilitacji po endoprotezoplastyce stawu kolanowego i biodrowego</li>
+            <li>bólu w obrębie stawu ramiennego, łokciowego, skokowego</li>
+            <li>rehabilitacji po złamaniach</li>
+            <li>tendinopatii i entezopatii.</li>
+          </ul>
+          <p>Podczas pierwszej wizyty fizjoterapeuta przeprowadzi dokładny wywiad, zbada oraz ustali plan leczenia. Następnie rozpocznie proces fizjoterapii w postaci terapii manualnej lub ćwiczeń.</p>`,
+        price: "150,00 zł",
+        time: "1g 15min",
         personId: [1],
       },
       {
-        id: 1,
-        serviceName: "Trening / RTS",
-        description: `<p>W ramach treningu oraz RTS (return to sport – powrót do sportu) praca z pacjentem/zawodnikiem polega na progresywnym treningu siłowym i wprowadzaniu elementów dyscypliny, którą uprawia (bieganie, zmiany kierunku ruchów, plyometria), 
-        zgodnie z protokołami i wytycznymi.</p>
-        <p>Nasz gabinet wyposażony jest w sprzęt, który pozwoli bezpiecznie i skutecznie wrócić do pełni sprawności po kontuzji.</p>`,
+        serviceName: "Fizjoterapia - Kolejna wizyta",
+        description: `<p>Kontynuacja leczenia zgodnie z ustalonym planem podczas pierwszej wizyty, modyfikacja zaleceń domowych.
+        </p>`,
         price: "130,00 zł",
         time: "1g",
         personId: [1],
+      },
+      // {
+      //   serviceName: "Trening / RTS",
+      //   description: `<p>W ramach treningu oraz RTS (return to sport – powrót do sportu) praca z pacjentem/zawodnikiem polega na progresywnym treningu siłowym i wprowadzaniu elementów dyscypliny, którą uprawia (bieganie, zmiany kierunku ruchów, plyometria),
+      //   zgodnie z protokołami i wytycznymi.</p>
+      //   <p>Nasz gabinet wyposażony jest w sprzęt, który pozwoli bezpiecznie i skutecznie wrócić do pełni sprawności po kontuzji.</p>`,
+      //   price: "130,00 zł",
+      //   time: "1g",
+      //   personId: [1],
+      // },
+      {
+        serviceName: "Trening personalny",
+        description: `<p>Trening personalny pomoże zadbać o swoją sprawność i funkcjonalność, wzmocni całe ciało i ukształtuje sylwetkę. Treningi odbywają się w kameralnej sali pod okiem wykwalifikowanego fizjoterapeuty i trenera.</p>`,
+        price: "150,00 zł",
+        time: "1g",
+        personId: [1, 6],
+      },
+      {
+        serviceName: "Trening motoryczny",
+        description: `<p>Trening motoryczny ma na celu wykształcenie i poprawę podstawowych wzorców motorycznych niezbędnych w uprawianej przez Ciebie dyscyplinie sportowej. Głównym założeniem jest poprawa wyników i zmniejszenie ryzyka wystąpienia kontuzji.</p>
+        <p>Trening odbywa się w kameralnej sali z doświadczonym fizjoterapeutą.</p>`,
+        price: "150,00 zł",
+        time: "1g",
+        personId: [1, 6],
       },
       {
         serviceName: "Wizyta diagnostyczna z terapią wstępną",
@@ -316,7 +357,17 @@ export const SERVICES = [
         description: `<p>Masaż tkanek głębokich skupia się na głębszych warstwach mięśni i tkanki łącznej. Stosowany jest jako narzędzie do rozwiązywania problemów w obrębie układu mięśniowego.</p>`,
         price: "150,00 zł",
         time: "1g",
-        personId: [1, 4],
+        personId: [1, 5],
+      },
+      {
+        serviceName: "Kobido - japoński masaż twarzy",
+        description: `<p>Masaż kobido to tradycyjna japońska technika masażu twarzy. W naszym gabinecie masaż Kobido łączy tradycję z nowoczesną pielęgnacją.</p>
+        <p>Kobido działa na głębokie warstwy skóry, pobudza krążenie, stymuluje produkcję kolagenu i elastyny, a także redukuje napięcie mięśniowe. Efektem jest wyraźnie jędrniejsza, promienna skóra oraz zrelaksowany i odmłodzony wygląd.</p>
+        <p>Podczas sesji używane są unikalne techniki ugniatania, wygładzania i delikatnego rozciągania, które odprężają i rewitalizują. To idealny wybór dla osób, które pragną zadbać o swoją urodę w sposób holistyczny i bezinwazyjny.</p>
+        <p>Zapewnij sobie chwilę luksusu i pozwól, aby masaż Kobido odmienił Twoją cerę oraz samopoczucie!</p>`,
+        price: "180,00 zł",
+        time: "1g",
+        personId: [5],
       },
       {
         serviceName: "Masaż leczniczy",
@@ -344,7 +395,7 @@ export const SERVICES = [
         description: `<p>Masaż pistoletem do masażu jest nowoczesnym sposobem na radzenie sobie ze wzmożonym napięciem mięśniowym. Wykorzystując pistolet do masażu mamy możliwość precyzyjnego rozluźnienia struktur mięśniowych, co znacząco poprawia skuteczność i zadowolenie</p>`,
         price: "50,00 zł",
         time: "30min",
-        personId: [4],
+        personId: [1, 4],
       },
       {
         serviceName: "Masaż kobido",

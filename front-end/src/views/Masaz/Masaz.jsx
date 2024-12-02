@@ -32,7 +32,7 @@ export function Masaz() {
             selectedServiceId={[4]}
           />
         </div>
-        <AllAboutUs selectedEmployeesId={[1, 4]} sectionH2={true} />
+        <AllAboutUs selectedEmployeesId={[1, 4, 5]} sectionH2={true} />
       </div>
     </Layout>
   );

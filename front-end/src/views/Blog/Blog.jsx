@@ -1,4 +1,5 @@
 import { AllAboutUs } from "../../components/AllAboutUs/AllAboutUs";
+import { BlogDisplay } from "../../components/BlogDisplay/BlogDisplay";
 import { BlogWeb } from "../../components/BlogSite/BlogWeb";
 import { CenteredContent } from "../../components/CenteredContent/CenteredContent";
 import { H1 } from "../../components/H1/H1";
@@ -9,13 +10,13 @@ export function Blog() {
   return (
     <Layout>
       <CenteredContent>
-        <div className={styles.flex}>
+        <BlogDisplay>
           <div>
             <H1 text={"Blog"} />
             <BlogWeb />
           </div>
           <AllAboutUs />
-        </div>
+        </BlogDisplay>
       </CenteredContent>
     </Layout>
   );

@@ -12,7 +12,7 @@ export const OPINIONS = [
   {
     id: 2,
     average: "5.0",
-    counter: 72,
+    counter: 90,
     image: BOOKSY_LOGO,
     path: "https://booksy.com/pl-pl/119503_in-motion-fizjoterapia-i-terapia-si_fizjoterapia_12321_swietochlowice#ba_s=seo",
   },

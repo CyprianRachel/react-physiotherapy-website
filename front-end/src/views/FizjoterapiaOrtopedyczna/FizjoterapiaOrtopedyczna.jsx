@@ -31,7 +31,7 @@ export function FizjoterapiaOrtopedyczna() {
         team={false}
         selectedServiceId={[1]}
         description={true}
-        selectedEmployeesId={[1]}
+        selectedEmployeesId={[1, 6]}
         subCategory={false}
         borderTop={true}
         sectionH2={true}
